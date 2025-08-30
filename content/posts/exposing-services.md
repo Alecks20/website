@@ -8,7 +8,7 @@ tags = [
 ]
 +++
 
-In a perfect world everyone could port forward to and use an ISP with DDoS Protection and Static IPs, however we don't live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.
+In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don't live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.
 
 So here are a few **free and paid** solutions for exposing both web applications and game servers to the internet without port forwarding.
 

@@ -95,7 +95,7 @@ params:
   homeInfoParams:
     Title: "Hello Internet,"
     Content: >
-      - I’m a 15 year old self-taught developer from Australia with a passion for computers, tinkering, homelabbing, infrastructure, digital minimalism, old tech and system administration.
+      - I’m a teenage self-taught developer from Australia with a passion for computers, tinkering, homelabbing, infrastructure, digital minimalism, old tech and system administration.
   socialIcons:
     - name: github
       title: See my projects
