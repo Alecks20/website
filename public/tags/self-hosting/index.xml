@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Self-Hosting on Alecks</title>
+    <link>http://localhost:1313/tags/self-hosting/</link>
+    <description>Recent content in Self-Hosting on Alecks</description>
+    <image>
+      <title>Alecks</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>Alecks 2025</copyright>
+    <lastBuildDate>Sat, 30 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/self-hosting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mini PCs: the perfect home server</title>
+      <link>http://localhost:1313/posts/mini-pcs/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mini-pcs/</guid>
+      <description>&lt;p&gt;Recently we&amp;rsquo;ve seen a surge in both governments and tech companies implementing Digital ID and AI Facial Recognition systems to prove users of social media platforms are above a minimum age requirement otherwise they will be restricted or fully blocked from using the platform.&lt;/p&gt;
+&lt;h3 id=&#34;this-is-not-for-the-kids&#34;&gt;This is not &amp;ldquo;for the kids&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;All these laws and enforcements market themself as being purely for getting kids off social media&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

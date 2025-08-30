@@ -28,4 +28,4 @@ There are a few things I found out that could’ve got my account terminated, bu
 ### “Closing” your account, doesn't actually close your account
 Another issue I have with oracle cloud is that when you “delete” a tenancy (An account) it doesn’t actually delete *ANYTHING*, it just disables it putting you under the illusion that its gone. You can even still login to the account and access the dashboard. I disabled my other oracle cloud account expecting to be able to sign up for it again once the old one was deleted and change the home region, however im still waiting to this day 4 months later for it to fully delete and it hasn’t yet and im not expecting it to at all.
 
-To conclude, their offering is tempting and quite generous but you should outright avoid it for anything except minecraft servers or anything that you care about, even then keep backups on a 3rd party service (Such as backblaze). 
+To conclude, their offering is tempting and quite generous but you should outright avoid it for anything except minecraft servers or anything that you don't care about, even then keep backups on a third party service (e.g Backblaze). 
