@@ -15,13 +15,24 @@
     <lastBuildDate>Sat, 30 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/self-hosting/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mini PCs: the perfect home server</title>
+      <title>Exposing self-hosted applications without a Public IP address</title>
+      <link>http://localhost:1313/posts/exposing-services/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/exposing-services/</guid>
+      <description>&lt;p&gt;In a perfect world everyone could port forward to and use an ISP with DDoS Protection and Static IPs, however we don&amp;rsquo;t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.&lt;/p&gt;
+&lt;p&gt;So here are a few &lt;strong&gt;free and paid&lt;/strong&gt; solutions for exposing both web applications and game servers to the internet without port forwarding.&lt;/p&gt;
+&lt;h2 id=&#34;cloudflare-tunnels&#34;&gt;&lt;a href=&#34;https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/&#34;&gt;Cloudflare Tunnels&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mini pcs are perfect home servers</title>
       <link>http://localhost:1313/posts/mini-pcs/</link>
       <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/mini-pcs/</guid>
-      <description>&lt;p&gt;Recently we&amp;rsquo;ve seen a surge in both governments and tech companies implementing Digital ID and AI Facial Recognition systems to prove users of social media platforms are above a minimum age requirement otherwise they will be restricted or fully blocked from using the platform.&lt;/p&gt;
-&lt;h3 id=&#34;this-is-not-for-the-kids&#34;&gt;This is not &amp;ldquo;for the kids&amp;rdquo;&lt;/h3&gt;
-&lt;p&gt;All these laws and enforcements market themself as being purely for getting kids off social media&lt;/p&gt;</description>
+      <description>&lt;p&gt;Recently I picked up a $100 Lenovo ThinkCentre M710Q with an i5 7400T, 8GB of ram and 256 SSD as a secondary node for hosting monitoring services and smaller applications.&lt;/p&gt;
+&lt;h3 id=&#34;the-good-and-the-bad&#34;&gt;The good and the bad&lt;/h3&gt;
+&lt;p&gt;Mini PCs are built to be small, quiet and power efficient, perfect for a home server. They&amp;rsquo;re also tiny, hence the name meaning they can live pretty much anywhere.&lt;/p&gt;
+&lt;p&gt;However, their form factor makes them hard to upgrade for future expandability and hard to add redundant storage to (raid).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

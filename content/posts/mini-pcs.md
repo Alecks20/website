@@ -1,6 +1,6 @@
 +++
 author = "Alecks"
-title = "Mini PCs: the perfect home servers"
+title = "Mini pcs are perfect home servers"
 date = "2025-08-30"
 description = ""
 tags = [
@@ -21,4 +21,4 @@ However, their form factor makes them hard to upgrade for future expandability a
 I'd recommend having a browse on eBay, find a listing with lots available which means they're selling in bulk and make sure its not "barebones" since then your pretty much just getting a motherboard and case.
 
 ### Why they're such good value
-Similar to ThinkPads, businesses buy these machines in bulk and then decommision the old ones selling them in bulk for cheap.
+Similar to Thinkpads, businesses buy these machines in bulk and then decommision the old ones selling them in bulk for cheap.

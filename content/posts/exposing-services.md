@@ -19,7 +19,7 @@ Some argue that it defeats the point of self-hosting since Cloudflare centralize
 
 ## [Tailscale](https://tailscale.com) (w/ an optional VPS)
 
-This solution can be either free or paid depending on if you want just yourself to be able to access your services or you want them to be exposed via a domain. You can setup tailscale on both your devices and the server then securely connect to eachother without exposing anything publicly for completely free.
+This solution can be either free or paid depending on if you want just yourself to be able to access your services or you want them to be exposed via a domain. You can setup Tailscale on both your devices and the server then securely connect to eachother without exposing anything publicly for completely free.
 
 If you want a service to be publicly accessible via a domain, you'll need a remote server with its own public ip address as Tailscale only lets you establish secure connections between devices, not expose things to the internet.
 
@@ -30,9 +30,9 @@ example.com {
 }
 ```
 
-Additionally, you can use this to expose any TCP/UDP service, including Game Servers, SSH, (S)FTP and much more which requires forwarding ports from a remote server to your home servers Tailscale address but I don't feel confident explaining how to do that.
+Additionally, you can use this to expose any tcp/udp service, including Game Servers, SSH, (S)FTP and much more which requires forwarding ports from a remote server to your home servers Tailscale address but I don't feel confident explaining how to do that.
 
-## [Playit](https://playit.gg)
+## [Playit.gg](https://playit.gg)
 
 Arguably the best free service for exposing game servers without port forwarding. The setup includes installing a program which tunnels game server traffic to their global network of relay servers.
 

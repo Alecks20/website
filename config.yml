@@ -89,11 +89,7 @@ params:
   homeInfoParams:
     Title: "Hello Internet,"
     Content: >
-      - I’m a self-taught developer from Australia with a passion for computers, tinkering, programming, homelabbing, digital minimalism, old tech (mainly thinkpads) and system administration.
-
-      - This website is used to showcase different technologies, blog about things I've learned, interested in or passionate about and display my skills, projects and digital garden.
-
-      - Contact me via email (**me@alecks.dev**) or discord (**alecks20**).
+      - I’m a 15 year old self-taught developer from Australia with a passion for computers, tinkering, homelabbing, infrastructure, digital minimalism, old tech and system administration.
   socialIcons:
     - name: github
       title: See my projects
@@ -102,8 +98,8 @@ params:
       title: Send me an email
       url: "mailto:me@alecks.dev"
     - name: Discord
-      title: Contact me on Discord
-      url: "https://discord.com/users/612522818294251522"
+      title: Message me on Discord
+      url: "mailto:me@alecks.dev"
 
   # label:
   # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'

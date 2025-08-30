@@ -145,32 +145,47 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Securing ssh on your Linux Server
+    <h2 class="entry-hint-parent">Exposing self-hosted applications without a Public IP address
     </h2>
   </header>
   <div class="entry-content">
-    <p>This post is made for debian based linux distros
-Non-root account for logins / Disable root login Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants
-adduser kuma Then add it to the list of sudoers
-usermod -aG sudo kuma Using SSH keys over plaintext passwords SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.
+    <p>In a perfect world everyone could port forward to and use an ISP with DDoS Protection and Static IPs, however we don’t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.
+So here are a few free and paid solutions for exposing both web applications and game servers to the internet without port forwarding.
+Cloudflare Tunnels This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-04-25 00:00:00 +0000 UTC'>April 25, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Alecks</footer>
-  <a class="entry-link" aria-label="post link to Securing ssh on your Linux Server" href="http://localhost:1313/posts/securing-server/"></a>
+  <footer class="entry-footer"><span title='2025-08-30 00:00:00 +0000 UTC'>August 30, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Alecks</footer>
+  <a class="entry-link" aria-label="post link to Exposing self-hosted applications without a Public IP address" href="http://localhost:1313/posts/exposing-services/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Oracle cloud is a horrible platform
+    <h2 class="entry-hint-parent">Mini pcs are perfect home servers
     </h2>
   </header>
   <div class="entry-content">
-    <p>I’ve previously used oracle cloud to host a large variety of services, from minecraft servers to kasm workspaces and much more.
-I signed up on April 20th 2023 and ended up being terminated from the platform for an unknown reason on the 29th of November 2023, I ran 2 oracle cloud accounts (Not related to the termination, both used completely different information) and only 1 of them was terminated so I continued using the platform until late 2023 (around December) when I manually terminated my other account.
+    <p>Recently I picked up a $100 Lenovo ThinkCentre M710Q with an i5 7400T, 8GB of ram and 256 SSD as a secondary node for hosting monitoring services and smaller applications.
+The good and the bad Mini PCs are built to be small, quiet and power efficient, perfect for a home server. They’re also tiny, hence the name meaning they can live pretty much anywhere.
+However, their form factor makes them hard to upgrade for future expandability and hard to add redundant storage to (raid).
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-03-10 00:00:00 +0000 UTC'>March 10, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Alecks</footer>
-  <a class="entry-link" aria-label="post link to Oracle cloud is a horrible platform" href="http://localhost:1313/posts/oracle-cloud-rant/"></a>
+  <footer class="entry-footer"><span title='2025-08-30 00:00:00 +0000 UTC'>August 30, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Alecks</footer>
+  <a class="entry-link" aria-label="post link to Mini pcs are perfect home servers" href="http://localhost:1313/posts/mini-pcs/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Securing ssh on your Linux Server
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>This post is made for debian based linux distros.
+Don’t expose ssh, use a VPN This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.
+Non-root account for logins / Disable root login Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-04-25 00:00:00 +0000 UTC'>April 25, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Alecks</footer>
+  <a class="entry-link" aria-label="post link to Securing ssh on your Linux Server" href="http://localhost:1313/posts/securing-server/"></a>
 </article>
     </main>
     

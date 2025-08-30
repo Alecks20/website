@@ -7,14 +7,11 @@
 <meta name="robots" content="index, follow">
 <title>Securing ssh on your Linux Server | Alecks</title>
 <meta name="keywords" content="linux, servers, ssh, security">
-<meta name="description" content="This post is made for debian based linux distros
+<meta name="description" content="This post is made for debian based linux distros.
+Don&rsquo;t expose ssh, use a VPN
+This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.
 Non-root account for logins / Disable root login
-Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants
-adduser kuma
-Then add it to the list of sudoers
-usermod -aG sudo kuma
-Using SSH keys over plaintext passwords
-SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.">
+Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want">
 <meta name="author" content="Alecks">
 <link rel="canonical" href="http://localhost:1313/posts/securing-server/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.36819bea596090d8b48cf10d9831382996197aa7e4fc86f792f7c08c9ca4d23b.css" integrity="sha256-NoGb6llgkNi0jPENmDE4KZYZeqfk/Ib3kvfAjJyk0js=" rel="preload stylesheet" as="style">
@@ -65,10 +62,9 @@ SSH Keys are both more convenient and more secure than a regular plaintext passw
 </noscript><meta property="og:url" content="http://localhost:1313/posts/securing-server/">
   <meta property="og:site_name" content="Alecks">
   <meta property="og:title" content="Securing ssh on your Linux Server">
-  <meta property="og:description" content="This post is made for debian based linux distros
-Non-root account for logins / Disable root login Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants
-adduser kuma Then add it to the list of sudoers
-usermod -aG sudo kuma Using SSH keys over plaintext passwords SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.">
+  <meta property="og:description" content="This post is made for debian based linux distros.
+Don’t expose ssh, use a VPN This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.
+Non-root account for logins / Disable root login Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -82,14 +78,11 @@ usermod -aG sudo kuma Using SSH keys over plaintext passwords SSH Keys are both 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/images/papermod-cover.png">
 <meta name="twitter:title" content="Securing ssh on your Linux Server">
-<meta name="twitter:description" content="This post is made for debian based linux distros
+<meta name="twitter:description" content="This post is made for debian based linux distros.
+Don&rsquo;t expose ssh, use a VPN
+This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.
 Non-root account for logins / Disable root login
-Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants
-adduser kuma
-Then add it to the list of sudoers
-usermod -aG sudo kuma
-Using SSH keys over plaintext passwords
-SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.">
+Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want">
 
 
 <script type="application/ld+json">
@@ -118,12 +111,12 @@ SSH Keys are both more convenient and more secure than a regular plaintext passw
   "@type": "BlogPosting",
   "headline": "Securing ssh on your Linux Server",
   "name": "Securing ssh on your Linux Server",
-  "description": "This post is made for debian based linux distros\nNon-root account for logins / Disable root login Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants\nadduser kuma Then add it to the list of sudoers\nusermod -aG sudo kuma Using SSH keys over plaintext passwords SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.\n",
+  "description": "This post is made for debian based linux distros.\nDon\u0026rsquo;t expose ssh, use a VPN This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.\nNon-root account for logins / Disable root login Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want\n",
   "keywords": [
     "linux", "servers", "ssh", "security"
   ],
-  "articleBody": "This post is made for debian based linux distros\nNon-root account for logins / Disable root login Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants\nadduser kuma Then add it to the list of sudoers\nusermod -aG sudo kuma Using SSH keys over plaintext passwords SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.\nGenerate an ssh key using PuttyGen and paste it on a new line in /home//.ssh/authorized_keys\nUpdating your SSH configuration This process can differ depending on your host, but for most servers the ssh config is located in /etc/ssh/sshd_config, in the file you want to change the following values\nPasswordAuthentication no PubkeyAuthentication yes PermitRootLogin no Changing these config vaulues will\nDisable password authentication Allow you to login using ssh keys (Which I showed how to setup above) Disable root login (Applying the steps from before) Run the command below to apply the motifications\nsudo systemctl restart ssh NTFY notifcations on ssh login Adding these lines to your /etc/profile file will send a request to your chosen ntfy server when any user logs in via ssh\nif [ -n \"$SSH_CLIENT\" ]; then\rNTFY=\"${USER}@$(hostname -f) from $(echo $SSH_CLIENT|awk '{print $1}')\"\rcurl -u : -s -H \"Title: SSH Login\" -d \"$NTFY\" -L \"https://ntfy.exaple.com/ssh\" \u003e /dev/null\rfi Modify to add your own api key and change the url to your ntfy server\nYou can also find an example on the ntfy docs here (Didn’t work for me)\n",
-  "wordCount" : "271",
+  "articleBody": "This post is made for debian based linux distros.\nDon’t expose ssh, use a VPN This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.\nNon-root account for logins / Disable root login Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want\nadduser kuma Then add it to the list of sudoers\nusermod -aG sudo kuma Using SSH keys over plaintext passwords SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.\nGenerate an ssh key using PuttyGen and paste it on a new line in /home//.ssh/authorized_keys.\nUpdating your SSH configuration This process can differ depending on your host, but for most servers the ssh config is located in /etc/ssh/sshd_config, in the file you want to change the following values.\nPasswordAuthentication no PubkeyAuthentication yes PermitRootLogin no Changing these config vaulues will\nDisable password authentication Allow you to login using ssh keys (Which I showed how to setup above) Disable root login (Applying the steps from before) Run the command below to apply the motifications\nsudo systemctl restart ssh NTFY notifcations on ssh login Adding these lines to your /etc/profile file will send a request to your chosen ntfy server when any user logs in via ssh\nif [ -n \"$SSH_CLIENT\" ]; then\rNTFY=\"${USER}@$(hostname -f) from $(echo $SSH_CLIENT|awk '{print $1}')\"\rcurl -u : -s -H \"Title: SSH Login\" -d \"$NTFY\" -L \"https://ntfy.exaple.com/ssh\" \u003e /dev/null\rfi Modify to add your own api key and change the url to your ntfy server\nYou can also find an example on the ntfy docs here (Didn’t work for me)\n",
+  "wordCount" : "317",
   "inLanguage": "en",
   "image": "http://localhost:1313/images/papermod-cover.png","datePublished": "2024-04-25T00:00:00Z",
   "dateModified": "2024-04-25T00:00:00Z",
@@ -224,6 +217,8 @@ SSH Keys are both more convenient and more secure than a regular plaintext passw
 
         <div class="inner"><ul>
                 <li>
+                    <a href="#dont-expose-ssh-use-a-vpn" aria-label="Don&rsquo;t expose ssh, use a VPN">Don&rsquo;t expose ssh, use a VPN</a></li>
+                <li>
                     <a href="#non-root-account-for-logins--disable-root-login" aria-label="Non-root account for logins / Disable root login">Non-root account for logins / Disable root login</a></li>
                 <li>
                     <a href="#using-ssh-keys-over-plaintext-passwords" aria-label="Using SSH keys over plaintext passwords">Using SSH keys over plaintext passwords</a></li>
@@ -237,17 +232,19 @@ SSH Keys are both more convenient and more secure than a regular plaintext passw
     </details>
 </div>
 
-  <div class="post-content"><p>This post is made for debian based linux distros</p>
+  <div class="post-content"><p>This post is made for debian based linux distros.</p>
+<h3 id="dont-expose-ssh-use-a-vpn">Don&rsquo;t expose ssh, use a VPN<a hidden class="anchor" aria-hidden="true" href="#dont-expose-ssh-use-a-vpn">#</a></h3>
+<p>This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.</p>
 <h3 id="non-root-account-for-logins--disable-root-login">Non-root account for logins / Disable root login<a hidden class="anchor" aria-hidden="true" href="#non-root-account-for-logins--disable-root-login">#</a></h3>
-<p>Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants</p>
+<p>Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want</p>
 <pre tabindex="0"><code>adduser kuma
 </code></pre><p>Then add it to the list of sudoers</p>
 <pre tabindex="0"><code>usermod -aG sudo kuma
 </code></pre><h3 id="using-ssh-keys-over-plaintext-passwords">Using SSH keys over plaintext passwords<a hidden class="anchor" aria-hidden="true" href="#using-ssh-keys-over-plaintext-passwords">#</a></h3>
 <p>SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.</p>
-<p>Generate an ssh key using PuttyGen and paste it on a new line in <code>/home/&lt;your_username&gt;/.ssh/authorized_keys</code></p>
+<p>Generate an ssh key using PuttyGen and paste it on a new line in <code>/home/&lt;your_username&gt;/.ssh/authorized_keys</code>.</p>
 <h3 id="updating-your-ssh-configuration">Updating your SSH configuration<a hidden class="anchor" aria-hidden="true" href="#updating-your-ssh-configuration">#</a></h3>
-<p>This process can differ depending on your host, but for most servers the ssh config is located in <code>/etc/ssh/sshd_config</code>, in the file you want to change the following values</p>
+<p>This process can differ depending on your host, but for most servers the ssh config is located in <code>/etc/ssh/sshd_config</code>, in the file you want to change the following values.</p>
 <pre tabindex="0"><code>PasswordAuthentication no
 </code></pre><pre tabindex="0"><code>PubkeyAuthentication yes
 </code></pre><pre tabindex="0"><code>PermitRootLogin no

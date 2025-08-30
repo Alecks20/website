@@ -9,10 +9,13 @@ tags = [
 ]
 +++
 
-This post is made for debian based linux distros
+This post is made for debian based linux distros.
+
+### Don't expose ssh, use a VPN
+This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.
 
 ### Non-root account for logins / Disable root login
-Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants
+Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want
 
 ```
 adduser kuma
@@ -27,10 +30,10 @@ usermod -aG sudo kuma
 ### Using SSH keys over plaintext passwords
 SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider. 
 
-Generate an ssh key using PuttyGen and paste it on a new line in `/home/<your_username>/.ssh/authorized_keys`
+Generate an ssh key using PuttyGen and paste it on a new line in `/home/<your_username>/.ssh/authorized_keys`.
 
 ### Updating your SSH configuration
-This process can differ depending on your host, but for most servers the ssh config is located in `/etc/ssh/sshd_config`, in the file you want to change the following values
+This process can differ depending on your host, but for most servers the ssh config is located in `/etc/ssh/sshd_config`, in the file you want to change the following values.
 
 ```
 PasswordAuthentication no
