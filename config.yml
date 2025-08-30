@@ -41,6 +41,12 @@ languages:
         - name: Tags
           url: tags/
           weight: 10
+        - name: Homelab
+          url: homelab/
+          weight: 7
+        - name: Skills
+          url: skills/
+          weight: 6
         #- name: Homelab
         #  url: homelab/
         #  weight: 6
@@ -96,9 +102,6 @@ params:
       url: "https://github.com/alecks20"
     - name: Email
       title: Send me an email
-      url: "mailto:me@alecks.dev"
-    - name: Discord
-      title: Message me on Discord
       url: "mailto:me@alecks.dev"
 
   # label:

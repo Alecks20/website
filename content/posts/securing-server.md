@@ -47,7 +47,7 @@ PubkeyAuthentication yes
 PermitRootLogin no
 ```
 
-Changing these config vaulues will
+Changing these config values will
 - Disable password authentication
 - Allow you to login using ssh keys (Which I showed how to setup above) 
 - Disable root login (Applying the steps from before)

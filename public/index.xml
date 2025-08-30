@@ -45,5 +45,78 @@
 &lt;h3 id=&#34;non-root-account-for-logins--disable-root-login&#34;&gt;Non-root account for logins / Disable root login&lt;/h3&gt;
 &lt;p&gt;Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Homelab</title>
+      <link>http://localhost:1313/homelab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/homelab/</guid>
+      <description>&lt;p&gt;This setup hosts all of my core infrastructure which consists of several linux virtual machines and a couple lxc containers. Physical nodes run Proxmox VE (clustered)&lt;/p&gt;
+&lt;h3 id=&#34;compute-nodes&#34;&gt;Compute Nodes&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;CPU&lt;/th&gt;
+          &lt;th&gt;RAM&lt;/th&gt;
+          &lt;th&gt;Storage&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Lightsail&lt;/td&gt;
+          &lt;td&gt;Ryzen 5 5500&lt;/td&gt;
+          &lt;td&gt;32GB DDR4&lt;/td&gt;
+          &lt;td&gt;1TB NVMe&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Railway&lt;/td&gt;
+          &lt;td&gt;Intel i5-7400T&lt;/td&gt;
+          &lt;td&gt;8GB DDR4&lt;/td&gt;
+          &lt;td&gt;256GB NVMe&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;additional-info&#34;&gt;Additional Info&lt;/h3&gt;
+&lt;p&gt;Both are connected to the Internet via a shared fibre line with gsl ddos protection, systems are monitored with hetrixtools (moving to on-prem prometheus soon).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Skills</title>
+      <link>http://localhost:1313/skills/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/skills/</guid>
+      <description>&lt;h2 id=&#34;systems--virtualization&#34;&gt;Systems &amp;amp; Virtualization&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Build and configured custom pcs (Desktops and Servers)&lt;/li&gt;
+&lt;li&gt;Windows 10/11 Installation and setup&lt;/li&gt;
+&lt;li&gt;Experienced with Proxmox VE (Type 1) and Virtualbox (Type 2) virtualization&lt;/li&gt;
+&lt;li&gt;Docker Container deployment and management on Windows and Multiple linux distros (Ubuntu, Debian, Fedora)&lt;/li&gt;
+&lt;li&gt;Troubleshooted dozens of issues with desktop machines and servers (Windows &amp;amp; Linux)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;networking&#34;&gt;Networking&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Home network design and troubleshooting (vLANS, Static IPs, Port Forwarding, Wireless APs)&lt;/li&gt;
+&lt;li&gt;Knowledge of IP Addresses (Public &amp;amp; Private), NAT, Ports, DNS, Routers/Modems, Firewalls, TCP/UDP&lt;/li&gt;
+&lt;li&gt;Setup VPNs/Secure Remote Access (Tailscale, Self-hosted Wireguard) and secure tunnels (Cloudflare Tunnels)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Operated dozens of servers (Bare Metal, VMs and VPSes) running various linux distros (Ubuntu LTS, Debian, Fedora Server, CoreOS)&lt;/li&gt;
+&lt;li&gt;Familiar with the command line and various package managers (apt, dnf)&lt;/li&gt;
+&lt;li&gt;Daily drove multiple desktop versions of Linux (Ubuntu, Mint, Bazzite, Fedora KDE)&lt;/li&gt;
+&lt;li&gt;Familar with general system security (SSH Keys, Fail2Ban, No root login, UFW)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;web-cloud--devops-tools&#34;&gt;Web, Cloud &amp;amp; DevOps Tools&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Reverse web proxy setup &amp;amp; configuration (Nginx, Caddy)&lt;/li&gt;
+&lt;li&gt;Website deployment using Cloudflare/GitHub pages (Static sites) and Docker Containers (Flask, FastAPI, Express.js)&lt;/li&gt;
+&lt;li&gt;Domain/DNS management (Cloudflare &amp;amp; Namecheap)&lt;/li&gt;
+&lt;li&gt;Experience with Wordpress on both shared hosting (cPanel) and Self-hosted/VPS (Docker &amp;amp; Caddy/Nginx)&lt;/li&gt;
+&lt;li&gt;Maintained lots of vps servers on various cloud platforms (BinaryLane, DigitalOcean, Linode, AWS Lightsail &amp;amp; GCP)&lt;/li&gt;
+&lt;li&gt;Programming &amp;amp; Databases&lt;/li&gt;
+&lt;li&gt;Intermediate skills with Python, HTML &amp;amp; CSS&lt;/li&gt;
+&lt;li&gt;Basic knowledge of JavaScript/NodeJS&lt;/li&gt;
+&lt;li&gt;Experience operating MariaDB and MongoDB servers for self-hosted services &amp;amp; small projects&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
   </channel>
 </rss>
