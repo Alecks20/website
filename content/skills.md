@@ -2,7 +2,7 @@
 title: "My Skills"
 author: "Alecks"
 ---
-From my tinkering and natural curiosity, I became familiar with basic IT concepts in networking, Linux and infrastructure at the age of 11. Over the past 4 years I've fallen much deeper down this rabbit hole where my skills have grown exponentially and exposed me to all parts of the software stack.
+From my tinkering and natural curiosity, I became familiar with basic IT concepts in networking, Linux and infrastructure at the age of 11. Over the years I've delved deeper into this rabbit hole setting up a homelab and learning to administer servers in production environments, where my skills and knowledge have grown exponentially.
 
 
 ## Systems & Virtualization

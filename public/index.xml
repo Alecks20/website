@@ -58,7 +58,7 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m a teenager living in Australia from a small town in New Zealand who happens to be a self-taught developer highly skilled in various tech fields - &lt;a href=&#34;http://localhost:1313/skills/&#34;&gt;my skills&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;I&amp;rsquo;m a teenager living in Australia from a small town in New Zealand who happens to be a self-taught developer highly skilled in various tech fields - &lt;a href=&#34;http://localhost:1313/skills/&#34;&gt;my skills&lt;/a&gt;. I&amp;rsquo;m passionate about computers, tinkering, homelabbing, digital infrastructure, digital minimalism, reviving old tech, programming and system administration&lt;/p&gt;
 &lt;p&gt;This website is used to have my own little corner of the internet, showcase my practical experience and serve as a time capsule for my writings, it also helps solidify learnings as explaining things to other people is one of the best ways to remember things.&lt;/p&gt;</description>
     </item>
     <item>
@@ -134,7 +134,7 @@ youtubers (entertainment) - &lt;a href=&#34;https://www.youtube.com/@jvscholz/&#
       <link>http://localhost:1313/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/skills/</guid>
-      <description>&lt;p&gt;From my tinkering and natural curiosity, I became familiar with basic IT concepts in networking, Linux and infrastructure at the age of 11. Over the past 4 years I&amp;rsquo;ve fallen much deeper down this rabbit hole where my skills have grown exponentially and exposed me to all parts of the software stack.&lt;/p&gt;
+      <description>&lt;p&gt;From my tinkering and natural curiosity, I became familiar with basic IT concepts in networking, Linux and infrastructure at the age of 11. Over the years I&amp;rsquo;ve delved deeper into this rabbit hole setting up a homelab and learning to administer servers in production environments, where my skills and knowledge have grown exponentially.&lt;/p&gt;
 &lt;h2 id=&#34;systems--virtualization&#34;&gt;Systems &amp;amp; Virtualization&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Build and configured custom pcs (Desktops and Servers)&lt;/li&gt;
