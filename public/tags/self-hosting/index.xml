@@ -25,14 +25,14 @@
 &lt;p&gt;This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Mini pcs are perfect home servers</title>
+      <title>The perfect home servers - Mini PCs</title>
       <link>http://localhost:1313/posts/mini-pcs/</link>
       <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/mini-pcs/</guid>
-      <description>&lt;p&gt;Recently I picked up a $100 Lenovo ThinkCentre M710Q with an i5 7400T, 8GB of ram and 256 SSD as a secondary node for hosting monitoring services and smaller applications.&lt;/p&gt;
-&lt;h3 id=&#34;the-good-and-the-bad&#34;&gt;The good and the bad&lt;/h3&gt;
+      <description>&lt;p&gt;Recently I picked up a $100 Lenovo ThinkCentre M710Q off ebay with an i5 7400T, 8GB of ram and a 256GB NVMe SSD to add to my Proxmox cluster.&lt;/p&gt;
+&lt;h3 id=&#34;the-good--bad&#34;&gt;The good &amp;amp; Bad&lt;/h3&gt;
 &lt;p&gt;Mini PCs are built to be small, quiet and power efficient, perfect for a home server. They&amp;rsquo;re also tiny, hence the name meaning they can live pretty much anywhere.&lt;/p&gt;
-&lt;p&gt;However, their form factor makes them hard to upgrade for future expandability and hard to add redundant storage to (raid).&lt;/p&gt;</description>
+&lt;p&gt;However, their form factor makes them hard to upgrade for future expandability and hard to add redundant storage to.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

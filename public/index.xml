@@ -54,11 +54,31 @@
 &lt;p&gt;Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Homelab</title>
+      <title>About Me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a teenager living in Australia from a small town in New Zealand who happens to be a self-taught developer skilled in various tech fields - &lt;a href=&#34;http://localhost:1313/skills/&#34;&gt;my skills&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This website is used to have my own little corner of the internet, showcase my practical experience and serve as a time capsule for my writings, it also helps solidify learnings as explaining things to other people is one of the best ways to remember things.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Favourites</title>
+      <link>http://localhost:1313/favourites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/favourites/</guid>
+      <description>&lt;p&gt;Small web communities - &lt;a href=&#34;https://32bit.cafe&#34;&gt;32bit.cafe&lt;/a&gt; - &lt;a href=&#34;https://cyberia.club&#34;&gt;cyberia&lt;/a&gt; - &lt;a href=&#34;https://bearblog.dev&#34;&gt;bearblog&lt;/a&gt; - &lt;a href=&#34;https://status.cafe&#34;&gt;status.cafe&lt;/a&gt; - &lt;a href=&#34;https://tildeverse.org&#34;&gt;tildeverse&lt;/a&gt;&lt;br&gt;
+VPS providers - &lt;a href=&#34;https://binarylane.com.au&#34;&gt;binarylane&lt;/a&gt;  - &lt;a href=&#34;https://capsul.org&#34;&gt;capsul&lt;/a&gt;&lt;br&gt;
+YouTubers (for learning IT) - &lt;a href=&#34;https://www.youtube.com/@NetworkChuck&#34;&gt;network chuck&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@PowerCertAnimatedVideos&#34;&gt;powercert&lt;/a&gt;&lt;br&gt;
+YouTubers (entertainment) - &lt;a href=&#34;https://www.youtube.com/@jvscholz/&#34;&gt;jvscholz&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@BrandonFM/&#34;&gt;brandon fm&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@fern-tv&#34;&gt;fern&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@jidionpremiunm&#34;&gt;jidion&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@therealskeeterjean&#34;&gt;skeeter jean&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@iambysurf&#34;&gt;bysurf&lt;/a&gt;&lt;br&gt;
+Animes - &lt;a href=&#34;https://en.wikipedia.org/wiki/Serial_Experiments_Lain&#34;&gt;serial experiments lain&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Cyberpunk:_Edgerunners&#34;&gt;cp: edgerunners&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Neon_Genesis_Evangelion&#34;&gt;evangelion&lt;/a&gt;&lt;br&gt;
+Games - &lt;a href=&#34;#ZgotmplZ&#34;&gt;watch_dogs&lt;/a&gt; - &lt;a href=&#34;https://minecraft.net&#34;&gt;minecraft&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Cyberpunk_2077&#34;&gt;cyberpunk&lt;/a&gt; - &lt;a href=&#34;https://www.counter-strike.net/cs2&#34;&gt;cs2&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1966720/Lethal_Company/&#34;&gt;lethal company&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1144200/Ready_or_Not/&#34;&gt;ready or not&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Homelab Setup</title>
       <link>http://localhost:1313/homelab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/homelab/</guid>
-      <description>&lt;p&gt;This setup hosts all of my core infrastructure which consists of several linux virtual machines and a couple lxc containers. Physical nodes run Proxmox VE (clustered)&lt;/p&gt;
+      <description>&lt;p&gt;This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. Physical nodes run Proxmox VE (Clustered).&lt;/p&gt;
 &lt;h3 id=&#34;compute-nodes&#34;&gt;Compute Nodes&lt;/h3&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -72,20 +92,42 @@
   &lt;tbody&gt;
       &lt;tr&gt;
           &lt;td&gt;Lightsail&lt;/td&gt;
-          &lt;td&gt;AMD Ryzen 5 5500&lt;/td&gt;
+          &lt;td&gt;Ryzen 5 5500&lt;/td&gt;
           &lt;td&gt;32GB DDR4&lt;/td&gt;
           &lt;td&gt;1TB SSD&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;Railway&lt;/td&gt;
-          &lt;td&gt;Intel Core i5-7400T&lt;/td&gt;
+          &lt;td&gt;i5-7400T&lt;/td&gt;
           &lt;td&gt;8GB DDR4&lt;/td&gt;
           &lt;td&gt;256GB SSD&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;additional-info&#34;&gt;Additional Info&lt;/h3&gt;
-&lt;p&gt;Both are connected to the Internet via a shared fibre line with gsl ddos protection, systems are monitored with hetrixtools (moving to on-prem prometheus soon).&lt;/p&gt;</description>
+&lt;h3 id=&#34;backups--monitoring&#34;&gt;Backups &amp;amp; Monitoring&lt;/h3&gt;
+&lt;p&gt;Daily backups of vm disks is sent to backblaze b2 - hetrixtools monitors server resources and uptime - ntfy notifies me of incidents with mobile push notifications.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Gear</title>
+      <link>http://localhost:1313/gear/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/gear/</guid>
+      <description>&lt;h2 id=&#34;computers&#34;&gt;Computers&lt;/h2&gt;
+&lt;h3 id=&#34;laptops-plans---for-tafe--uni&#34;&gt;Laptops (Plans - for Tafe &amp;amp; Uni)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Laptop 1: ThinkPad off eBay - for tinkering and experimenting with different Linux setups, distros and more technical stuff.&lt;/li&gt;
+&lt;li&gt;Laptop 2: Macbook Air M4 (16GB RAM, 512GB SSD) - stable everyday machine for development on the go, web browsing and entertainment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;main-pc-built-by-me&#34;&gt;Main PC (Built by me)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU: Ryzen 5 5500&lt;/li&gt;
+&lt;li&gt;Memory: 32GB DDR4&lt;/li&gt;
+&lt;li&gt;GPU: RX 7800 XT&lt;/li&gt;
+&lt;li&gt;Storage: 2TB NVMe + 1TB NVMe + 256GB SATA&lt;/li&gt;
+&lt;li&gt;OS: Windows 11 &amp;amp; Fedora 42 KDE (Dual Boot)&lt;/li&gt;
+&lt;li&gt;Uses: Development, virtualization, tinkering/experiments, web browsing and entertainment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;homelab&#34;&gt;&lt;a href=&#34;http://localhost:1313/homelab/&#34;&gt;Homelab&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     <item>
       <title>My Skills</title>

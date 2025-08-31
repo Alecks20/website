@@ -1,15 +1,18 @@
 ---
-title: "Homelab"
+title: "Homelab Setup"
 author: "Alecks"
 ---
 
-This setup hosts all of my core infrastructure which consists of several linux virtual machines and a couple lxc containers. Physical nodes run Proxmox VE (clustered)
+This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. Physical nodes run Proxmox VE (Clustered).
 ### Compute Nodes
 
 | Name | CPU | RAM | Storage |
 | -------- | ------- | ------- | ------ |
-| Lightsail | AMD Ryzen 5 5500 | 32GB DDR4 | 1TB SSD |
-| Railway | Intel Core i5-7400T | 8GB DDR4  | 256GB SSD  |
+| Lightsail | Ryzen 5 5500 | 32GB DDR4 | 1TB SSD |
+| Railway | i5-7400T | 8GB DDR4  | 256GB SSD  |
 
-### Additional Info
-Both are connected to the Internet via a shared fibre line with gsl ddos protection, systems are monitored with hetrixtools (moving to on-prem prometheus soon).
+### Backups & Monitoring
+Daily backups of vm disks is sent to backblaze b2 - hetrixtools monitors server resources and uptime - ntfy notifies me of incidents with mobile push notifications.
+
+### Reliability
+Power outages happen at max a couple times a year (ups backup will be in place soon to mitigate that) - internet has never gone down before - I use a ubiquiti edgerouter 4, an enterprise-grade router built for 24/7 operation.
