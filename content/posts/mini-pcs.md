@@ -1,6 +1,6 @@
 +++
 author = "Alecks"
-title = "Mini pcs are perfect home servers"
+title = "The perfect home servers - Mini PCs"
 date = "2025-08-30"
 description = ""
 tags = [
@@ -8,13 +8,13 @@ tags = [
 ]
 +++
 
-Recently I picked up a $100 Lenovo ThinkCentre M710Q with an i5 7400T, 8GB of ram and 256 SSD as a secondary node for hosting monitoring services and smaller applications. 
+Recently I picked up a $100 Lenovo ThinkCentre M710Q off ebay with an i5 7400T, 8GB of ram and a 256GB NVMe SSD to add to my Proxmox cluster.
 
-### The good and the bad
+### The good & Bad
 
 Mini PCs are built to be small, quiet and power efficient, perfect for a home server. They're also tiny, hence the name meaning they can live pretty much anywhere.
 
-However, their form factor makes them hard to upgrade for future expandability and hard to add redundant storage to (raid).
+However, their form factor makes them hard to upgrade for future expandability and hard to add redundant storage to.
 
 ### Where to buy them
 
