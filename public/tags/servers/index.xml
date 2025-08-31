@@ -25,6 +25,13 @@
 &lt;p&gt;This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network&lt;/p&gt;</description>
     </item>
     <item>
+      <title>How I run a mini vps hosting service out of my homelab</title>
+      <link>http://localhost:1313/posts/vps-service/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vps-service/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve developed a neat little kinda complex system for assigning isolated vms on my homelab their own public ip address, so I thought I&amp;rsquo;d share it for some feedback.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Mini pcs are perfect home servers</title>
       <link>http://localhost:1313/posts/mini-pcs/</link>
       <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>

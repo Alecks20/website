@@ -11,7 +11,16 @@
     <loc>http://localhost:1313/tags/homelab/</loc>
     <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/vps-service/</loc>
+    <lastmod>2025-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/linux/</loc>
+    <lastmod>2025-08-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/mini-pcs/</loc>
+    <lastmod>2025-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/networking/</loc>
     <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
@@ -26,8 +35,8 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
-    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/tailscale/</loc>
+    <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/securing-server/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
