@@ -31,7 +31,7 @@ This all happens behind the scenes without any noticeable latency (1-2ms latency
 ## Internal Network Security
 Obviously one of the main security risks with running a service like this in my Homelab isn't really external attacks, its vms being breached and then attacking or breaking into stuff on my home network.
 
-To mitigate this I have security group on the Proxmox firewall with a list of rules denying access to anything on my local network except the router (for internet) and tailscale gateway (to expose services). Running it on the hypervisor level adds an extra layer of security because you'd need access to Proxmox which is also firewalled off.
+To mitigate this I have a security group on the Proxmox firewall with a list of rules denying access to anything on my local network except the router (for internet) and tailscale gateway (to expose services). Running it on the hypervisor level adds an extra layer of security because you'd need access to Proxmox which is also firewalled off.
 
 ## Conclusion
 This setup is still in the early stages of development, I've been working on it for a couple days so I'll improve over time as I make it more robust and reliable, one of my goals for later on is to add something like high availability or an automated system as most of it is manual right now.
