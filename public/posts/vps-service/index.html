@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>How I host Linux VMs for people in my Homelab | Alecks</title>
-<meta name="keywords" content="linux, servers, tailscale, networking">
+<meta name="keywords" content="linux, servers, homelab, vms">
 <meta name="description" content="A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers &ldquo;spot&rdquo; vms for much cheaper as it uses excess compute capacity.
 Obviously I can&rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.">
 <meta name="author" content="Alecks">
@@ -68,8 +68,8 @@ Obviously I can’t provide this as a paid service since that comes with a lot o
     <meta property="article:modified_time" content="2025-08-31T00:00:00+00:00">
     <meta property="article:tag" content="Linux">
     <meta property="article:tag" content="Servers">
-    <meta property="article:tag" content="Tailscale">
-    <meta property="article:tag" content="Networking">
+    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="Vms">
       <meta property="og:image" content="http://localhost:1313/images/papermod-cover.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/images/papermod-cover.png">
@@ -106,7 +106,7 @@ Obviously I can&rsquo;t provide this as a paid service since that comes with a l
   "name": "How I host Linux VMs for people in my Homelab",
   "description": "A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers \u0026ldquo;spot\u0026rdquo; vms for much cheaper as it uses excess compute capacity.\nObviously I can\u0026rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.\n",
   "keywords": [
-    "linux", "servers", "tailscale", "networking"
+    "linux", "servers", "homelab", "vms"
   ],
   "articleBody": "A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers “spot” vms for much cheaper as it uses excess compute capacity.\nObviously I can’t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.\nVM Templates \u0026 Operating Systems I already use Proxmox VE for personal vms so I’m using my existing setup for this service.\nCurrently I have a vm template for Debian 13 “Trixie”, which lets me spin up new machines with unattended updates and the setup process already complete.\nNetworking \u0026 Public IPs I had to get a bit creative here as residential internet connections don’t let you have multiple public ip addresses on your connection.\nTo get around this I run a vps with multiple public ips which has a secure encrypted tunnel back into a tailscale gateway running inside my home network which exposes the vm subnets/network, this setup also means I don’t have to install tailscale on any vms.\nIf someone connected to [public_vps_ip]:22 it gets relayed to [private_vm_ip]:22 through the tunnel and it all happens seemlessly.\nThis all happens behind the scenes without any noticeable latency (1-2ms latency between vps and my network, tailscale gateway gets under 0.2ms to vms)\nInternal Network Security Obviously one of the main security risks with running a service like this in my Homelab isn’t really external attacks, its vms being breached and then attacking or breaking into stuff on my home network.\nTo mitigate this I have a security group on the Proxmox firewall with a list of rules denying access to anything on my local network except the router (for internet) and tailscale gateway (to expose services). Running it on the hypervisor level adds an extra layer of security because you’d need access to Proxmox which is also firewalled off.\nConclusion This setup is still in the early stages of development, I’ve been working on it for a couple days so I’ll improve over time as I make it more robust and reliable, one of my goals for later on is to add something like high availability or an automated system as most of it is manual right now.\n",
   "wordCount" : "396",
@@ -257,8 +257,8 @@ Obviously I can&rsquo;t provide this as a paid service since that comes with a l
     <ul class="post-tags">
       <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
       <li><a href="http://localhost:1313/tags/servers/">Servers</a></li>
-      <li><a href="http://localhost:1313/tags/tailscale/">Tailscale</a></li>
-      <li><a href="http://localhost:1313/tags/networking/">Networking</a></li>
+      <li><a href="http://localhost:1313/tags/homelab/">Homelab</a></li>
+      <li><a href="http://localhost:1313/tags/vms/">Vms</a></li>
     </ul>
   </footer>
 </article>

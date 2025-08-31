@@ -5,7 +5,7 @@ title = 'How I host Linux VMs for people in my Homelab'
 date = "2025-08-31"
 description = ""
 tags = [
-    "linux","servers","tailscale","networking"
+    "linux","servers","homelab","vms"
 ]
 +++
 A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers "spot" vms for much cheaper as it uses excess compute capacity.
