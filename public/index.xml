@@ -59,7 +59,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m a teenager living in Australia from a small town in New Zealand who happens to be a self-taught developer highly skilled in various tech fields - &lt;a href=&#34;http://localhost:1313/skills/&#34;&gt;my skills&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m passionate about computers, tinkering, homelabbing, self-hosting, networking, digital infrastructure, giving old tech new lives to reduce ewaste, programming, system administration, cybersecurity, linux, open source software, cloud computing, virtualization, self-driven learning and experimentation.&lt;/p&gt;
 &lt;p&gt;This website is my own little corner of the internet to showcase my practical experience and serve as a time capsule for writings, it also helps solidify learnings as explaining things to other people is one of the best ways to remember things.&lt;/p&gt;</description>
     </item>
     <item>
@@ -71,7 +70,7 @@
 vps  providers - &lt;a href=&#34;https://binarylane.com.au&#34;&gt;binarylane&lt;/a&gt;  - &lt;a href=&#34;https://capsul.org&#34;&gt;capsul&lt;/a&gt;&lt;br&gt;
 youtubers (for learning IT) - &lt;a href=&#34;https://www.youtube.com/@NetworkChuck&#34;&gt;network chuck&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@PowerCertAnimatedVideos&#34;&gt;powercert&lt;/a&gt;&lt;br&gt;
 animes - &lt;a href=&#34;https://en.wikipedia.org/wiki/Serial_Experiments_Lain&#34;&gt;serial experiments lain&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Cyberpunk:_Edgerunners&#34;&gt;cp: edgerunners&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Neon_Genesis_Evangelion&#34;&gt;evangelion&lt;/a&gt;&lt;br&gt;
-names - &lt;a href=&#34;#ZgotmplZ&#34;&gt;watch dogs&lt;/a&gt; - &lt;a href=&#34;https://minecraft.net&#34;&gt;minecraft&lt;/a&gt; - &lt;a href=&#34;https://www.counter-strike.net/cs2&#34;&gt;cs2&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1966720/Lethal_Company/&#34;&gt;lethal company&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1144200/Ready_or_Not/&#34;&gt;ready or not&lt;/a&gt;&lt;br&gt;
+games - &lt;a href=&#34;#ZgotmplZ&#34;&gt;watch dogs&lt;/a&gt; - &lt;a href=&#34;https://minecraft.net&#34;&gt;minecraft&lt;/a&gt; - &lt;a href=&#34;https://www.counter-strike.net/cs2&#34;&gt;cs2&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1966720/Lethal_Company/&#34;&gt;lethal company&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1144200/Ready_or_Not/&#34;&gt;ready or not&lt;/a&gt;&lt;br&gt;
 youtubers (entertainment) - &lt;a href=&#34;https://www.youtube.com/@jvscholz/&#34;&gt;jvscholz&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@BrandonFM/&#34;&gt;brandon fm&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@fern-tv&#34;&gt;fern&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@jidionpremiunm&#34;&gt;jidion&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@therealskeeterjean&#34;&gt;skeeter jean&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@iambysurf&#34;&gt;bysurf&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
@@ -135,36 +134,37 @@ youtubers (entertainment) - &lt;a href=&#34;https://www.youtube.com/@jvscholz/&#
       <link>http://localhost:1313/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/skills/</guid>
-      <description>&lt;p&gt;From my tinkering and natural curiosity, I became familiar with basic IT concepts in networking, Linux and infrastructure at the age of 11. Over the years I&amp;rsquo;ve delved deeper into this rabbit hole setting up a homelab and learning to administer servers in production environments, where my skills and knowledge have grown exponentially.&lt;/p&gt;
-&lt;h2 id=&#34;systems--virtualization&#34;&gt;Systems &amp;amp; Virtualization&lt;/h2&gt;
+      <description>&lt;p&gt;From my tinkering and natural curiosity, I became familiar with basic IT concepts in networking, Linux and infrastructure at the age of 11.&lt;/p&gt;
+&lt;p&gt;Over the years I&amp;rsquo;ve delved deeper into this rabbit hole setting up a homelab and learning to administer servers in production environments, where my skills, knowledge and practical experience has grown exponentially.&lt;/p&gt;
+&lt;h2 id=&#34;general-knowledge&#34;&gt;General Knowledge&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Build and configured custom pcs (Desktops and Servers)&lt;/li&gt;
-&lt;li&gt;Windows 10/11 Installation and setup&lt;/li&gt;
+&lt;li&gt;Built and configured custom pcs (Desktops &amp;amp; Servers)&lt;/li&gt;
+&lt;li&gt;Familar with setting up Windows 10 &amp;amp; 11 on various hardware.&lt;/li&gt;
+&lt;li&gt;Comfortable configuring BIOS/UEFI settings, installing and updating drivers, updating firmware and optimizing firmware for stability and performance.&lt;/li&gt;
 &lt;li&gt;Experienced with Proxmox VE (Type 1) and Virtualbox (Type 2) virtualization&lt;/li&gt;
-&lt;li&gt;Docker Container deployment and management on Windows and Multiple linux distros (Ubuntu, Debian, Fedora)&lt;/li&gt;
 &lt;li&gt;Troubleshooted dozens of issues with desktop machines and servers (Windows &amp;amp; Linux)&lt;/li&gt;
+&lt;li&gt;Daily drove multiple desktop versions of Linux (Ubuntu, Mint, Bazzite, Fedora KDE)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;networking&#34;&gt;Networking&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Home network design and troubleshooting (vLANS, Static IPs, Port Forwarding, Wireless APs)&lt;/li&gt;
-&lt;li&gt;Knowledge of IP Addresses (Public &amp;amp; Private), NAT, Ports, DNS, Routers/Modems, Firewalls, TCP/UDP&lt;/li&gt;
-&lt;li&gt;Setup VPNs/Secure Remote Access (Tailscale, Self-hosted Wireguard) and secure tunnels (Cloudflare Tunnels)&lt;/li&gt;
+&lt;li&gt;Designing, configuring and troubleshooting my home network (Subnetting, Router configuration, Static IPs, Port forwarding and Wireless APs/Wi-Fi)&lt;/li&gt;
+&lt;li&gt;Knowledge of IP Addresses (Public &amp;amp; Private), NAT, Ports, DNS, Routers/Modems, Firewalls, TCP/UDP, Subnets and SSL Certificates.&lt;/li&gt;
+&lt;li&gt;Setup VPNs for secure remote access and secure tunnels (Tailscale, Self-hosted Wireguard)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
+&lt;h2 id=&#34;systems--infrastructure&#34;&gt;Systems &amp;amp; Infrastructure&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Operated dozens of servers (Bare Metal, VMs and VPSes) running various linux distros (Ubuntu LTS, Debian, Fedora Server, CoreOS)&lt;/li&gt;
 &lt;li&gt;Familiar with the command line and various package managers (apt, dnf)&lt;/li&gt;
-&lt;li&gt;Daily drove multiple desktop versions of Linux (Ubuntu, Mint, Bazzite, Fedora KDE)&lt;/li&gt;
-&lt;li&gt;Familar with general system security (SSH Keys, Fail2Ban, No root login, UFW)&lt;/li&gt;
+&lt;li&gt;Familar with industry standard security practices (SSH Keys, Fail2Ban, No root login, Firewalls)&lt;/li&gt;
+&lt;li&gt;Docker Container deployment and management on Windows and Multiple linux distros (Ubuntu, Debian, Fedora)&lt;/li&gt;
+&lt;li&gt;Maintained lots of vps servers on various cloud platforms (DigitalOcean, Linode, AWS Lightsail, GCP &amp;amp; BinaryLane)&lt;/li&gt;
+&lt;li&gt;Reverse proxy setup &amp;amp; configuration (Nginx, Caddy)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;web-cloud--devops-tools&#34;&gt;Web, Cloud &amp;amp; DevOps Tools&lt;/h2&gt;
+&lt;h2 id=&#34;web--cloud-development&#34;&gt;Web &amp;amp; Cloud Development&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Reverse web proxy setup &amp;amp; configuration (Nginx, Caddy)&lt;/li&gt;
 &lt;li&gt;Website deployment using Cloudflare/GitHub pages (Static sites) and Docker Containers (Flask, FastAPI, Express.js)&lt;/li&gt;
 &lt;li&gt;Domain/DNS management (Cloudflare &amp;amp; Namecheap)&lt;/li&gt;
 &lt;li&gt;Experience with Wordpress on both shared hosting (cPanel) and Self-hosted/VPS (Docker &amp;amp; Caddy/Nginx)&lt;/li&gt;
-&lt;li&gt;Maintained lots of vps servers on various cloud platforms (BinaryLane, DigitalOcean, Linode, AWS Lightsail &amp;amp; GCP)&lt;/li&gt;
-&lt;li&gt;Programming &amp;amp; Databases&lt;/li&gt;
 &lt;li&gt;Intermediate skills with Python, HTML &amp;amp; CSS&lt;/li&gt;
 &lt;li&gt;Basic knowledge of JavaScript/NodeJS&lt;/li&gt;
 &lt;li&gt;Experience operating MariaDB and MongoDB servers for self-hosted services &amp;amp; small projects&lt;/li&gt;
