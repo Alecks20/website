@@ -23,6 +23,13 @@
 &lt;p&gt;Obviously I can&amp;rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.&lt;/p&gt;</description>
     </item>
     <item>
+      <title></title>
+      <link>http://localhost:1313/posts/homelab-2025/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/homelab-2025/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Exposing self-hosted applications without a Public IP address</title>
       <link>http://localhost:1313/posts/exposing-services/</link>
       <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>

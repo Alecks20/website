@@ -9,8 +9,7 @@ This setup hosts all of my core infrastructure which consists of several Linux V
 | Name | CPU | RAM | Storage |
 | -------- | ------- | ------- | ------ |
 | Lightsail | Ryzen 5 5500 | 32GB DDR4 | 1TB SSD |
-| Railway | i5-7400T | 8GB DDR4  | 256GB SSD  |
-
+| Railway | Intel i5-7400T | 8GB DDR4  | 256GB SSD  |
 ### Backups & Monitoring
 Daily backups of vm disks is sent to backblaze b2 - hetrixtools monitors server resources and uptime - ntfy notifies me of incidents with mobile push notifications.
 
