@@ -59,6 +59,8 @@ sudo systemctl restart ssh
 ```
 
 ### NTFY notifcations on ssh login
+You can learn how to setup a secure personal ntfy server [here](/posts/ntfy-server).
+
 Adding these lines to your `/etc/profile` file will send a request to your chosen ntfy server when any user logs in via ssh
 
 ```
