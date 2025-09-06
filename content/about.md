@@ -9,4 +9,4 @@ This website is my own little corner of the internet to showcase my practical ex
 
 Outside of IT I love documentaries (tech, hacking, politics, economics and true crime), anime, fixing up/reviving old thinkpads or devices and designing things.
 
-[gear](/gear) - [favourites](/favourites)
+[Gear/Tech](/gear) - [Favourites](/favourites)

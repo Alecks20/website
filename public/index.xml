@@ -12,8 +12,16 @@
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>Alecks 2025</copyright>
-    <lastBuildDate>Wed, 03 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An affordable container hosting service for Hobbyists, Students &amp; Indie Web</title>
+      <link>http://localhost:1313/posts/container-hosting-project/</link>
+      <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/container-hosting-project/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always wished there was a service with super low spec plans for dirt-cheap prices that could reliably host my tiny projects or web applications, that can also scale up if you need more power.&lt;/p&gt;
+&lt;p&gt;So why not try and build one myself, with a huge Dedicated Server and some smart overallocation I could easy host dozens of containers and provide them for cheap, most services in the managed hosting scene target large enterprise customers but I want to make something thats genuinely great for students and hobbyists, something I would actually use myself and fills the gap in the market.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The state of my Homelab in 2025</title>
       <link>http://localhost:1313/posts/homelab-2025/</link>
@@ -74,12 +82,14 @@
       <link>http://localhost:1313/favourites/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/favourites/</guid>
-      <description>&lt;p&gt;small web communities - &lt;a href=&#34;https://32bit.cafe&#34;&gt;32bit.cafe&lt;/a&gt; - &lt;a href=&#34;https://cyberia.club&#34;&gt;cyberia&lt;/a&gt; - &lt;a href=&#34;https://bearblog.dev&#34;&gt;bearblog&lt;/a&gt; - &lt;a href=&#34;https://status.cafe&#34;&gt;status.cafe&lt;/a&gt; - &lt;a href=&#34;https://tildeverse.org&#34;&gt;tildeverse&lt;/a&gt;&lt;br&gt;
-vps  providers - &lt;a href=&#34;https://binarylane.com.au&#34;&gt;binarylane&lt;/a&gt;  - &lt;a href=&#34;https://capsul.org&#34;&gt;capsul&lt;/a&gt;&lt;br&gt;
-youtubers (for learning IT) - &lt;a href=&#34;https://www.youtube.com/@NetworkChuck&#34;&gt;network chuck&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@PowerCertAnimatedVideos&#34;&gt;powercert&lt;/a&gt;&lt;br&gt;
-animes - &lt;a href=&#34;https://en.wikipedia.org/wiki/Serial_Experiments_Lain&#34;&gt;serial experiments lain&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Cyberpunk:_Edgerunners&#34;&gt;cp: edgerunners&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Neon_Genesis_Evangelion&#34;&gt;evangelion&lt;/a&gt;&lt;br&gt;
-games - &lt;a href=&#34;#ZgotmplZ&#34;&gt;watch dogs&lt;/a&gt; - &lt;a href=&#34;https://minecraft.net&#34;&gt;minecraft&lt;/a&gt; - &lt;a href=&#34;https://www.counter-strike.net/cs2&#34;&gt;cs2&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1966720/Lethal_Company/&#34;&gt;lethal company&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1144200/Ready_or_Not/&#34;&gt;ready or not&lt;/a&gt;&lt;br&gt;
-youtubers (entertainment) - &lt;a href=&#34;https://www.youtube.com/@jvscholz/&#34;&gt;jvscholz&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@BrandonFM/&#34;&gt;brandon fm&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@fern-tv&#34;&gt;fern&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@jidionpremiunm&#34;&gt;jidion&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@therealskeeterjean&#34;&gt;skeeter jean&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@iambysurf&#34;&gt;bysurf&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Small Web Communities - &lt;a href=&#34;https://32bit.cafe&#34;&gt;32bit.cafe&lt;/a&gt; - &lt;a href=&#34;https://cyberia.club&#34;&gt;Cyberia&lt;/a&gt; - &lt;a href=&#34;https://bearblog.dev&#34;&gt;Bearblog&lt;/a&gt; - &lt;a href=&#34;https://status.cafe&#34;&gt;status.cafe&lt;/a&gt; - &lt;a href=&#34;https://tildeverse.org&#34;&gt;Tildeverse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;VPS Providers - &lt;a href=&#34;https://binarylane.com.au&#34;&gt;BinaryLane&lt;/a&gt;  - &lt;a href=&#34;https://capsul.org&#34;&gt;Capsul&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;YouTubers (For Learning IT) - &lt;a href=&#34;https://www.youtube.com/@NetworkChuck&#34;&gt;Network Chuck&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@PowerCertAnimatedVideos&#34;&gt;Powercert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Animes - &lt;a href=&#34;https://en.wikipedia.org/wiki/Serial_Experiments_Lain&#34;&gt;Serial Experiments Lain&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Cyberpunk:_Edgerunners&#34;&gt;CP: Edgerunners&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Neon_Genesis_Evangelion&#34;&gt;Evangelion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Games - &lt;a href=&#34;#ZgotmplZ&#34;&gt;Watch Dogs&lt;/a&gt; - &lt;a href=&#34;https://minecraft.net&#34;&gt;Minecraft&lt;/a&gt; - &lt;a href=&#34;https://www.counter-strike.net/cs2&#34;&gt;CS2&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1966720/Lethal_Company/&#34;&gt;Lethal Company&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1144200/Ready_or_Not/&#34;&gt;Ready or not&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;YouTubers (Entertainment) - &lt;a href=&#34;https://www.youtube.com/@jvscholz/&#34;&gt;jvscholz&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@BrandonFM/&#34;&gt;Brandon FM&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@fern-tv&#34;&gt;Fern&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@iambysurf&#34;&gt;bySurf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Homelab Setup</title>
@@ -121,7 +131,7 @@ youtubers (entertainment) - &lt;a href=&#34;https://www.youtube.com/@jvscholz/&#
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/gear/</guid>
       <description>&lt;h2 id=&#34;computers&#34;&gt;Computers&lt;/h2&gt;
-&lt;h3 id=&#34;laptops-plans---for-tafe--uni&#34;&gt;Laptops (Plans - for Tafe &amp;amp; Uni)&lt;/h3&gt;
+&lt;h3 id=&#34;laptops-plans---buying-november-2025-aka-black-friday&#34;&gt;Laptops (Plans - buying november 2025 aka black friday)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Laptop 1: ThinkPad off eBay - for tinkering and experimenting with different Linux setups, distros and more technical stuff.&lt;/li&gt;
 &lt;li&gt;Laptop 2: Macbook Air M4 (16GB RAM, 512GB SSD) - stable everyday machine for development on the go, web browsing and entertainment.&lt;/li&gt;
