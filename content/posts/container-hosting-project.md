@@ -1,6 +1,6 @@
 +++
 author = "Alecks"
-title =  "An affordable container hosting service for Hobbyists, Students & Indie Web"
+title =  "Affordable container hosting for Hobbyists & Students"
 date = "2025-09-06"
 description = ""
 tags = [
@@ -38,4 +38,4 @@ Now for the best part, my plans for pricing
 
 These are likely bound to change, however the $1-3/month plans and free tier will definitely be coming.
 
-Thats all I have laid out for now, I've been working super hard to get a prototype working I'll post another update after some progress.
+Thats all I have laid out for now, I've been working super hard to get a prototype working and will post another update after some progress.
