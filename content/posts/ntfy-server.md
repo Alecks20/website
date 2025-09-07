@@ -43,7 +43,7 @@ Then save that file with nothing in it
 
 ### Container Creation
 
-Install Docker
+Install Docker for your distribution
 ```
 sudo apt install docker.io # (Ubuntu/Debian)
 sudo dnf install docker # (Fedora/Red Hat)
