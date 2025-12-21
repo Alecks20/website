@@ -1,41 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gear on Alecks</title>
-    <link>http://localhost:1313/tags/gear/</link>
+    <link>//localhost:1313/tags/gear/</link>
     <description>Recent content in Gear on Alecks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <copyright>© Alecks 2025</copyright>
     <lastBuildDate>Sun, 09 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/gear/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/gear/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The MacBook Experience: Initial Impressions</title>
-      <link>http://localhost:1313/blog/macbook-experience/</link>
+      <link>//localhost:1313/blog/macbook-experience/</link>
       <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/macbook-experience/</guid>
+      <guid>//localhost:1313/blog/macbook-experience/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been looking closely at the laptop market for a while now, and I haven&amp;rsquo;t been able to find anything thats a better all-rounder than the Macbook lineup. They offer amazing battery life, hardware and performance on battery for fairly competitive prices.&lt;/p&gt;&#xA;&lt;p&gt;I ended up going with the M3 Macbook Air with 24GB ram and 512GB storage. The ram upgrade was primarily because I planned to do development with Docker which is very memory hungry, and I felt that 512gb storage would give me the best longevity.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
-<p>I&rsquo;ve been looking closely at the laptop market for a while now, and I haven&rsquo;t been able to find anything thats a better all-rounder than the Macbook lineup. They offer amazing battery life, hardware and performance on battery for fairly competitive prices.</p>
-<p>I ended up going with the M3 Macbook Air with 24GB ram and 512GB storage. The ram upgrade was primarily because I planned to do development with Docker which is very memory hungry, and I felt that 512gb storage would give me the best longevity.</p>
-<p>These are my thoughts after 2 days of using this laptop for media consumption, light coding, communication and web browsing, I&rsquo;ll be writing another post about this after another few months of use.</p>
-<h2 id="setup-and-unboxing">Setup and Unboxing</h2>
-<p>The unboxing experience was the usual apple experience, except for it arriving dead but it&rsquo;s not that big of a deal. With the charger plugged in and after booting it up which took 10 seconds I begin the setup process.</p>
-<p>I immediately noticed how amazing the keyboard and trackpad on this thing are, in fact, I&rsquo;m using it to write the post you&rsquo;re reading. Haptic touch trackpads are something I&rsquo;ve always heard to be incredible which I always thought was an overexaggeration but they really do feel like night and day compared to other laptops.</p>
-<p>The keyboard obviously isn&rsquo;t as good as my keychron k8 pro or a proper mechanical keyboard but for a laptop keyboard it&rsquo;s pretty solid.</p>
-<h2 id="software-experience">Software Experience</h2>
-<p>I&rsquo;ve been using Windows for 5 years now and tried various Linux distros but never used any full time (exlcuding servers) and I&rsquo;m pretty comfortable with tinkering, changing settings and adapting to new ways to do things so MacOS was a fairly smooth transition.</p>
-<p>It&rsquo;s definitely not perfect, I installed Rectangle for window snapping and <a href="https://github.com/lwouis/alt-tab-macos">AltTab</a> to fix the built in alt+tab behaviour. Another gripe I have is how there&rsquo;s no clipboard history built in and finder not having an easy way to enter a file path.</p>
-<p>While MacBooks definitely aren&rsquo;t gaming laptops and I didn&rsquo;t buy one for it, this thing runs Roblox smoothly and Minecraft at 70-80 fps (Sodium, 12 chunk render distance, fabric 1.21.5 on a vanilla server)</p>
-<h2 id="performance">Performance</h2>
-<p>Everything has been super snappy, apps open quick, installs are fast and overall its been a very solid experience similar to my Desktop PC.</p>
-<p>In terms of thermals, it&rsquo;s only ever heated up significantly once when I ran ollama and played around with some AI models like Deepseek, other than that its been dead silent thanks to being fanless and never really hot to the touch.</p>
-<h2 id="battery-life">Battery Life</h2>
-<p>I haven&rsquo;t been able to properly measure the battery because I haven&rsquo;t had it for long enough, the next review will have a writeup about my battery life.</p>
-<h2 id="concluding-thoughts">Concluding Thoughts</h2>
-<p>So far I&rsquo;m pretty happy with this laptop, It&rsquo;s what I&rsquo;m gonna be using for the next few years at school and tafe where its silent operations, great performance and battery life will really get put to the test.</p>
-<p>See you in a few months.</p>
-]]></content:encoded>
     </item>
   </channel>
 </rss>

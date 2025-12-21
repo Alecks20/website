@@ -1,202 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security on Alecks</title>
-    <link>http://localhost:1313/tags/security/</link>
+    <link>//localhost:1313/tags/security/</link>
     <description>Recent content in Security on Alecks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <copyright>© Alecks 2025</copyright>
     <lastBuildDate>Sat, 06 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up and securing a personal NTFY server</title>
-      <link>http://localhost:1313/blog/ntfy-server/</link>
+      <link>//localhost:1313/blog/ntfy-server/</link>
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/ntfy-server/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://ntfy.sh&#34;&gt;Ntfy&lt;/a&gt; is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.&lt;/p&gt;&#xA;&lt;p&gt;Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on &lt;a href=&#34;http://localhost:1313/posts/securing-server&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p><a href="https://ntfy.sh">Ntfy</a> is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.</p>
-<p>Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on <a href="/posts/securing-server">here</a>.</p>
-<h2 id="initial-setup">Initial Setup</h2>
-<h3 id="config-file">Config File</h3>
-<p>Make a directory at /etc/ntfy then setup a config file</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo mkdir /etc/ntfy
-sudo nano /etc/ntfy/server.yml</code></pre><p>Copy paste the text below into server.yml with the required changes</p>
-
-
-
-
-
-<pre tabindex="0"><code># General Config
-base-url: &#34;https://ntfy.example.com&#34; # Change this to your URL
-upstream-base-url: &#34;https://ntfy.sh&#34; # Required for notifications to work on iPhone
-
-# Authentication
-auth-file: &#34;/var/lib/ntfy/user.db&#34;
-auth-default-access: &#34;deny-all&#34; # Block access to channels by default unless logged in</code></pre><h3 id="user-database-creation">User Database Creation</h3>
-<p>You have to manually create a user.db file in /var/lib/ntfy/user.db otherwise this won&rsquo;t work</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo mkdir /var/lib/ntfy/
-sudo touch /var/lib/ntfy/user.db</code></pre><p>Then save that file with nothing in it</p>
-<h3 id="container-creation">Container Creation</h3>
-<p>Install Docker for your distribution</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo apt install docker.io # (Ubuntu/Debian)
-sudo dnf install docker # (Fedora/Red Hat)</code></pre><p>Then run the command below which will</p>
-<ul>
-<li>Create a container for ntfy (named ntfy)</li>
-<li>Run it in the background (-d)</li>
-<li>Start at boot unless it was stopped (&ndash;restart=unless-stopped)</li>
-<li>Expose port 80 to 127.0.0.1:8080 so your reverse proxy can access it but its not exposed at your machines public IP</li>
-<li>Map directories for a cache and config file</li>
-</ul>
-
-
-
-
-
-<pre tabindex="0"><code>sudo docker run \
--d \
--v /var/cache/ntfy:/var/cache/ntfy \
--v /etc/ntfy:/etc/ntfy \
--v /var/lib/ntfy:/var/lib/ntfy \
--p 127.0.0.1:8080:80 \
---name=ntfy \
---restart=unless-stopped \
-binwiederhier/ntfy \
-serve \
---cache-file /var/cache/ntfy/cache.db</code></pre><h2 id="reverse-proxy-configuration">Reverse Proxy Configuration</h2>
-<p>Since its the best plug-and-play solution I&rsquo;ll be using <a href="https://caddyserver.com">Caddy</a> for this guide, but there are several others, for example <a href="https://nginx.org">Nginx</a></p>
-<p>Install Caddy and edit the Caddyfile</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo apt install caddy -y
-sudo nano /etc/caddy/Caddyfile</code></pre><p>Then paste this config into it, replacing example.com with your actual domain of course</p>
-
-
-
-
-
-<pre tabindex="0"><code>ntfy.example.com {
-    reverse_proxy http://127.0.0.1:8080
-}</code></pre><p>Finally, restart your Caddy server</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo systemctl restart caddy</code></pre><p>Your ntfy instance should now be securely exposed!! Caddy will automatically fetch and install an SSL certificate for you</p>
-<h2 id="setting-up-authentication">Setting up Authentication</h2>
-<p>Only being able to access your server with an account was already configured in the initial setup process, now you just need to create an account to access it</p>
-<p>Attach the ntfy containers shell</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo docker exec -it ntfy /bin/sh</code></pre><p>Then create a user account with the admin role</p>
-
-
-
-
-
-<pre tabindex="0"><code>ntfy user add --role=admin example</code></pre><p>It will then prompt you for a password, obviously change &ldquo;example&rdquo; to any username you want</p>
-<p>Also, when sending notifications to channels most services want an access token, which you can create with this command</p>
-
-
-
-
-
-<pre tabindex="0"><code>ntfy token add example</code></pre><p>Hope this guide was helpful - for its creation I used several sections from the <a href="https://docs.ntfy.sh/">ntfy docs</a> and a <a href="https://www.youtube.com/watch?v=poDIT2ruQ9M">networkchuck video</a></p>
-]]></content:encoded>
+      <guid>//localhost:1313/blog/ntfy-server/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://ntfy.sh&#34;&gt;Ntfy&lt;/a&gt; is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.&lt;/p&gt;&#xA;&lt;p&gt;Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on &lt;a href=&#34;//localhost:1313/posts/securing-server&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Securing ssh on your Linux Server</title>
-      <link>http://localhost:1313/blog/securing-server/</link>
+      <link>//localhost:1313/blog/securing-server/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/securing-server/</guid>
+      <guid>//localhost:1313/blog/securing-server/</guid>
       <description>&lt;p&gt;This post is made for debian based linux distros.&lt;/p&gt;&#xA;&lt;h3 id=&#34;dont-expose-ssh-use-a-vpn&#34;&gt;Don&amp;rsquo;t expose ssh, use a VPN&lt;/h3&gt;&#xA;&lt;p&gt;This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.&lt;/p&gt;&#xA;&lt;h3 id=&#34;non-root-account-for-logins--disable-root-login&#34;&gt;Non-root account for logins / Disable root login&lt;/h3&gt;&#xA;&lt;p&gt;Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>This post is made for debian based linux distros.</p>
-<h3 id="dont-expose-ssh-use-a-vpn">Don&rsquo;t expose ssh, use a VPN</h3>
-<p>This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.</p>
-<h3 id="non-root-account-for-logins--disable-root-login">Non-root account for logins / Disable root login</h3>
-<p>Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want</p>
-
-
-
-
-
-<pre tabindex="0"><code>adduser kuma</code></pre><p>Then add it to the list of sudoers</p>
-
-
-
-
-
-<pre tabindex="0"><code>usermod -aG sudo kuma</code></pre><h3 id="using-ssh-keys-over-plaintext-passwords">Using SSH keys over plaintext passwords</h3>
-<p>SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.</p>
-<p>Generate an ssh key using PuttyGen and paste it on a new line in <code>/home/&lt;your_username&gt;/.ssh/authorized_keys</code>.</p>
-<h3 id="updating-your-ssh-configuration">Updating your SSH configuration</h3>
-<p>This process can differ depending on your host, but for most servers the ssh config is located in <code>/etc/ssh/sshd_config</code>, in the file you want to change the following values.</p>
-
-
-
-
-
-<pre tabindex="0"><code>PasswordAuthentication no</code></pre>
-
-
-
-
-<pre tabindex="0"><code>PubkeyAuthentication yes</code></pre>
-
-
-
-
-<pre tabindex="0"><code>PermitRootLogin no</code></pre><p>Changing these config values will</p>
-<ul>
-<li>Disable password authentication</li>
-<li>Allow you to login using ssh keys (Which I showed how to setup above)</li>
-<li>Disable root login (Applying the steps from before)</li>
-</ul>
-<p>Run the command below to apply the motifications</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo systemctl restart ssh</code></pre><h3 id="ntfy-notifcations-on-ssh-login">NTFY notifcations on ssh login</h3>
-<p>You can learn how to setup a secure personal ntfy server <a href="/posts/ntfy-server">here</a>.</p>
-<p>Adding these lines to your <code>/etc/profile</code> file will send a request to your chosen ntfy server when any user logs in via ssh</p>
-
-
-
-
-
-<pre tabindex="0"><code>if [ -n &#34;$SSH_CLIENT&#34; ]; then
-
-NTFY=&#34;${USER}@$(hostname -f) from $(echo $SSH_CLIENT|awk &#39;{print $1}&#39;)&#34;
-
-curl -u :&lt;ntfy_api_key&gt; -s -H &#34;Title: SSH Login&#34; -d &#34;$NTFY&#34; -L  &#34;https://ntfy.exaple.com/ssh&#34; &gt; /dev/null
-
-fi</code></pre><p>Modify to add your own api key and change the url to your ntfy server</p>
-<p>You can also find an example on the ntfy docs <a href="https://docs.ntfy.sh/examples/#ssh-login-alerts">here</a> (Didn&rsquo;t work for me)</p>
-]]></content:encoded>
     </item>
   </channel>
 </rss>

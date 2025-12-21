@@ -1,148 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Setting up and securing a personal NTFY server | Alecks</title>
-<meta name="title" content="Setting up and securing a personal NTFY server" />
+  
+    <title>Setting up and securing a personal NTFY server :: Alecks</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Ntfy is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.
-Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on here." />
-<meta name="author" content="Alecks" />
-<meta name="keywords" content="servers,self-hosting,security,ntfy,Docker," />
+Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on here.
+" />
+<meta name="keywords" content="" />
 
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="//localhost:1313/blog/ntfy-server/" />
 
 
 
 
 
   
-  <meta property="og:url" content="http://localhost:1313/blog/ntfy-server/">
-  <meta property="og:site_name" content="Alecks">
-  <meta property="og:title" content="Setting up and securing a personal NTFY server">
-  <meta property="og:description" content="Ntfy is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.
-Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on here.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2025-09-06T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-09-06T00:00:00+00:00">
-    <meta property="article:tag" content="Servers">
-    <meta property="article:tag" content="Self-Hosting">
-    <meta property="article:tag" content="Security">
-    <meta property="article:tag" content="Ntfy">
-    <meta property="article:tag" content="Docker">
-
+  <link rel="stylesheet" href="//localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
 
   
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Setting up and securing a personal NTFY server">
-  <meta name="twitter:description" content="Ntfy is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.
-Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on here.">
-
+  <link rel="stylesheet" href="//localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
 
   
-  
-  <meta itemprop="name" content="Setting up and securing a personal NTFY server">
-  <meta itemprop="description" content="Ntfy is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.
-Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on here.">
-  <meta itemprop="datePublished" content="2025-09-06T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-09-06T00:00:00+00:00">
-  <meta itemprop="wordCount" content="480">
-  <meta itemprop="keywords" content="Servers,Self-Hosting,Security,Ntfy,Docker">
-
-<meta name="referrer" content="no-referrer-when-downgrade" />
+  <link rel="stylesheet" href="//localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
 
   
-  <link href="/original.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
 
   
-    
-    <link href="/syntax.min.css" rel="stylesheet">
-  
+  <link rel="stylesheet" href="//localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
 
   
+  <link rel="stylesheet" href="//localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
 
   
+  <link rel="stylesheet" href="//localhost:1313/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="//localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Setting up and securing a personal NTFY server">
+<meta property="og:description" content="Ntfy is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.
+Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on here.
+" />
+<meta property="og:url" content="//localhost:1313/blog/ntfy-server/" />
+<meta property="og:site_name" content="Alecks" />
+
+  <meta property="og:image" content="//localhost:1313/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2025-09-06 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
-
 <body>
-  <header><a class="skip-link" href="#main-content">Skip to main content</a>
-
-<a href="/" class="title"><h1>Alecks</h1></a>
-<nav>
-  <a href="/">Home</a>
-
-  <a href="/blog/">Blog</a>
-
-  <a href="/homelab/">Homelab</a>
-
-  <a href="/skills/">Skills</a>
-
-<a href='http://localhost:1313/index.xml'>RSS</a>
 
 
+<div class="container center">
 
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Alecks
+  </div>
+</a>
 
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/">About</a></li>
+        
+      
+        
+          <li><a href="/blog">Blog</a></li>
+        
+      
+        
+          <li><a href="/homelab">Homelab</a></li>
+        
+      
+        
+          <li><a href="/skills">Skills</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
 
-
-
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/" >About</a></li>
+        
+      
+        
+          <li><a href="/blog" >Blog</a></li>
+        
+      
+        
+          <li><a href="/homelab" >Homelab</a></li>
+        
+      
+        
+          <li><a href="/skills" >Skills</a></li>
+        
+      
+      
+    
+  </ul>
 </nav>
+
+  
 </header>
-  <main id="main-content">
 
-<h1>Setting up and securing a personal NTFY server</h1>
-<p class="byline">
-  <time datetime='2025-09-06' pubdate>
-    2025-09-06
-  </time>
-  · Alecks
-</p>
 
-<content>
-  <p><a href="https://ntfy.sh">Ntfy</a> is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.</p>
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="//localhost:1313/blog/ntfy-server/">Setting up and securing a personal NTFY server</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-09-06</time><span class="post-author">Alecks</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="//localhost:1313/tags/servers/">servers</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/self-hosting/">self-hosting</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/security/">security</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/ntfy/">ntfy</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/docker/">Docker</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p><a href="https://ntfy.sh">Ntfy</a> is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.</p>
 <p>Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on <a href="/posts/securing-server">here</a>.</p>
-<h2 id="initial-setup">Initial Setup</h2>
-<h3 id="config-file">Config File</h3>
+<h2 id="initial-setup">Initial Setup<a href="#initial-setup" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="config-file">Config File<a href="#config-file" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>Make a directory at /etc/ntfy then setup a config file</p>
-
-
-
-
-
 <pre tabindex="0"><code>sudo mkdir /etc/ntfy
-sudo nano /etc/ntfy/server.yml</code></pre><p>Copy paste the text below into server.yml with the required changes</p>
-
-
-
-
-
+sudo nano /etc/ntfy/server.yml
+</code></pre><p>Copy paste the text below into server.yml with the required changes</p>
 <pre tabindex="0"><code># General Config
 base-url: &#34;https://ntfy.example.com&#34; # Change this to your URL
 upstream-base-url: &#34;https://ntfy.sh&#34; # Required for notifications to work on iPhone
 
 # Authentication
 auth-file: &#34;/var/lib/ntfy/user.db&#34;
-auth-default-access: &#34;deny-all&#34; # Block access to channels by default unless logged in</code></pre><h3 id="user-database-creation">User Database Creation</h3>
+auth-default-access: &#34;deny-all&#34; # Block access to channels by default unless logged in
+</code></pre><h3 id="user-database-creation">User Database Creation<a href="#user-database-creation" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>You have to manually create a user.db file in /var/lib/ntfy/user.db otherwise this won&rsquo;t work</p>
-
-
-
-
-
 <pre tabindex="0"><code>sudo mkdir /var/lib/ntfy/
-sudo touch /var/lib/ntfy/user.db</code></pre><p>Then save that file with nothing in it</p>
-<h3 id="container-creation">Container Creation</h3>
+sudo touch /var/lib/ntfy/user.db
+</code></pre><p>Then save that file with nothing in it</p>
+<h3 id="container-creation">Container Creation<a href="#container-creation" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>Install Docker for your distribution</p>
-
-
-
-
-
 <pre tabindex="0"><code>sudo apt install docker.io # (Ubuntu/Debian)
-sudo dnf install docker # (Fedora/Red Hat)</code></pre><p>Then run the command below which will</p>
+sudo dnf install docker # (Fedora/Red Hat)
+</code></pre><p>Then run the command below which will</p>
 <ul>
 <li>Create a container for ntfy (named ntfy)</li>
 <li>Run it in the background (-d)</li>
@@ -150,11 +237,6 @@ sudo dnf install docker # (Fedora/Red Hat)</code></pre><p>Then run the command b
 <li>Expose port 80 to 127.0.0.1:8080 so your reverse proxy can access it but its not exposed at your machines public IP</li>
 <li>Map directories for a cache and config file</li>
 </ul>
-
-
-
-
-
 <pre tabindex="0"><code>sudo docker run \
 -d \
 -v /var/cache/ntfy:/var/cache/ntfy \
@@ -165,77 +247,67 @@ sudo dnf install docker # (Fedora/Red Hat)</code></pre><p>Then run the command b
 --restart=unless-stopped \
 binwiederhier/ntfy \
 serve \
---cache-file /var/cache/ntfy/cache.db</code></pre><h2 id="reverse-proxy-configuration">Reverse Proxy Configuration</h2>
+--cache-file /var/cache/ntfy/cache.db
+</code></pre><h2 id="reverse-proxy-configuration">Reverse Proxy Configuration<a href="#reverse-proxy-configuration" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Since its the best plug-and-play solution I&rsquo;ll be using <a href="https://caddyserver.com">Caddy</a> for this guide, but there are several others, for example <a href="https://nginx.org">Nginx</a></p>
 <p>Install Caddy and edit the Caddyfile</p>
-
-
-
-
-
 <pre tabindex="0"><code>sudo apt install caddy -y
-sudo nano /etc/caddy/Caddyfile</code></pre><p>Then paste this config into it, replacing example.com with your actual domain of course</p>
-
-
-
-
-
+sudo nano /etc/caddy/Caddyfile
+</code></pre><p>Then paste this config into it, replacing example.com with your actual domain of course</p>
 <pre tabindex="0"><code>ntfy.example.com {
     reverse_proxy http://127.0.0.1:8080
-}</code></pre><p>Finally, restart your Caddy server</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo systemctl restart caddy</code></pre><p>Your ntfy instance should now be securely exposed!! Caddy will automatically fetch and install an SSL certificate for you</p>
-<h2 id="setting-up-authentication">Setting up Authentication</h2>
+}
+</code></pre><p>Finally, restart your Caddy server</p>
+<pre tabindex="0"><code>sudo systemctl restart caddy
+</code></pre><p>Your ntfy instance should now be securely exposed!! Caddy will automatically fetch and install an SSL certificate for you</p>
+<h2 id="setting-up-authentication">Setting up Authentication<a href="#setting-up-authentication" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Only being able to access your server with an account was already configured in the initial setup process, now you just need to create an account to access it</p>
 <p>Attach the ntfy containers shell</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo docker exec -it ntfy /bin/sh</code></pre><p>Then create a user account with the admin role</p>
-
-
-
-
-
-<pre tabindex="0"><code>ntfy user add --role=admin example</code></pre><p>It will then prompt you for a password, obviously change &ldquo;example&rdquo; to any username you want</p>
+<pre tabindex="0"><code>sudo docker exec -it ntfy /bin/sh
+</code></pre><p>Then create a user account with the admin role</p>
+<pre tabindex="0"><code>ntfy user add --role=admin example
+</code></pre><p>It will then prompt you for a password, obviously change &ldquo;example&rdquo; to any username you want</p>
 <p>Also, when sending notifications to channels most services want an access token, which you can create with this command</p>
+<pre tabindex="0"><code>ntfy token add example
+</code></pre><p>Hope this guide was helpful - for its creation I used several sections from the <a href="https://docs.ntfy.sh/">ntfy docs</a> and a <a href="https://www.youtube.com/watch?v=poDIT2ruQ9M">networkchuck video</a></p>
 
+      </div></div>
 
-
-
-
-<pre tabindex="0"><code>ntfy token add example</code></pre><p>Hope this guide was helpful - for its creation I used several sections from the <a href="https://docs.ntfy.sh/">ntfy docs</a> and a <a href="https://www.youtube.com/watch?v=poDIT2ruQ9M">networkchuck video</a></p>
-
-</content>
-<p>
   
-    <a class="blog-tags" href="/tags/servers/">#servers</a>
-  
-    <a class="blog-tags" href="/tags/self-hosting/">#self-hosting</a>
-  
-    <a class="blog-tags" href="/tags/security/">#security</a>
-  
-    <a class="blog-tags" href="/tags/ntfy/">#ntfy</a>
-  
-    <a class="blog-tags" href="/tags/docker/">#docker</a>
-  
-</p>
 
-
-
-
-  </main>
-  <footer><small>
-  © Alecks 2025 | <a href="https://github.com/alecks20/alecks.dev">Source</a>
-</small></footer>
-
+  
     
-</body>
 
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
 </html>

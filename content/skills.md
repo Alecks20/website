@@ -1,7 +1,5 @@
 ---
 title: "Skills"
-menu: "main"
-weight: 8
 ---
 From my tinkering and natural curiosity, I became familiar with basic IT concepts in networking, Linux and infrastructure at the age of 11. 
 

@@ -1,7 +1,5 @@
 ---
 title: "Homelab"
-menu: "main"
-weight: 7
 ---
 
 This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).

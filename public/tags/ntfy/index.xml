@@ -1,130 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ntfy on Alecks</title>
-    <link>http://localhost:1313/tags/ntfy/</link>
+    <link>//localhost:1313/tags/ntfy/</link>
     <description>Recent content in Ntfy on Alecks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <copyright>© Alecks 2025</copyright>
     <lastBuildDate>Sat, 06 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ntfy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/ntfy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up and securing a personal NTFY server</title>
-      <link>http://localhost:1313/blog/ntfy-server/</link>
+      <link>//localhost:1313/blog/ntfy-server/</link>
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/ntfy-server/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://ntfy.sh&#34;&gt;Ntfy&lt;/a&gt; is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.&lt;/p&gt;&#xA;&lt;p&gt;Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on &lt;a href=&#34;http://localhost:1313/posts/securing-server&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p><a href="https://ntfy.sh">Ntfy</a> is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.</p>
-<p>Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on <a href="/posts/securing-server">here</a>.</p>
-<h2 id="initial-setup">Initial Setup</h2>
-<h3 id="config-file">Config File</h3>
-<p>Make a directory at /etc/ntfy then setup a config file</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo mkdir /etc/ntfy
-sudo nano /etc/ntfy/server.yml</code></pre><p>Copy paste the text below into server.yml with the required changes</p>
-
-
-
-
-
-<pre tabindex="0"><code># General Config
-base-url: &#34;https://ntfy.example.com&#34; # Change this to your URL
-upstream-base-url: &#34;https://ntfy.sh&#34; # Required for notifications to work on iPhone
-
-# Authentication
-auth-file: &#34;/var/lib/ntfy/user.db&#34;
-auth-default-access: &#34;deny-all&#34; # Block access to channels by default unless logged in</code></pre><h3 id="user-database-creation">User Database Creation</h3>
-<p>You have to manually create a user.db file in /var/lib/ntfy/user.db otherwise this won&rsquo;t work</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo mkdir /var/lib/ntfy/
-sudo touch /var/lib/ntfy/user.db</code></pre><p>Then save that file with nothing in it</p>
-<h3 id="container-creation">Container Creation</h3>
-<p>Install Docker for your distribution</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo apt install docker.io # (Ubuntu/Debian)
-sudo dnf install docker # (Fedora/Red Hat)</code></pre><p>Then run the command below which will</p>
-<ul>
-<li>Create a container for ntfy (named ntfy)</li>
-<li>Run it in the background (-d)</li>
-<li>Start at boot unless it was stopped (&ndash;restart=unless-stopped)</li>
-<li>Expose port 80 to 127.0.0.1:8080 so your reverse proxy can access it but its not exposed at your machines public IP</li>
-<li>Map directories for a cache and config file</li>
-</ul>
-
-
-
-
-
-<pre tabindex="0"><code>sudo docker run \
--d \
--v /var/cache/ntfy:/var/cache/ntfy \
--v /etc/ntfy:/etc/ntfy \
--v /var/lib/ntfy:/var/lib/ntfy \
--p 127.0.0.1:8080:80 \
---name=ntfy \
---restart=unless-stopped \
-binwiederhier/ntfy \
-serve \
---cache-file /var/cache/ntfy/cache.db</code></pre><h2 id="reverse-proxy-configuration">Reverse Proxy Configuration</h2>
-<p>Since its the best plug-and-play solution I&rsquo;ll be using <a href="https://caddyserver.com">Caddy</a> for this guide, but there are several others, for example <a href="https://nginx.org">Nginx</a></p>
-<p>Install Caddy and edit the Caddyfile</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo apt install caddy -y
-sudo nano /etc/caddy/Caddyfile</code></pre><p>Then paste this config into it, replacing example.com with your actual domain of course</p>
-
-
-
-
-
-<pre tabindex="0"><code>ntfy.example.com {
-    reverse_proxy http://127.0.0.1:8080
-}</code></pre><p>Finally, restart your Caddy server</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo systemctl restart caddy</code></pre><p>Your ntfy instance should now be securely exposed!! Caddy will automatically fetch and install an SSL certificate for you</p>
-<h2 id="setting-up-authentication">Setting up Authentication</h2>
-<p>Only being able to access your server with an account was already configured in the initial setup process, now you just need to create an account to access it</p>
-<p>Attach the ntfy containers shell</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo docker exec -it ntfy /bin/sh</code></pre><p>Then create a user account with the admin role</p>
-
-
-
-
-
-<pre tabindex="0"><code>ntfy user add --role=admin example</code></pre><p>It will then prompt you for a password, obviously change &ldquo;example&rdquo; to any username you want</p>
-<p>Also, when sending notifications to channels most services want an access token, which you can create with this command</p>
-
-
-
-
-
-<pre tabindex="0"><code>ntfy token add example</code></pre><p>Hope this guide was helpful - for its creation I used several sections from the <a href="https://docs.ntfy.sh/">ntfy docs</a> and a <a href="https://www.youtube.com/watch?v=poDIT2ruQ9M">networkchuck video</a></p>
-]]></content:encoded>
+      <guid>//localhost:1313/blog/ntfy-server/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://ntfy.sh&#34;&gt;Ntfy&lt;/a&gt; is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.&lt;/p&gt;&#xA;&lt;p&gt;Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on &lt;a href=&#34;//localhost:1313/posts/securing-server&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

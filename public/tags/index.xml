@@ -1,181 +1,159 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Alecks</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>//localhost:1313/tags/</link>
     <description>Recent content in Tags on Alecks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <copyright>© Alecks 2025</copyright>
     <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Homelab</title>
-      <link>http://localhost:1313/tags/homelab/</link>
+      <link>//localhost:1313/tags/homelab/</link>
       <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/homelab/</guid>
+      <guid>//localhost:1313/tags/homelab/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Self-Hosting</title>
-      <link>http://localhost:1313/tags/self-hosting/</link>
+      <link>//localhost:1313/tags/self-hosting/</link>
       <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/self-hosting/</guid>
+      <guid>//localhost:1313/tags/self-hosting/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Servers</title>
-      <link>http://localhost:1313/tags/servers/</link>
+      <link>//localhost:1313/tags/servers/</link>
       <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/servers/</guid>
+      <guid>//localhost:1313/tags/servers/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Privacy</title>
-      <link>http://localhost:1313/tags/privacy/</link>
+      <link>//localhost:1313/tags/privacy/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/privacy/</guid>
+      <guid>//localhost:1313/tags/privacy/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Reviews</title>
-      <link>http://localhost:1313/tags/reviews/</link>
+      <link>//localhost:1313/tags/reviews/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/reviews/</guid>
+      <guid>//localhost:1313/tags/reviews/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Vpns</title>
-      <link>http://localhost:1313/tags/vpns/</link>
+      <link>//localhost:1313/tags/vpns/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/vpns/</guid>
+      <guid>//localhost:1313/tags/vpns/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Computers</title>
-      <link>http://localhost:1313/tags/computers/</link>
+      <link>//localhost:1313/tags/computers/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/computers/</guid>
+      <guid>//localhost:1313/tags/computers/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Obsidian</title>
-      <link>http://localhost:1313/tags/obsidian/</link>
+      <link>//localhost:1313/tags/obsidian/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/obsidian/</guid>
+      <guid>//localhost:1313/tags/obsidian/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Software</title>
-      <link>http://localhost:1313/tags/software/</link>
+      <link>//localhost:1313/tags/software/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/software/</guid>
+      <guid>//localhost:1313/tags/software/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Gear</title>
-      <link>http://localhost:1313/tags/gear/</link>
+      <link>//localhost:1313/tags/gear/</link>
       <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/gear/</guid>
+      <guid>//localhost:1313/tags/gear/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Laptops</title>
-      <link>http://localhost:1313/tags/laptops/</link>
+      <link>//localhost:1313/tags/laptops/</link>
       <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/laptops/</guid>
+      <guid>//localhost:1313/tags/laptops/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Backups</title>
-      <link>http://localhost:1313/tags/backups/</link>
+      <link>//localhost:1313/tags/backups/</link>
       <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/backups/</guid>
+      <guid>//localhost:1313/tags/backups/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Proxmox</title>
-      <link>http://localhost:1313/tags/proxmox/</link>
+      <link>//localhost:1313/tags/proxmox/</link>
       <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/proxmox/</guid>
+      <guid>//localhost:1313/tags/proxmox/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/tags/docker/</link>
+      <link>//localhost:1313/tags/docker/</link>
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/docker/</guid>
+      <guid>//localhost:1313/tags/docker/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Ntfy</title>
-      <link>http://localhost:1313/tags/ntfy/</link>
+      <link>//localhost:1313/tags/ntfy/</link>
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ntfy/</guid>
+      <guid>//localhost:1313/tags/ntfy/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Security</title>
-      <link>http://localhost:1313/tags/security/</link>
+      <link>//localhost:1313/tags/security/</link>
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/security/</guid>
+      <guid>//localhost:1313/tags/security/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
+      <link>//localhost:1313/tags/linux/</link>
       <pubDate>Sun, 31 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/linux/</guid>
+      <guid>//localhost:1313/tags/linux/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Vms</title>
-      <link>http://localhost:1313/tags/vms/</link>
+      <link>//localhost:1313/tags/vms/</link>
       <pubDate>Sun, 31 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/vms/</guid>
+      <guid>//localhost:1313/tags/vms/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Ssh</title>
-      <link>http://localhost:1313/tags/ssh/</link>
+      <link>//localhost:1313/tags/ssh/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ssh/</guid>
+      <guid>//localhost:1313/tags/ssh/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Ddos</title>
-      <link>http://localhost:1313/tags/ddos/</link>
+      <link>//localhost:1313/tags/ddos/</link>
       <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ddos/</guid>
+      <guid>//localhost:1313/tags/ddos/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     <item>
       <title>Networking</title>
-      <link>http://localhost:1313/tags/networking/</link>
+      <link>//localhost:1313/tags/networking/</link>
       <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/networking/</guid>
+      <guid>//localhost:1313/tags/networking/</guid>
       <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
     </item>
   </channel>
 </rss>

@@ -2,128 +2,128 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>//localhost:1313/blog/</loc>
     <lastmod>2025-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2025-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/homelab/</loc>
-  </url><url>
-    <loc>http://localhost:1313/skills/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/homelab/</loc>
+    <loc>//localhost:1313/tags/homelab/</loc>
     <lastmod>2025-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/revised-homelab-2026/</loc>
+    <loc>//localhost:1313/blog/revised-homelab-2026/</loc>
     <lastmod>2025-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/self-hosting/</loc>
+    <loc>//localhost:1313/tags/self-hosting/</loc>
     <lastmod>2025-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/servers/</loc>
+    <loc>//localhost:1313/tags/servers/</loc>
     <lastmod>2025-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2025-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/privacy/</loc>
+    <loc>//localhost:1313/tags/privacy/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/reviews/</loc>
+    <loc>//localhost:1313/tags/reviews/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vpns/</loc>
+    <loc>//localhost:1313/tags/vpns/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/vpns/</loc>
+    <loc>//localhost:1313/blog/vpns/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/computers/</loc>
+    <loc>//localhost:1313/tags/computers/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/obsidian/</loc>
+    <loc>//localhost:1313/tags/obsidian/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/software/</loc>
+    <loc>//localhost:1313/tags/software/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/paying-for-obsidian/</loc>
+    <loc>//localhost:1313/blog/paying-for-obsidian/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gear/</loc>
+    <loc>//localhost:1313/tags/gear/</loc>
     <lastmod>2025-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/laptops/</loc>
+    <loc>//localhost:1313/tags/laptops/</loc>
     <lastmod>2025-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/macbook-experience/</loc>
+    <loc>//localhost:1313/blog/macbook-experience/</loc>
     <lastmod>2025-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/homelab-plans-2026/</loc>
+    <loc>//localhost:1313/blog/homelab-plans-2026/</loc>
     <lastmod>2025-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/backups/</loc>
+    <loc>//localhost:1313/tags/backups/</loc>
     <lastmod>2025-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/backup-system/</loc>
+    <loc>//localhost:1313/blog/backup-system/</loc>
     <lastmod>2025-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/proxmox/</loc>
+    <loc>//localhost:1313/tags/proxmox/</loc>
     <lastmod>2025-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>//localhost:1313/tags/docker/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ntfy/</loc>
+    <loc>//localhost:1313/tags/ntfy/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/security/</loc>
+    <loc>//localhost:1313/tags/security/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/ntfy-server/</loc>
+    <loc>//localhost:1313/blog/ntfy-server/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/homelab-2025/</loc>
+    <loc>//localhost:1313/blog/homelab-2025/</loc>
     <lastmod>2025-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/vps-service/</loc>
+    <loc>//localhost:1313/blog/vps-service/</loc>
     <lastmod>2025-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>//localhost:1313/tags/linux/</loc>
     <lastmod>2025-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vms/</loc>
+    <loc>//localhost:1313/tags/vms/</loc>
     <lastmod>2025-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/exposing-services/</loc>
+    <loc>//localhost:1313/blog/exposing-services/</loc>
     <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/mini-pcs/</loc>
+    <loc>//localhost:1313/blog/mini-pcs/</loc>
     <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/securing-server/</loc>
+    <loc>//localhost:1313/blog/securing-server/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssh/</loc>
+    <loc>//localhost:1313/tags/ssh/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/starting-homelab/</loc>
+    <loc>//localhost:1313/blog/starting-homelab/</loc>
     <lastmod>2024-03-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/ip-address-misconceptions/</loc>
+    <loc>//localhost:1313/blog/ip-address-misconceptions/</loc>
     <lastmod>2024-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ddos/</loc>
+    <loc>//localhost:1313/tags/ddos/</loc>
     <lastmod>2024-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/networking/</loc>
+    <loc>//localhost:1313/tags/networking/</loc>
     <lastmod>2024-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/favourites/</loc>
+    <loc>//localhost:1313/favourites/</loc>
   </url><url>
-    <loc>http://localhost:1313/gear/</loc>
+    <loc>//localhost:1313/homelab/</loc>
+  </url><url>
+    <loc>//localhost:1313/gear/</loc>
+  </url><url>
+    <loc>//localhost:1313/skills/</loc>
   </url>
 </urlset>

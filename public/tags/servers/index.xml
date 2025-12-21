@@ -1,551 +1,82 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Servers on Alecks</title>
-    <link>http://localhost:1313/tags/servers/</link>
+    <link>//localhost:1313/tags/servers/</link>
     <description>Recent content in Servers on Alecks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <copyright>© Alecks 2025</copyright>
     <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/servers/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/servers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Revised Homelab plans for 2026</title>
-      <link>http://localhost:1313/blog/revised-homelab-2026/</link>
+      <link>//localhost:1313/blog/revised-homelab-2026/</link>
       <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/revised-homelab-2026/</guid>
-      <description>&lt;p&gt;Thanks to AI datacenters making the cost of RAM and Storage skyrocket, then making Micron one of the biggest manufacturers leave the consumer market (moving to exclusively serving these datacenters), the huge server cluster plans I had for 2026 really just aren&amp;rsquo;t viable anymore.&lt;/p&gt;&#xA;&lt;p&gt;At the time each server would&amp;rsquo;ve cost around 2 and a half to 3 thousand aud, now just 128GB of DDR5 RAM &lt;a href=&#34;http://localhost:1313/images/ddr5_ram_prices.webp&#34;&gt;costs 3 thousand aud&lt;/a&gt; so I&amp;rsquo;ll primarily use second hand hardware like mini pcs and legacy AM4 machines.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>Thanks to AI datacenters making the cost of RAM and Storage skyrocket, then making Micron one of the biggest manufacturers leave the consumer market (moving to exclusively serving these datacenters), the huge server cluster plans I had for 2026 really just aren&rsquo;t viable anymore.</p>
-<p>At the time each server would&rsquo;ve cost around 2 and a half to 3 thousand aud, now just 128GB of DDR5 RAM <a href="/images/ddr5_ram_prices.webp">costs 3 thousand aud</a> so I&rsquo;ll primarily use second hand hardware like mini pcs and legacy AM4 machines.</p>
-<p>I will still be getting the job I mentioned in the previous 2026 homelab plans post, but the big ambitious plans I had for a full server rack just seem overkill and I wanted it more so I could show it off rather than practical use, most upgrades mentioned in this post are just adding new stuff to my existing machines.</p>
-<h3 id="current-state-of-my-setup">Current state of my setup</h3>
-<p>My original needs for a homelab are met, which was to cancel my vps and game server subscriptions, but now I need it to do a whole lot more. Replace my proton drive subscription (store backups of my computer files), host any future projects or apps I build, replace my icloud plus subscription (store photos using immich) and my crunchyroll subscription (maybe) with Jellyfin.</p>
-<p>It consists of a custom built ryzen desktop and mini pc I got off ebay, both great computers and very efficient but I need more redundancy and better reliability before I trust it with more important data and critical services.</p>
-<h3 id="planned-upgrades">Planned upgrades</h3>
-<p>A lot of these are centred around getting rid of my subscriptions, for data sovereignty, cost saving and media preservation reasons.</p>
-<ul>
-<li><strong>High-capacity storage</strong></li>
-</ul>
-<p>To accommodate for my growing storage needs, I plan to attach at least two likely 4tb hdds in raid 1 (mirrored) and some small ssds as boot drives with plans for a proper ssd cache later on to my current ryzen box.</p>
-<p>4tb seems like a safe future proof option for now that will fit my needs fine, I&rsquo;m using raid 1 since its easy to setup but do want to experiment with something like zfs in the future.</p>
-<p>This will be used for services that need lots of storage like my File Server (for backing up files on my computer), Immich and Jellyfin</p>
-<ul>
-<li><strong>Improved reliability and redundancy</strong></li>
-</ul>
-<p>As I host <em>production</em> services such as live websites (like this one), game servers for communities and plan to use this setup for any future projects or apps I build everything runs in vms that can live migrate to other hosts if any machines need maintenance or cleaning (thanks to proxmox clustering).</p>
-<p>Something I haven&rsquo;t resolved yet is keeping things online during power outages, most of the time caused by storms, a ups is an important investment I&rsquo;ll be making next year.</p>
-<p>Hard drive redundancy with Raid or ZFS is definitely a high priority, right now there&rsquo;s offsite backups but if any drives fail onsite I&rsquo;d need to buy a new drive and pull a backup from the cloud to get things back online, all nodes will be setup with dual nvme ssds setup in raid 1 (mirrored).</p>
-<ul>
-<li><strong>Local more in depth monitoring</strong></li>
-</ul>
-<p>The addition of a Raspberry Pi running Grafana and Prometheus will give me a much more in depth monitoring system that&rsquo;s fully under my control and power efficient.</p>
-<p>I plan to use this as its a cheap low power machine thats seperate from the compute nodes, meaning if they both die it won&rsquo;t take my monitoring system with it.</p>
-<h3 id="concluding-thoughts">Concluding Thoughts</h3>
-<p>To recap everything that will be added next year</p>
-<ul>
-<li>2x 4tb hdds in raid 1 that&rsquo;ll be attached to my ryzen box</li>
-<li>A UPS to protect against power outages primarily caused by storms</li>
-<li>Redundant nvme storage on all machines</li>
-<li>Raspberry Pi as a dedicated monitoring server</li>
-</ul>
-<p>Not entirely sure what I plan to do with networking right now, will discuss that later on in a future blog post, likely one dedicated to setting up my own custom opnsense router as that seems like a fun project I&rsquo;ll work on once these upgrades are finished.</p>
-<p>Thanks for reading :)</p>
-]]></content:encoded>
+      <guid>//localhost:1313/blog/revised-homelab-2026/</guid>
+      <description>&lt;p&gt;Thanks to AI datacenters making the cost of RAM and Storage skyrocket, then making Micron one of the biggest manufacturers leave the consumer market (moving to exclusively serving these datacenters), the huge server cluster plans I had for 2026 really just aren&amp;rsquo;t viable anymore.&lt;/p&gt;&#xA;&lt;p&gt;At the time each server would&amp;rsquo;ve cost around 2 and a half to 3 thousand aud, now just 128GB of DDR5 RAM &lt;a href=&#34;//localhost:1313/images/ddr5_ram_prices.webp&#34;&gt;costs 3 thousand aud&lt;/a&gt; so I&amp;rsquo;ll primarily use second hand hardware like mini pcs and legacy AM4 machines.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Homelab Plan for 2026</title>
-      <link>http://localhost:1313/blog/homelab-plans-2026/</link>
+      <link>//localhost:1313/blog/homelab-plans-2026/</link>
       <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/homelab-plans-2026/</guid>
+      <guid>//localhost:1313/blog/homelab-plans-2026/</guid>
       <description>&lt;p&gt;As great as my homelab is, there&amp;rsquo;s still a ton of improvements I wanna make it to it for reliability, scalability and to learn new technologies, so lets go through them.&lt;/p&gt;&#xA;&lt;p&gt;2026 is gonna be the year of upgrades, as I&amp;rsquo;ll be employed making probably around 2k per month depending on how many hours I work.&lt;/p&gt;&#xA;&lt;h2 id=&#34;moving-to-rackmount-hardware&#34;&gt;Moving to Rackmount Hardware&lt;/h2&gt;&#xA;&lt;p&gt;Not only would moving to a proper server rack (most likely &lt;a href=&#34;https://www.amazon.com.au/VEVOR-Adjustable-Standing-Networking-Equipment/dp/B0C64YY7G7&#34;&gt;this one&lt;/a&gt;) make it easier to add new compute nodes compared to the shelf all my hardware is currently on, it also looks way cooler.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>As great as my homelab is, there&rsquo;s still a ton of improvements I wanna make it to it for reliability, scalability and to learn new technologies, so lets go through them.</p>
-<p>2026 is gonna be the year of upgrades, as I&rsquo;ll be employed making probably around 2k per month depending on how many hours I work.</p>
-<h2 id="moving-to-rackmount-hardware">Moving to Rackmount Hardware</h2>
-<p>Not only would moving to a proper server rack (most likely <a href="https://www.amazon.com.au/VEVOR-Adjustable-Standing-Networking-Equipment/dp/B0C64YY7G7">this one</a>) make it easier to add new compute nodes compared to the shelf all my hardware is currently on, it also looks way cooler.</p>
-<p>To achieve this I&rsquo;m gonna be moving from my Edgerouter 4 to a custom rackmount <a href="https://opnsense.org">opnsense</a> router. As for compute nodes, I&rsquo;ll be moving Navi into a rackmount case.</p>
-<p>I&rsquo;ll also be installing a patch panel so everything is nice and cable managed, with proper labeling to save future me a few all nighters.</p>
-<h2 id="new-machines">New Machines</h2>
-<p>Not only am I gonna be moving my existing node (Lightsail) into a <a href="https://www.scorptec.com.au/product/cases/server-&amp;-rackmount/97350-sst-rm23-502-mini">Silverstone RM23-502 Mini 2U</a> rackmount case to add to the rack and turning it into a VPS host node, I&rsquo;m also gonna be adding a few new nodes to the cluster.</p>
-<h3 id="vps-host-node">VPS Host Node</h3>
-<p>As you probably read above, I&rsquo;m gonna turn Lightsail into a dedicated node for hosting VPS servers for relability purposes (If I do any hardware changes on my personal machines other peoples stuff isn&rsquo;t affected) and to give my stuff more resources.</p>
-<h3 id="new-primary-machine">New Primary Machine</h3>
-<p>My current primary node (Navi) has served me well but I need an upgrade for better performance and reliability (Such as implementing Raid 1, old motherboard only has 1 NVMe slot)</p>
-<p>The hardware config is gonna look something like this</p>
-<ul>
-<li>CPU: Ryzen 7 7700</li>
-<li>Memory: 128/192GB DDR5 RAM (Depending on budget)</li>
-<li>Storage: Dual 2TB NVMe SSDs (Raid 1)</li>
-<li>Case: <a href="https://www.scorptec.com.au/product/cases/server-&amp;-rackmount/97350-sst-rm23-502-mini">Silverstone RM23-502 Mini 2U</a></li>
-<li>Power Supply: Corsair RM850x</li>
-</ul>
-<p>This machine is gonna be used to host linux labs, remote workspaces, game servers, hosting/mirroring my GitHub repos and packages, running my personal website and various other personal services.</p>
-<h3 id="storage-server">Storage Server</h3>
-<p>My current onsite backup server (read more about that <a href="">here</a>) is great but I want something with way more than 1TB of storage and some proper redundancy. It&rsquo;ll run a PBS VM (VM Backups) and Minio VM.</p>
-<p>I&rsquo;m not entirely sure what kind of hardware to get yet, but probably something not too powerful built for a good balance of efficiency and cost effectiveness</p>
-<ul>
-<li>CPU: Ryzen 5 7600</li>
-<li>Memory: 32GB DDR</li>
-<li>Storage: a lot of high-capacity HDDs, not sure exactly how much yet</li>
-<li>Case: <a href="https://www.silverstonetek.com/en/product/info/server-nas/RM22-308/">Silverstone RM22-308</a></li>
-<li>Power Supply: Corsair RM850</li>
-</ul>
-<hr>
-<p>Those are all the machines I have planned for right now, I&rsquo;ve had ideas for a 3 node ceph cluster instead of the single storage server but It&rsquo;ll be way overkill for my needs and also a dedicated game server machine but that&rsquo;ll only be needed if my other services need more resources, which with the new primary compute node (an absolute beast) is highly unlikely.</p>
-<h2 id="network-upgrades">Network Upgrades</h2>
-<p>Since the NBN just released new 2 Gigabit plans the older maxxed out 1 Gigabit high upload plans (1000/400) just dropped in price by like $33 per month (On my ISP), currently my Internet is 1000/100 which means that big backups take <em>weeks</em> to upload, upgrading to 1000/400 would be a humungous noticeable improvement.</p>
-<h2 id="power-backups">Power Backups</h2>
-<p>Recently my power has been pretty unstable and a UPS has seemed more and more critical for smooth operations, with the migration to a server rack I will be installing a dual UPS system, heres a basic rundown</p>
-<ul>
-<li>UPS 1: Critical devices including the Router, NBN Box and Switch</li>
-<li>UPS 2: Compute nodes - VPS Host, Primary Machine &amp; Storage Server</li>
-</ul>
-<p>Seperating networking infrastructure from compute nodes means that nothing gets overloaded and is overall just good practice.</p>
-<p>Both will be a Cyberpower rackmount UPS (Not sure exactly which model yet)</p>
-<h2 id="closing-thoughts">Closing Thoughts</h2>
-<p>Upgrading my Homelab into a more sophisticated setup such as the one above might seem overkill but is essential for someone like me who uses it as their own &ldquo;Digital Garden&rdquo;, it stores all my projects, personal notes, remote labs and much more so it must be as resilient and reliable as my budget allows.</p>
-<p>I&rsquo;m not sure what changes I&rsquo;m gonna make after these as anything more than this is probably actually overkill and will make the power bill even higher, but we&rsquo;ll see what the future holds.</p>
-]]></content:encoded>
     </item>
     <item>
       <title>Finally setting up onsite and offsite backups with PBS</title>
-      <link>http://localhost:1313/blog/backup-system/</link>
+      <link>//localhost:1313/blog/backup-system/</link>
       <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/backup-system/</guid>
+      <guid>//localhost:1313/blog/backup-system/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been meaning to setup backups for a very very long time, so I figured it was finally time to setup a proper system with a Mini PC and 1TB NVMe SSD I had lying around.&lt;/p&gt;&#xA;&lt;h2 id=&#34;hardware-changes&#34;&gt;Hardware Changes&lt;/h2&gt;&#xA;&lt;p&gt;I removed the bottom cover of my Mini PC then swapped out the original 256GB SSD and replaced it with a fresh 1TB one which is identical to the one in my live Proxmox node.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>I&rsquo;ve been meaning to setup backups for a very very long time, so I figured it was finally time to setup a proper system with a Mini PC and 1TB NVMe SSD I had lying around.</p>
-<h2 id="hardware-changes">Hardware Changes</h2>
-<p>I removed the bottom cover of my Mini PC then swapped out the original 256GB SSD and replaced it with a fresh 1TB one which is identical to the one in my live Proxmox node.</p>
-<h2 id="software-configuration">Software Configuration</h2>
-<p>For its intuitive interface, incremental backup system and tight integration with Proxmox VE, I chose to install Proxmox Backup Server (PBS)</p>
-<p>On PBS I setup a datastore on my disk which stores all VM backups, then configured it as an endpoint on the Proxmox VE server.</p>
-<h3 id="additional-notes">Additional Notes</h3>
-<ul>
-<li>When adding it as an endpoint you need to fill in the fingerprint box otherwise It&rsquo;ll fail, which you can get by running this command on PBS</li>
-</ul>
-
-
-
-
-
-<pre tabindex="0"><code>proxmox-backup-manager cert info | grep Fingerprint | awk &#39;{print $3}`</code></pre><ul>
-<li>For extra security, create a dedicated user account in PBS instead of using <code>root</code> to handle backups.</li>
-</ul>
-<h2 id="syncing-offsite">Syncing Offsite</h2>
-<p>I followed <a href="https://chriscolotti.us/technology/proxmox-backup-4-0-with-s3-tech-preview/">this guide</a> to help me setup syncing PBS to a Backblaze bucket, this kind of hybrid setup allows me to safely store everything in the Cloud while being able to restore backups super fast from a local copy.</p>
-<hr>
-<p><img src="/images/backup_setup.webp" alt="">
-<!-- raw HTML omitted -->Diagram showing backup flow from the live VM disks to the onsite PBS and offsite storage.<!-- raw HTML omitted --></p>
-<p>Thanks for reading :)</p>
-]]></content:encoded>
     </item>
     <item>
       <title>Setting up and securing a personal NTFY server</title>
-      <link>http://localhost:1313/blog/ntfy-server/</link>
+      <link>//localhost:1313/blog/ntfy-server/</link>
       <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/ntfy-server/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://ntfy.sh&#34;&gt;Ntfy&lt;/a&gt; is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.&lt;/p&gt;&#xA;&lt;p&gt;Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on &lt;a href=&#34;http://localhost:1313/posts/securing-server&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p><a href="https://ntfy.sh">Ntfy</a> is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.</p>
-<p>Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on <a href="/posts/securing-server">here</a>.</p>
-<h2 id="initial-setup">Initial Setup</h2>
-<h3 id="config-file">Config File</h3>
-<p>Make a directory at /etc/ntfy then setup a config file</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo mkdir /etc/ntfy
-sudo nano /etc/ntfy/server.yml</code></pre><p>Copy paste the text below into server.yml with the required changes</p>
-
-
-
-
-
-<pre tabindex="0"><code># General Config
-base-url: &#34;https://ntfy.example.com&#34; # Change this to your URL
-upstream-base-url: &#34;https://ntfy.sh&#34; # Required for notifications to work on iPhone
-
-# Authentication
-auth-file: &#34;/var/lib/ntfy/user.db&#34;
-auth-default-access: &#34;deny-all&#34; # Block access to channels by default unless logged in</code></pre><h3 id="user-database-creation">User Database Creation</h3>
-<p>You have to manually create a user.db file in /var/lib/ntfy/user.db otherwise this won&rsquo;t work</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo mkdir /var/lib/ntfy/
-sudo touch /var/lib/ntfy/user.db</code></pre><p>Then save that file with nothing in it</p>
-<h3 id="container-creation">Container Creation</h3>
-<p>Install Docker for your distribution</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo apt install docker.io # (Ubuntu/Debian)
-sudo dnf install docker # (Fedora/Red Hat)</code></pre><p>Then run the command below which will</p>
-<ul>
-<li>Create a container for ntfy (named ntfy)</li>
-<li>Run it in the background (-d)</li>
-<li>Start at boot unless it was stopped (&ndash;restart=unless-stopped)</li>
-<li>Expose port 80 to 127.0.0.1:8080 so your reverse proxy can access it but its not exposed at your machines public IP</li>
-<li>Map directories for a cache and config file</li>
-</ul>
-
-
-
-
-
-<pre tabindex="0"><code>sudo docker run \
--d \
--v /var/cache/ntfy:/var/cache/ntfy \
--v /etc/ntfy:/etc/ntfy \
--v /var/lib/ntfy:/var/lib/ntfy \
--p 127.0.0.1:8080:80 \
---name=ntfy \
---restart=unless-stopped \
-binwiederhier/ntfy \
-serve \
---cache-file /var/cache/ntfy/cache.db</code></pre><h2 id="reverse-proxy-configuration">Reverse Proxy Configuration</h2>
-<p>Since its the best plug-and-play solution I&rsquo;ll be using <a href="https://caddyserver.com">Caddy</a> for this guide, but there are several others, for example <a href="https://nginx.org">Nginx</a></p>
-<p>Install Caddy and edit the Caddyfile</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo apt install caddy -y
-sudo nano /etc/caddy/Caddyfile</code></pre><p>Then paste this config into it, replacing example.com with your actual domain of course</p>
-
-
-
-
-
-<pre tabindex="0"><code>ntfy.example.com {
-    reverse_proxy http://127.0.0.1:8080
-}</code></pre><p>Finally, restart your Caddy server</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo systemctl restart caddy</code></pre><p>Your ntfy instance should now be securely exposed!! Caddy will automatically fetch and install an SSL certificate for you</p>
-<h2 id="setting-up-authentication">Setting up Authentication</h2>
-<p>Only being able to access your server with an account was already configured in the initial setup process, now you just need to create an account to access it</p>
-<p>Attach the ntfy containers shell</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo docker exec -it ntfy /bin/sh</code></pre><p>Then create a user account with the admin role</p>
-
-
-
-
-
-<pre tabindex="0"><code>ntfy user add --role=admin example</code></pre><p>It will then prompt you for a password, obviously change &ldquo;example&rdquo; to any username you want</p>
-<p>Also, when sending notifications to channels most services want an access token, which you can create with this command</p>
-
-
-
-
-
-<pre tabindex="0"><code>ntfy token add example</code></pre><p>Hope this guide was helpful - for its creation I used several sections from the <a href="https://docs.ntfy.sh/">ntfy docs</a> and a <a href="https://www.youtube.com/watch?v=poDIT2ruQ9M">networkchuck video</a></p>
-]]></content:encoded>
+      <guid>//localhost:1313/blog/ntfy-server/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://ntfy.sh&#34;&gt;Ntfy&lt;/a&gt; is an absolutely amazing service for sending push notifications to your phone or other devices with a simple web request, I use it for alerts from my uptime monitor (HetrixTools) and ssh logins. Mine is hosted on a google cloud free tier e2 micro instance which gives me great reliability for free.&lt;/p&gt;&#xA;&lt;p&gt;Heres how to set it up with docker and proper authentication for personal use - you can find a guide on how to secure whatever Linux server your hosting this on &lt;a href=&#34;//localhost:1313/posts/securing-server&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The state of my Homelab in 2025</title>
-      <link>http://localhost:1313/blog/homelab-2025/</link>
+      <link>//localhost:1313/blog/homelab-2025/</link>
       <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/homelab-2025/</guid>
+      <guid>//localhost:1313/blog/homelab-2025/</guid>
       <description>&lt;p&gt;Currently my Homelab is used to run services for personal use, my stuff exposed to the internet and services for friends or people in my local community.&lt;/p&gt;&#xA;&lt;p&gt;The original goal of this setup was to build a service that lets me cancel most of my vps subscriptions, which so far has succeeded, the next goal is to make the service as reliable or close to as reliable as a proper hosting provider.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>Currently my Homelab is used to run services for personal use, my stuff exposed to the internet and services for friends or people in my local community.</p>
-<p>The original goal of this setup was to build a service that lets me cancel most of my vps subscriptions, which so far has succeeded, the next goal is to make the service as reliable or close to as reliable as a proper hosting provider.</p>
-<h2 id="compute-nodes">Compute Nodes</h2>
-<p>Navi is my main machine running pretty much everything, it currently sits on a shelf but I plan to build a server rack and add some more machines later on.</p>
-<p>It runs Proxmox VE and hosts various virtual machines and lxc containers.</p>
-<table>
-  <thead>
-      <tr>
-          <th>Name</th>
-          <th>CPU</th>
-          <th>RAM</th>
-          <th>Storage</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Navi</td>
-          <td>Ryzen 5 5500</td>
-          <td>32GB DDR4</td>
-          <td>1TB SSD</td>
-      </tr>
-  </tbody>
-</table>
-<h2 id="networking">Networking</h2>
-<h3 id="internet-line">Internet Line</h3>
-<p>Being in Australia on the NBN, I have an FTTP (Fibre to the Premises) connection, essentially a full fibre line which is perfect for reliability and performance.</p>
-<p>My ISP is small and reasonably priced, they&rsquo;ve never had an outage on my line and I consistently get full speeds with zero congestion. They even provide built-in inline DDoS Protection with <a href="https://globalsecurelayer.com/ddos-protection">GSL</a> for no extra cost. On top of that, their support actually knows what they&rsquo;re talking about while taking less than a day to respond over email, probably one of the best setups you could possibly have for Homelabbing.</p>
-<h3 id="local-network">Local Network</h3>
-<p>As my main router I use an enterprise-grade business router built for performance, reliability and high uptime.</p>
-<p>My network is segmented into 2 vLANs: one for my home network and another for my Homelab, this ensures that any breaches in my infrastructure don&rsquo;t spread to vulnerable IoT devices or other home devices.</p>
-<p>On top of that other peoples VMs are segmented and blocked from accessing anything except my router with Proxmox&rsquo;s firewall.</p>
-<h2 id="exposing-services">Exposing Services</h2>
-<p>For web based services I use cloudflare tunnels in additional to tailscale and a vps for non web based services (e.g game servers).</p>
-<h2 id="what-im-running-on-it">What I&rsquo;m running on it</h2>
-<h3 id="linux-labs"><a href="https://kasmweb.com">Linux Labs</a></h3>
-<p>Using excess capacity I build small linux labs for penetration testing running Kali linux in addition to a vulnerable machine.</p>
-<p><img src="/images/kali_linux.webp" alt=""></p>
-<h3 id="pterodactyl-panel--wings"><a href="https://pterodactyl.io">Pterodactyl Panel &amp; Wings</a></h3>
-<p>This allows me to create and manage all of my game servers with a clean web interface and central place to manage accounts and servers across multiple nodes.</p>
-<h3 id="gitea"><a href="https://about.gitea.com">Gitea</a></h3>
-<p>A self-hosted GitHub/GitLab alternative, I trust GitHub more with durability so I mainly use my Gitea server for mirrors incase something happens to GitHub or my account on it.</p>
-<h3 id="vps-servers">VPS Servers</h3>
-<p>I operate a small service for friends or people in my local community offering small linux VMs hosted in my homelab for free - find more about how that works <a href="/posts/vps-service">here</a>.</p>
-<h2 id="reliability">Reliability</h2>
-<p>My goal of building my own hosting platform more reliable than a proper hosting provider is pretty much impossible without being in a datacenter, as homes typically don&rsquo;t have multiple internet lines or onsite diesel generators. However, I&rsquo;m in the position where I can achieve good enough uptime for non commercial services.</p>
-<ul>
-<li><strong>Power:</strong>  Extremely reliable, I live in a fairly new area with pretty solid power infrastructure. My next upgrade will definitely be adding a UPS.</li>
-<li><strong>Internet:</strong> I haven&rsquo;t had a single outage on my Internet line, speeds are always consistent with no congestion.</li>
-<li><strong>Services Interfering</strong>: All services run in their own VMs with strict resource allocations. If one service crashes or maxxes out resources, nothing else is affected.</li>
-</ul>
-<h3 id="backups">Backups</h3>
-<p>I follow the industry-standard 3-2-1 rule where you have a copy on production, an onsite backup and an offsite backup. I run a Proxmox Backup Server onsite which is then sent up to Backblaze B2.</p>
-<h3 id="monitoring">Monitoring</h3>
-<p>Even though I do want to setup a proper onsite monitoring system with Prometheus &amp; Grafana as a future project, HetrixTools is super easy to setup and does everything I need it to do - monitor uptime, system resources, network usage and active processes of each Node &amp; VM so I&rsquo;m using that in the meantime.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>Even though my Homelab is in a great state for my needs, it can always improve, a few things I still want to do with it include:</p>
-<ul>
-<li>Setup an onsite monitoring system with Prometheus &amp; Grafana</li>
-<li>Add a UPS to protect data integrity and keep systems up during short power outages</li>
-<li>Build a proper server rack and add more compute nodes (Including a proper storage server with multiple TBs of storage)</li>
-</ul>
-<p>And more stuff will definitely come up throughout the years.</p>
-<p>Thanks for reading.</p>
-]]></content:encoded>
     </item>
     <item>
       <title>How I host Linux VMs for people in my Homelab</title>
-      <link>http://localhost:1313/blog/vps-service/</link>
+      <link>//localhost:1313/blog/vps-service/</link>
       <pubDate>Sun, 31 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/vps-service/</guid>
+      <guid>//localhost:1313/blog/vps-service/</guid>
       <description>&lt;p&gt;A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers &amp;ldquo;spot&amp;rdquo; vms for much cheaper as it uses excess compute capacity.&lt;/p&gt;&#xA;&lt;p&gt;Obviously I can&amp;rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers &ldquo;spot&rdquo; vms for much cheaper as it uses excess compute capacity.</p>
-<p>Obviously I can&rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.</p>
-<h2 id="vm-templates--operating-systems">VM Templates &amp; Operating Systems</h2>
-<p>I already use Proxmox VE for personal vms so I&rsquo;m using my existing setup for this service.</p>
-<p>Currently I have a vm template for Debian 13 &ldquo;Trixie&rdquo;, which lets me spin up new machines with unattended updates and the setup process already complete.</p>
-<h2 id="networking--public-ips">Networking &amp; Public IPs</h2>
-<p>I had to get a bit creative here as residential internet connections don&rsquo;t let you have multiple public ip addresses on your connection.</p>
-<p>To get around this I run a vps with multiple public ips which has a secure encrypted tunnel back into a tailscale gateway running inside my home network which exposes the vm subnets/network, this setup also means I don&rsquo;t have to install tailscale on any vms.</p>
-<p>If someone connected to <code>[public_vps_ip]:22</code> it gets relayed to <code>[private_vm_ip]:22</code> through the tunnel and it all happens seemlessly.</p>
-<p><img src="/images/home_vps_diagram.webp" alt=""></p>
-<p>This all happens behind the scenes without any noticeable latency (1-2ms latency between vps and my network, tailscale gateway gets under 0.2ms to vms)</p>
-<h2 id="internal-network-security">Internal Network Security</h2>
-<p>Obviously one of the main security risks with running a service like this in my Homelab isn&rsquo;t really external attacks, its vms being breached and then attacking or breaking into stuff on my home network.</p>
-<p>To mitigate this I have a security group on the Proxmox firewall with a list of rules denying access to anything on my local network except the router (for internet) and tailscale gateway (to expose services). Running it on the hypervisor level adds an extra layer of security because you&rsquo;d need access to Proxmox which is also firewalled off.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>This setup is still in the early stages of development, I&rsquo;ve been working on it for a couple days so I&rsquo;ll improve over time as I make it more robust and reliable, one of my goals for later on is to add something like high availability or an automated system as most of it is manual right now.</p>
-]]></content:encoded>
     </item>
     <item>
       <title>Exposing self-hosted applications without a Public IP address</title>
-      <link>http://localhost:1313/blog/exposing-services/</link>
+      <link>//localhost:1313/blog/exposing-services/</link>
       <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/exposing-services/</guid>
+      <guid>//localhost:1313/blog/exposing-services/</guid>
       <description>&lt;p&gt;In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don&amp;rsquo;t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.&lt;/p&gt;&#xA;&lt;p&gt;So here are a few &lt;strong&gt;free and paid&lt;/strong&gt; solutions for exposing both web applications and game servers to the internet without port forwarding.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cloudflare-tunnels&#34;&gt;&lt;a href=&#34;https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/&#34;&gt;Cloudflare Tunnels&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don&rsquo;t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.</p>
-<p>So here are a few <strong>free and paid</strong> solutions for exposing both web applications and game servers to the internet without port forwarding.</p>
-<h2 id="cloudflare-tunnels"><a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/">Cloudflare Tunnels</a></h2>
-<p>This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network</p>
-<p>Some argue that it defeats the point of self-hosting since Cloudflare centralizes the web while the indie webs goal is the opposite, however its a great service for exposing applications for free if your fine with that tradeoff.</p>
-<h2 id="tailscale-w-an-optional-vps"><a href="https://tailscale.com">Tailscale</a> (w/ an optional VPS)</h2>
-<p>This solution can be either free or paid depending on if you want just yourself to be able to access your services or you want them to be exposed via a domain. You can setup Tailscale on both your devices and the server then securely connect to eachother without exposing anything publicly for completely free.</p>
-<p>If you want a service to be publicly accessible via a domain, you&rsquo;ll need a remote server with its own public ip address as Tailscale only lets you establish secure connections between devices, not expose things to the internet.</p>
-<p>You&rsquo;d install Tailscale on your home server and remote server, then on the remote server you install for example caddy and setup a reverse proxy to your home servers Tailscale address, an example config is shown below.</p>
-
-
-
-
-
-<pre tabindex="0"><code>example.com {
-  reverse_proxy http://100.85.48.32
-}</code></pre><p>Additionally, you can use this to expose any tcp/udp service, including Game Servers, SSH, (S)FTP and much more which requires forwarding ports from a remote server to your home servers Tailscale address but I don&rsquo;t feel confident explaining how to do that.</p>
-<h2 id="playitgg"><a href="https://playit.gg">Playit.gg</a></h2>
-<p>Arguably the best free service for exposing game servers without port forwarding. The setup includes installing a program which tunnels game server traffic to their global network of relay servers.</p>
-<p>Its super easy to setup, you can watch a video guide <a href="https://www.youtube.com/watch?v=itVVhcid2_Q&amp;pp=ygUUc2V0dGluZyB1cCBwbGF5aXQuZ2fSBwkJsgkBhyohjO8%3D">here</a>.</p>
-<p>You can also use it to expose any tcp port with a dedicated IPV4 but Tailscale w/ a VPS or CF Tunnels (for websites) is a better option since playit is primarily for game servers.</p>
-]]></content:encoded>
     </item>
     <item>
       <title>Mini PCs are perfect Home Servers</title>
-      <link>http://localhost:1313/blog/mini-pcs/</link>
+      <link>//localhost:1313/blog/mini-pcs/</link>
       <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/mini-pcs/</guid>
+      <guid>//localhost:1313/blog/mini-pcs/</guid>
       <description>&lt;p&gt;Recently I picked up a $100 Lenovo ThinkCentre M710Q off ebay with an i5 7400T, 8GB of ram and a 256GB NVMe SSD to add to my Proxmox cluster.&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-good--bad&#34;&gt;The good &amp;amp; Bad&lt;/h3&gt;&#xA;&lt;p&gt;Mini PCs are built to be small, quiet and power efficient, perfect for a home server. They&amp;rsquo;re also tiny, hence the name meaning they can live pretty much anywhere.&lt;/p&gt;&#xA;&lt;p&gt;However, their form factor makes them hard to upgrade for future expandability and hard to add redundant storage to.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>Recently I picked up a $100 Lenovo ThinkCentre M710Q off ebay with an i5 7400T, 8GB of ram and a 256GB NVMe SSD to add to my Proxmox cluster.</p>
-<h3 id="the-good--bad">The good &amp; Bad</h3>
-<p>Mini PCs are built to be small, quiet and power efficient, perfect for a home server. They&rsquo;re also tiny, hence the name meaning they can live pretty much anywhere.</p>
-<p>However, their form factor makes them hard to upgrade for future expandability and hard to add redundant storage to.</p>
-<h3 id="where-to-buy-them">Where to buy them</h3>
-<p>I&rsquo;d recommend having a browse on eBay, find a listing with lots available which means they&rsquo;re selling in bulk and make sure its not &ldquo;barebones&rdquo; since then your pretty much just getting a motherboard and case.</p>
-<h3 id="why-theyre-such-good-value">Why they&rsquo;re such good value</h3>
-<p>Similar to Thinkpads, businesses buy these machines in bulk and then decommision the old ones selling them in bulk for cheap.</p>
-]]></content:encoded>
     </item>
     <item>
       <title>Securing ssh on your Linux Server</title>
-      <link>http://localhost:1313/blog/securing-server/</link>
+      <link>//localhost:1313/blog/securing-server/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/securing-server/</guid>
+      <guid>//localhost:1313/blog/securing-server/</guid>
       <description>&lt;p&gt;This post is made for debian based linux distros.&lt;/p&gt;&#xA;&lt;h3 id=&#34;dont-expose-ssh-use-a-vpn&#34;&gt;Don&amp;rsquo;t expose ssh, use a VPN&lt;/h3&gt;&#xA;&lt;p&gt;This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.&lt;/p&gt;&#xA;&lt;h3 id=&#34;non-root-account-for-logins--disable-root-login&#34;&gt;Non-root account for logins / Disable root login&lt;/h3&gt;&#xA;&lt;p&gt;Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>This post is made for debian based linux distros.</p>
-<h3 id="dont-expose-ssh-use-a-vpn">Don&rsquo;t expose ssh, use a VPN</h3>
-<p>This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.</p>
-<h3 id="non-root-account-for-logins--disable-root-login">Non-root account for logins / Disable root login</h3>
-<p>Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want</p>
-
-
-
-
-
-<pre tabindex="0"><code>adduser kuma</code></pre><p>Then add it to the list of sudoers</p>
-
-
-
-
-
-<pre tabindex="0"><code>usermod -aG sudo kuma</code></pre><h3 id="using-ssh-keys-over-plaintext-passwords">Using SSH keys over plaintext passwords</h3>
-<p>SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.</p>
-<p>Generate an ssh key using PuttyGen and paste it on a new line in <code>/home/&lt;your_username&gt;/.ssh/authorized_keys</code>.</p>
-<h3 id="updating-your-ssh-configuration">Updating your SSH configuration</h3>
-<p>This process can differ depending on your host, but for most servers the ssh config is located in <code>/etc/ssh/sshd_config</code>, in the file you want to change the following values.</p>
-
-
-
-
-
-<pre tabindex="0"><code>PasswordAuthentication no</code></pre>
-
-
-
-
-<pre tabindex="0"><code>PubkeyAuthentication yes</code></pre>
-
-
-
-
-<pre tabindex="0"><code>PermitRootLogin no</code></pre><p>Changing these config values will</p>
-<ul>
-<li>Disable password authentication</li>
-<li>Allow you to login using ssh keys (Which I showed how to setup above)</li>
-<li>Disable root login (Applying the steps from before)</li>
-</ul>
-<p>Run the command below to apply the motifications</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo systemctl restart ssh</code></pre><h3 id="ntfy-notifcations-on-ssh-login">NTFY notifcations on ssh login</h3>
-<p>You can learn how to setup a secure personal ntfy server <a href="/posts/ntfy-server">here</a>.</p>
-<p>Adding these lines to your <code>/etc/profile</code> file will send a request to your chosen ntfy server when any user logs in via ssh</p>
-
-
-
-
-
-<pre tabindex="0"><code>if [ -n &#34;$SSH_CLIENT&#34; ]; then
-
-NTFY=&#34;${USER}@$(hostname -f) from $(echo $SSH_CLIENT|awk &#39;{print $1}&#39;)&#34;
-
-curl -u :&lt;ntfy_api_key&gt; -s -H &#34;Title: SSH Login&#34; -d &#34;$NTFY&#34; -L  &#34;https://ntfy.exaple.com/ssh&#34; &gt; /dev/null
-
-fi</code></pre><p>Modify to add your own api key and change the url to your ntfy server</p>
-<p>You can also find an example on the ntfy docs <a href="https://docs.ntfy.sh/examples/#ssh-login-alerts">here</a> (Didn&rsquo;t work for me)</p>
-]]></content:encoded>
     </item>
     <item>
       <title>Starting my Homelab</title>
-      <link>http://localhost:1313/blog/starting-homelab/</link>
+      <link>//localhost:1313/blog/starting-homelab/</link>
       <pubDate>Fri, 29 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/starting-homelab/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This is a very old post, I now have a fully functional homelab &lt;a href=&#34;http://localhost:1313/homelab/&#34;&gt;here&lt;/a&gt; - and a full walkthrough of everything on it &lt;a href=&#34;http://localhost:1313/posts/homelab-2025&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Im planning to start a homelab this year so I can get real hands on experience with server hardware and software, and also own my information and data instead of having to trust hosting companies with it&lt;/p&gt;&#xA;&lt;h2 id=&#34;upsides-to-running-one&#34;&gt;Upsides to running one&lt;/h2&gt;&#xA;&lt;p&gt;Most programmers and developers have a homelab for a few reasons&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<blockquote>
-<p>This is a very old post, I now have a fully functional homelab <a href="/homelab/">here</a> - and a full walkthrough of everything on it <a href="/posts/homelab-2025">here</a>.</p>
-</blockquote>
-<p>Im planning to start a homelab this year so I can get real hands on experience with server hardware and software, and also own my information and data instead of having to trust hosting companies with it</p>
-<h2 id="upsides-to-running-one">Upsides to running one</h2>
-<p>Most programmers and developers have a homelab for a few reasons</p>
-<ul>
-<li>
-<p>Having tons of computing power available to you at all times, its a lot cheaper to own your hardware over renting out stuff, you also have full control over it so you can handle backing it up, securing it and of course you can ensure that nothing bad happens to it since you have full control over the system</p>
-</li>
-<li>
-<p>Learn a ton about computers/server, teaching you stuff about managing the software and the hardware. You will also learn lots about networking and how to safely expose stuff to the internet</p>
-</li>
-<li>
-<p>If you tell a employer you have a homelab / you run multiple servers in your house, they&rsquo;re going to be more interested in you than other applicants, as you will have real hands on experience with server hardware and software and something to prove it too</p>
-</li>
-</ul>
-<h2 id="downsides-to-having-one">Downsides to having one</h2>
-<ul>
-<li>
-<p>It costs a lot of money to run one, specificially the power cost of having a homelab can add up overtime</p>
-</li>
-<li>
-<p>Not as relaible as a server in an enterprise datacenter, power outages do happen same with internet outages and are much more unlikely to happen to a datacenter which likely also has a backup generator of some sort.</p>
-</li>
-<li>
-<p>Starting one is farily expensive, at least for someone my age with not a lot of money.</p>
-</li>
-</ul>
-<h2 id="ideal-setup">Ideal Setup</h2>
-<p>This is what I aim to have for a homelab setup, I hope to have this within a few years.</p>
-<h3 id="productivitymultipurpose-machine">Productivity/Multipurpose machine</h3>
-<ul>
-<li>
-<p>Use case: Self hosted apps and file storage</p>
-</li>
-<li>
-<p>CPU: Likely an Intel with at least 4-6 threads</p>
-</li>
-<li>
-<p>Memory: 4-8GB, I don&rsquo;t need much for running self hosted apps</p>
-</li>
-<li>
-<p>Storage: 200+GB of SSD/HDD storage</p>
-</li>
-<li>
-<p>Networking: 1Gbit ethernet connection</p>
-</li>
-</ul>
-<h3 id="game-hosting-machine">Game hosting machine</h3>
-<ul>
-<li>
-<p>Use case: Hosting game servers like Minecraft, ARK, Valheim, etc.</p>
-</li>
-<li>
-<p>CPU: Some sort of Ryzen processer, either Ryzen 5 or Ryzen 7, single core performance is a priority</p>
-</li>
-<li>
-<p>Memory: 32GB of DDR4 or DDR5 ram, they both work fine for me</p>
-</li>
-<li>
-<p>Storage: 500+GB of NVMe storage, game server software is massive and even game server files can get really big from stuff like mods and big worlds</p>
-</li>
-<li>
-<p>Networking: 1Gbit ethernet connection</p>
-</li>
-</ul>
-<h2 id="what-im-going-to-move">What im going to move</h2>
-<p>Im going to keep this website in the Cloud since all of it is hosted on github as well as my cloud infrastructure, so if one fails then I have a backup and its very unlikely for me to lose the content of this website. I plan to move things like all of my game servers over to my homelab. I also want storage archives and backups of my systems on it.</p>
-<h2 id="backup-plan">Backup Plan</h2>
-<p>Im going to use multiple storage vpses from Datalix to backup my homelab systems, thats the primary reason I want to keep the hard drives not too big.</p>
-<p>Im going to constantly update this page when my needs change.</p>
-]]></content:encoded>
+      <guid>//localhost:1313/blog/starting-homelab/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This is a very old post, I now have a fully functional homelab &lt;a href=&#34;//localhost:1313/homelab/&#34;&gt;here&lt;/a&gt; - and a full walkthrough of everything on it &lt;a href=&#34;//localhost:1313/posts/homelab-2025&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Im planning to start a homelab this year so I can get real hands on experience with server hardware and software, and also own my information and data instead of having to trust hosting companies with it&lt;/p&gt;&#xA;&lt;h2 id=&#34;upsides-to-running-one&#34;&gt;Upsides to running one&lt;/h2&gt;&#xA;&lt;p&gt;Most programmers and developers have a homelab for a few reasons&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
