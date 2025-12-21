@@ -1,27 +1,109 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Linux on Alecks 🌱</title>
+    <title>Linux on Alecks</title>
     <link>http://localhost:1313/tags/linux/</link>
-    <description>Recent content in Linux on Alecks 🌱</description>
-    <generator>Hugo</generator>
+    <description>Recent content in Linux on Alecks</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>No copyright</copyright>
-    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <copyright>© Alecks 2025</copyright>
+    <lastBuildDate>Sun, 31 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Securing ssh on your linux server.</title>
+      <title>How I host Linux VMs for people in my Homelab</title>
+      <link>http://localhost:1313/blog/vps-service/</link>
+      <pubDate>Sun, 31 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/vps-service/</guid>
+      <description>&lt;p&gt;A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers &amp;ldquo;spot&amp;rdquo; vms for much cheaper as it uses excess compute capacity.&lt;/p&gt;&#xA;&lt;p&gt;Obviously I can&amp;rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers &ldquo;spot&rdquo; vms for much cheaper as it uses excess compute capacity.</p>
+<p>Obviously I can&rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.</p>
+<h2 id="vm-templates--operating-systems">VM Templates &amp; Operating Systems</h2>
+<p>I already use Proxmox VE for personal vms so I&rsquo;m using my existing setup for this service.</p>
+<p>Currently I have a vm template for Debian 13 &ldquo;Trixie&rdquo;, which lets me spin up new machines with unattended updates and the setup process already complete.</p>
+<h2 id="networking--public-ips">Networking &amp; Public IPs</h2>
+<p>I had to get a bit creative here as residential internet connections don&rsquo;t let you have multiple public ip addresses on your connection.</p>
+<p>To get around this I run a vps with multiple public ips which has a secure encrypted tunnel back into a tailscale gateway running inside my home network which exposes the vm subnets/network, this setup also means I don&rsquo;t have to install tailscale on any vms.</p>
+<p>If someone connected to <code>[public_vps_ip]:22</code> it gets relayed to <code>[private_vm_ip]:22</code> through the tunnel and it all happens seemlessly.</p>
+<p><img src="/images/home_vps_diagram.webp" alt=""></p>
+<p>This all happens behind the scenes without any noticeable latency (1-2ms latency between vps and my network, tailscale gateway gets under 0.2ms to vms)</p>
+<h2 id="internal-network-security">Internal Network Security</h2>
+<p>Obviously one of the main security risks with running a service like this in my Homelab isn&rsquo;t really external attacks, its vms being breached and then attacking or breaking into stuff on my home network.</p>
+<p>To mitigate this I have a security group on the Proxmox firewall with a list of rules denying access to anything on my local network except the router (for internet) and tailscale gateway (to expose services). Running it on the hypervisor level adds an extra layer of security because you&rsquo;d need access to Proxmox which is also firewalled off.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This setup is still in the early stages of development, I&rsquo;ve been working on it for a couple days so I&rsquo;ll improve over time as I make it more robust and reliable, one of my goals for later on is to add something like high availability or an automated system as most of it is manual right now.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Securing ssh on your Linux Server</title>
       <link>http://localhost:1313/blog/securing-server/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/securing-server/</guid>
-      <description>&lt;p&gt;This post is made for debian based linux distros&lt;/p&gt;&#xA;&lt;h2 id=&#34;non-root-account-for-logins--disable-root-login&#34;&gt;Non-root account for logins / Disable root login.&lt;/h2&gt;&#xA;&lt;p&gt;Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adduser kuma&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then add it to the list of sudoers&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;usermod -aG sudo kuma&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;using-ssh-keys-over-plaintext-passwords&#34;&gt;Using SSH keys over plaintext passwords.&lt;/h2&gt;&#xA;&lt;p&gt;SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Oracle cloud is a horrible platform.</title>
-      <link>http://localhost:1313/blog/oracle-cloud-rant/</link>
-      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/oracle-cloud-rant/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve previously used oracle cloud to host a large variety of services, from minecraft servers to kasm workspaces and much more.&lt;/p&gt;&#xA;&lt;p&gt;I signed up on April 20th 2023 and ended up being terminated from the platform for an unknown reason on the 29th of November 2023, I ran 2 oracle cloud accounts (Not related to the termination, both used completely different information) and only 1 of them was terminated so I continued using the platform until late 2023 (around December) when I manually terminated my other account.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post is made for debian based linux distros.&lt;/p&gt;&#xA;&lt;h3 id=&#34;dont-expose-ssh-use-a-vpn&#34;&gt;Don&amp;rsquo;t expose ssh, use a VPN&lt;/h3&gt;&#xA;&lt;p&gt;This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.&lt;/p&gt;&#xA;&lt;h3 id=&#34;non-root-account-for-logins--disable-root-login&#34;&gt;Non-root account for logins / Disable root login&lt;/h3&gt;&#xA;&lt;p&gt;Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>This post is made for debian based linux distros.</p>
+<h3 id="dont-expose-ssh-use-a-vpn">Don&rsquo;t expose ssh, use a VPN</h3>
+<p>This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.</p>
+<h3 id="non-root-account-for-logins--disable-root-login">Non-root account for logins / Disable root login</h3>
+<p>Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want</p>
+
+
+
+
+
+<pre tabindex="0"><code>adduser kuma</code></pre><p>Then add it to the list of sudoers</p>
+
+
+
+
+
+<pre tabindex="0"><code>usermod -aG sudo kuma</code></pre><h3 id="using-ssh-keys-over-plaintext-passwords">Using SSH keys over plaintext passwords</h3>
+<p>SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.</p>
+<p>Generate an ssh key using PuttyGen and paste it on a new line in <code>/home/&lt;your_username&gt;/.ssh/authorized_keys</code>.</p>
+<h3 id="updating-your-ssh-configuration">Updating your SSH configuration</h3>
+<p>This process can differ depending on your host, but for most servers the ssh config is located in <code>/etc/ssh/sshd_config</code>, in the file you want to change the following values.</p>
+
+
+
+
+
+<pre tabindex="0"><code>PasswordAuthentication no</code></pre>
+
+
+
+
+<pre tabindex="0"><code>PubkeyAuthentication yes</code></pre>
+
+
+
+
+<pre tabindex="0"><code>PermitRootLogin no</code></pre><p>Changing these config values will</p>
+<ul>
+<li>Disable password authentication</li>
+<li>Allow you to login using ssh keys (Which I showed how to setup above)</li>
+<li>Disable root login (Applying the steps from before)</li>
+</ul>
+<p>Run the command below to apply the motifications</p>
+
+
+
+
+
+<pre tabindex="0"><code>sudo systemctl restart ssh</code></pre><h3 id="ntfy-notifcations-on-ssh-login">NTFY notifcations on ssh login</h3>
+<p>You can learn how to setup a secure personal ntfy server <a href="/posts/ntfy-server">here</a>.</p>
+<p>Adding these lines to your <code>/etc/profile</code> file will send a request to your chosen ntfy server when any user logs in via ssh</p>
+
+
+
+
+
+<pre tabindex="0"><code>if [ -n &#34;$SSH_CLIENT&#34; ]; then
+
+NTFY=&#34;${USER}@$(hostname -f) from $(echo $SSH_CLIENT|awk &#39;{print $1}&#39;)&#34;
+
+curl -u :&lt;ntfy_api_key&gt; -s -H &#34;Title: SSH Login&#34; -d &#34;$NTFY&#34; -L  &#34;https://ntfy.exaple.com/ssh&#34; &gt; /dev/null
+
+fi</code></pre><p>Modify to add your own api key and change the url to your ntfy server</p>
+<p>You can also find an example on the ntfy docs <a href="https://docs.ntfy.sh/examples/#ssh-login-alerts">here</a> (Didn&rsquo;t work for me)</p>
+]]></content:encoded>
     </item>
   </channel>
 </rss>

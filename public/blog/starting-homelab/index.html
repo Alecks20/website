@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Starting my Homelab | Alecks</title>
+<meta name="title" content="Starting my Homelab" />
+<meta name="description" content="
+This is a very old post, I now have a fully functional homelab here - and a full walkthrough of everything on it here.
+
+Im planning to start a homelab this year so I can get real hands on experience with server hardware and software, and also own my information and data instead of having to trust hosting companies with it
+Upsides to running one
+Most programmers and developers have a homelab for a few reasons" />
+<meta name="author" content="Alecks" />
+<meta name="keywords" content="homelab,servers,self-hosting," />
+
+
+
+
+
+
+  
+  <meta property="og:url" content="http://localhost:1313/blog/starting-homelab/">
+  <meta property="og:site_name" content="Alecks">
+  <meta property="og:title" content="Starting my Homelab">
+  <meta property="og:description" content="This is a very old post, I now have a fully functional homelab here - and a full walkthrough of everything on it here.
+Im planning to start a homelab this year so I can get real hands on experience with server hardware and software, and also own my information and data instead of having to trust hosting companies with it
+Upsides to running one Most programmers and developers have a homelab for a few reasons">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-03-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-03-29T00:00:00+00:00">
+    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="Servers">
+    <meta property="article:tag" content="Self-Hosting">
+
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Starting my Homelab">
+  <meta name="twitter:description" content="This is a very old post, I now have a fully functional homelab here - and a full walkthrough of everything on it here.
+Im planning to start a homelab this year so I can get real hands on experience with server hardware and software, and also own my information and data instead of having to trust hosting companies with it
+Upsides to running one Most programmers and developers have a homelab for a few reasons">
+
+
+  
+  
+  <meta itemprop="name" content="Starting my Homelab">
+  <meta itemprop="description" content="This is a very old post, I now have a fully functional homelab here - and a full walkthrough of everything on it here.
+Im planning to start a homelab this year so I can get real hands on experience with server hardware and software, and also own my information and data instead of having to trust hosting companies with it
+Upsides to running one Most programmers and developers have a homelab for a few reasons">
+  <meta itemprop="datePublished" content="2024-03-29T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-03-29T00:00:00+00:00">
+  <meta itemprop="wordCount" content="546">
+  <meta itemprop="keywords" content="Homelab,Servers,Self-Hosting">
+
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  
+  <link href="/original.min.css" rel="stylesheet">
+
+  
+
+  
+
+  
+</head>
+
+<body>
+  <header><a class="skip-link" href="#main-content">Skip to main content</a>
+
+<a href="/" class="title"><h1>Alecks</h1></a>
+<nav>
+  <a href="/">Home</a>
+
+  <a href="/blog/">Blog</a>
+
+  <a href="/homelab/">Homelab</a>
+
+  <a href="/skills/">Skills</a>
+
+<a href='http://localhost:1313/index.xml'>RSS</a>
+
+
+
+
+
+
+
+</nav>
+</header>
+  <main id="main-content">
+
+<h1>Starting my Homelab</h1>
+<p class="byline">
+  <time datetime='2024-03-29' pubdate>
+    2024-03-29
+  </time>
+  · Alecks
+</p>
+
+<content>
+  <blockquote>
+<p>This is a very old post, I now have a fully functional homelab <a href="/homelab/">here</a> - and a full walkthrough of everything on it <a href="/posts/homelab-2025">here</a>.</p>
+</blockquote>
+<p>Im planning to start a homelab this year so I can get real hands on experience with server hardware and software, and also own my information and data instead of having to trust hosting companies with it</p>
+<h2 id="upsides-to-running-one">Upsides to running one</h2>
+<p>Most programmers and developers have a homelab for a few reasons</p>
+<ul>
+<li>
+<p>Having tons of computing power available to you at all times, its a lot cheaper to own your hardware over renting out stuff, you also have full control over it so you can handle backing it up, securing it and of course you can ensure that nothing bad happens to it since you have full control over the system</p>
+</li>
+<li>
+<p>Learn a ton about computers/server, teaching you stuff about managing the software and the hardware. You will also learn lots about networking and how to safely expose stuff to the internet</p>
+</li>
+<li>
+<p>If you tell a employer you have a homelab / you run multiple servers in your house, they&rsquo;re going to be more interested in you than other applicants, as you will have real hands on experience with server hardware and software and something to prove it too</p>
+</li>
+</ul>
+<h2 id="downsides-to-having-one">Downsides to having one</h2>
+<ul>
+<li>
+<p>It costs a lot of money to run one, specificially the power cost of having a homelab can add up overtime</p>
+</li>
+<li>
+<p>Not as relaible as a server in an enterprise datacenter, power outages do happen same with internet outages and are much more unlikely to happen to a datacenter which likely also has a backup generator of some sort.</p>
+</li>
+<li>
+<p>Starting one is farily expensive, at least for someone my age with not a lot of money.</p>
+</li>
+</ul>
+<h2 id="ideal-setup">Ideal Setup</h2>
+<p>This is what I aim to have for a homelab setup, I hope to have this within a few years.</p>
+<h3 id="productivitymultipurpose-machine">Productivity/Multipurpose machine</h3>
+<ul>
+<li>
+<p>Use case: Self hosted apps and file storage</p>
+</li>
+<li>
+<p>CPU: Likely an Intel with at least 4-6 threads</p>
+</li>
+<li>
+<p>Memory: 4-8GB, I don&rsquo;t need much for running self hosted apps</p>
+</li>
+<li>
+<p>Storage: 200+GB of SSD/HDD storage</p>
+</li>
+<li>
+<p>Networking: 1Gbit ethernet connection</p>
+</li>
+</ul>
+<h3 id="game-hosting-machine">Game hosting machine</h3>
+<ul>
+<li>
+<p>Use case: Hosting game servers like Minecraft, ARK, Valheim, etc.</p>
+</li>
+<li>
+<p>CPU: Some sort of Ryzen processer, either Ryzen 5 or Ryzen 7, single core performance is a priority</p>
+</li>
+<li>
+<p>Memory: 32GB of DDR4 or DDR5 ram, they both work fine for me</p>
+</li>
+<li>
+<p>Storage: 500+GB of NVMe storage, game server software is massive and even game server files can get really big from stuff like mods and big worlds</p>
+</li>
+<li>
+<p>Networking: 1Gbit ethernet connection</p>
+</li>
+</ul>
+<h2 id="what-im-going-to-move">What im going to move</h2>
+<p>Im going to keep this website in the Cloud since all of it is hosted on github as well as my cloud infrastructure, so if one fails then I have a backup and its very unlikely for me to lose the content of this website. I plan to move things like all of my game servers over to my homelab. I also want storage archives and backups of my systems on it.</p>
+<h2 id="backup-plan">Backup Plan</h2>
+<p>Im going to use multiple storage vpses from Datalix to backup my homelab systems, thats the primary reason I want to keep the hard drives not too big.</p>
+<p>Im going to constantly update this page when my needs change.</p>
+
+</content>
+<p>
+  
+    <a class="blog-tags" href="/tags/homelab/">#homelab</a>
+  
+    <a class="blog-tags" href="/tags/servers/">#servers</a>
+  
+    <a class="blog-tags" href="/tags/self-hosting/">#self-hosting</a>
+  
+</p>
+
+
+
+
+  </main>
+  <footer><small>
+  © Alecks 2025 | <a href="https://github.com/alecks20/alecks.dev">Source</a>
+</small></footer>
+
+    
+</body>
+
+</html>

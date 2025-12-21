@@ -5,8 +5,10 @@ weight: 1
 ---
 Hello Internet, 
 
-My name is Alecks, I'm a self-taught developer from Australia with a passion for system administration, networking, infrastructure, homelabbing and programming (Fairly experienced in Python, new to JavaScript). I also enjoy anime, reading and movies.
+I'm a passionate developer living in Australia from a small town in New Zealand highly skilled in various tech fields - [my skills](/skills). 
 
-I use this website to publish my writings (blog posts, rants, guides) and run my own little digital garden on the internet.
+This website is my own little corner of the internet to showcase my practical experience and serve as a time capsule for writings, it also helps solidify learnings as explaining things to other people is one of the best ways to remember things.
 
-Find me on the web - [Steam](https://steamcommunity.com/profiles/76561199121598457/), [GitHub](https://github.com/Alecks20)
+Outside of IT I love documentaries (tech, hacking, politics, economics and true crime), anime, fixing up/reviving old thinkpads or devices and designing things.
+
+[Tech/EDC](/gear) - [Favourites](/favourites)

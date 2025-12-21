@@ -5,11 +5,36 @@
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Homelab | Alecks 🌱</title>
+<title>Homelab | Alecks</title>
 <meta name="title" content="Homelab" />
-<meta name="description" content="The cloud is expensive, you can have random terminations or account issues, theres no physical control over your data and much more. Which is why I plan to have zero cloud server subscriptions by 2026 and run everything from here.
-Currently everything is brand new hardware but I&rsquo;d like to get into repurposing some second-hand builds later on.
-Pyro - Beefy build for game servers and other miscellaneous docker containers." />
+<meta name="description" content="This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).
+The VMs themself run various different services including remote workspaces, self-hosted applications, game servers and this website, some offsite services are utilized to expose everything to the internet.
+Compute Nodes - Live Status
+
+  
+      
+          Name
+          CPU
+          RAM
+          Storage
+      
+  
+  
+      
+          au-prox-01
+          Ryzen 5 5500
+          32GB DDR4
+          1TB NVMe
+      
+      
+          au-prox-02
+          Core i5-7400T
+          8GB DDR4
+          256GB NVMe
+      
+  
+
+Some upgrades to existing machines are coming soon." />
 <meta name="author" content="" />
 <meta name="keywords" content="" />
 
@@ -20,11 +45,11 @@ Pyro - Beefy build for game servers and other miscellaneous docker containers." 
 
   
   <meta property="og:url" content="http://localhost:1313/homelab/">
-  <meta property="og:site_name" content="Alecks 🌱">
+  <meta property="og:site_name" content="Alecks">
   <meta property="og:title" content="Homelab">
-  <meta property="og:description" content="The cloud is expensive, you can have random terminations or account issues, theres no physical control over your data and much more. Which is why I plan to have zero cloud server subscriptions by 2026 and run everything from here.
-Currently everything is brand new hardware but I’d like to get into repurposing some second-hand builds later on.
-Pyro - Beefy build for game servers and other miscellaneous docker containers.">
+  <meta property="og:description" content="This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).
+The VMs themself run various different services including remote workspaces, self-hosted applications, game servers and this website, some offsite services are utilized to expose everything to the internet.
+Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 32GB DDR4 1TB NVMe au-prox-02 Core i5-7400T 8GB DDR4 256GB NVMe Some upgrades to existing machines are coming soon.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
 
@@ -33,18 +58,18 @@ Pyro - Beefy build for game servers and other miscellaneous docker containers.">
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Homelab">
-  <meta name="twitter:description" content="The cloud is expensive, you can have random terminations or account issues, theres no physical control over your data and much more. Which is why I plan to have zero cloud server subscriptions by 2026 and run everything from here.
-Currently everything is brand new hardware but I’d like to get into repurposing some second-hand builds later on.
-Pyro - Beefy build for game servers and other miscellaneous docker containers.">
+  <meta name="twitter:description" content="This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).
+The VMs themself run various different services including remote workspaces, self-hosted applications, game servers and this website, some offsite services are utilized to expose everything to the internet.
+Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 32GB DDR4 1TB NVMe au-prox-02 Core i5-7400T 8GB DDR4 256GB NVMe Some upgrades to existing machines are coming soon.">
 
 
   
   
   <meta itemprop="name" content="Homelab">
-  <meta itemprop="description" content="The cloud is expensive, you can have random terminations or account issues, theres no physical control over your data and much more. Which is why I plan to have zero cloud server subscriptions by 2026 and run everything from here.
-Currently everything is brand new hardware but I’d like to get into repurposing some second-hand builds later on.
-Pyro - Beefy build for game servers and other miscellaneous docker containers.">
-  <meta itemprop="wordCount" content="101">
+  <meta itemprop="description" content="This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).
+The VMs themself run various different services including remote workspaces, self-hosted applications, game servers and this website, some offsite services are utilized to expose everything to the internet.
+Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 32GB DDR4 1TB NVMe au-prox-02 Core i5-7400T 8GB DDR4 256GB NVMe Some upgrades to existing machines are coming soon.">
+  <meta itemprop="wordCount" content="192">
 
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -61,13 +86,15 @@ Pyro - Beefy build for game servers and other miscellaneous docker containers.">
 <body>
   <header><a class="skip-link" href="#main-content">Skip to main content</a>
 
-<a href="/" class="title"><h1>Alecks 🌱</h1></a>
+<a href="/" class="title"><h1>Alecks</h1></a>
 <nav>
   <a href="/">Home</a>
 
   <a href="/blog/">Blog</a>
 
   <a href="/homelab/">Homelab</a>
+
+  <a href="/skills/">Skills</a>
 
 <a href='http://localhost:1313/index.xml'>RSS</a>
 
@@ -82,40 +109,45 @@ Pyro - Beefy build for game servers and other miscellaneous docker containers.">
   <main id="main-content">
 
 <content>
-  <p>The cloud is expensive, you can have random terminations or account issues, theres no physical control over your data and much more. Which is why I plan to have zero cloud server subscriptions by 2026 and run everything from here.</p>
-<p>Currently everything is brand new hardware but I&rsquo;d like to get into repurposing some second-hand builds later on.</p>
-<p><strong>Pyro</strong> <em>-</em> Beefy build for game servers and other miscellaneous docker containers.</p>
+  <p>This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).</p>
+<p>The VMs themself run various different services including remote workspaces, self-hosted applications, game servers and this website, some offsite services are utilized to expose everything to the internet.</p>
+<h3 id="compute-nodes---live-status">Compute Nodes - <a href="https://status.alecks.cloud">Live Status</a></h3>
 <table>
   <thead>
       <tr>
-          <th>Category</th>
-          <th>Part Chosen</th>
+          <th>Name</th>
+          <th>CPU</th>
+          <th>RAM</th>
+          <th>Storage</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>CPU</td>
-          <td>AMD Ryzen 5 5500</td>
+          <td>au-prox-01</td>
+          <td>Ryzen 5 5500</td>
+          <td>32GB DDR4</td>
+          <td>1TB NVMe</td>
       </tr>
       <tr>
-          <td>Memory</td>
-          <td>32GB Corsair DDR4 3000Mhz RAM</td>
-      </tr>
-      <tr>
-          <td>Storage</td>
-          <td>1TB Kingston NVMe SSD</td>
-      </tr>
-      <tr>
-          <td>PSU</td>
-          <td>Corsair RM750x</td>
-      </tr>
-      <tr>
-          <td>Motherboard</td>
-          <td>MSI B450M PRO-VDH Max</td>
+          <td>au-prox-02</td>
+          <td>Core i5-7400T</td>
+          <td>8GB DDR4</td>
+          <td>256GB NVMe</td>
       </tr>
   </tbody>
 </table>
-<p><em>More servers coming soon&hellip;</em></p>
+<p>Some upgrades to existing machines are coming soon.</p>
+<h3 id="backups--monitoring">Backups &amp; Monitoring</h3>
+<ul>
+<li>Daily backups of vm disks are sent to my local PBS server (incremental), then mirrored onto Hetzner object storage and stored for 7 days.</li>
+<li><a href="https://hetrixtools.com">HetrixTools</a> monitors server resources (cpu, ram, storage and bandwidth usage), uptime, drive health, detects outages and pushes alerts to my ntfy server.</li>
+<li><a href="https://ntfy.sh">ntfy</a> notifies me of incidents picked up my hetrix with mobile push notifications.</li>
+</ul>
+<h3 id="reliability">Reliability</h3>
+<ul>
+<li>Power outages happen at max a couple times a year and everything is designed to automatically recover when systems come back online (UPS backup will be installed soon to mitigate that).</li>
+<li>Internet has never gone down before, my router is reliable and semi-enterprise grade.</li>
+</ul>
 
 </content>
 <p>
@@ -127,7 +159,7 @@ Pyro - Beefy build for game servers and other miscellaneous docker containers.">
 
   </main>
   <footer><small>
-  No copyright | <a href="https://github.com/alecks20/alecks.dev">Source</a>
+  © Alecks 2025 | <a href="https://github.com/alecks20/alecks.dev">Source</a>
 </small></footer>
 
     

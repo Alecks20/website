@@ -4,20 +4,22 @@ menu: "main"
 weight: 7
 ---
 
-The cloud is expensive, you can have random terminations or account issues, theres no physical control over your data and much more. Which is why I plan to have zero cloud server subscriptions by 2026 and run everything from here.
+This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).
 
-Currently everything is brand new hardware but I'd like to get into repurposing some second-hand builds later on.
+The VMs themself run various different services including remote workspaces, self-hosted applications, game servers and this website, some offsite services are utilized to expose everything to the internet.
+### Compute Nodes - [Live Status](https://status.alecks.cloud)
 
+| Name | CPU | RAM | Storage |
+| -------- | ------- | ------- | ------ |
+| au-prox-01 | Ryzen 5 5500 | 32GB DDR4 | 1TB NVMe |
+| au-prox-02 | Core i5-7400T | 8GB DDR4 | 256GB NVMe |
 
-**Pyro** *-* Beefy build for game servers and other miscellaneous docker containers.
+Some upgrades to existing machines are coming soon.
+### Backups & Monitoring
+- Daily backups of vm disks are sent to my local PBS server (incremental), then mirrored onto Hetzner object storage and stored for 7 days.
+- [HetrixTools](https://hetrixtools.com) monitors server resources (cpu, ram, storage and bandwidth usage), uptime, drive health, detects outages and pushes alerts to my ntfy server.
+- [ntfy](https://ntfy.sh) notifies me of incidents picked up my hetrix with mobile push notifications.
 
-| Category | Part Chosen | 
-| -------- | ------- |
-| CPU  | AMD Ryzen 5 5500    |
-| Memory | 32GB Corsair DDR4 3000Mhz RAM     |
-| Storage    | 1TB Kingston NVMe SSD   |
-| PSU    | Corsair RM750x  |
-| Motherboard | MSI B450M PRO-VDH Max |
-
-*More servers coming soon...*
-
+### Reliability
+- Power outages happen at max a couple times a year and everything is designed to automatically recover when systems come back online (UPS backup will be installed soon to mitigate that).
+- Internet has never gone down before, my router is reliable and semi-enterprise grade.

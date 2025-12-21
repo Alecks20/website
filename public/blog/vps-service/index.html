@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How I host Linux VMs for people in my Homelab | Alecks</title>
+<meta name="title" content="How I host Linux VMs for people in my Homelab" />
+<meta name="description" content="A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers &ldquo;spot&rdquo; vms for much cheaper as it uses excess compute capacity.
+Obviously I can&rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends." />
+<meta name="author" content="Alecks" />
+<meta name="keywords" content="linux,servers,homelab,vms," />
+
+
+
+
+
+
+  
+  <meta property="og:url" content="http://localhost:1313/blog/vps-service/">
+  <meta property="og:site_name" content="Alecks">
+  <meta property="og:title" content="How I host Linux VMs for people in my Homelab">
+  <meta property="og:description" content="A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers “spot” vms for much cheaper as it uses excess compute capacity.
+Obviously I can’t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-08-31T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-31T00:00:00+00:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Servers">
+    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="Vms">
+
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How I host Linux VMs for people in my Homelab">
+  <meta name="twitter:description" content="A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers “spot” vms for much cheaper as it uses excess compute capacity.
+Obviously I can’t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.">
+
+
+  
+  
+  <meta itemprop="name" content="How I host Linux VMs for people in my Homelab">
+  <meta itemprop="description" content="A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers “spot” vms for much cheaper as it uses excess compute capacity.
+Obviously I can’t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.">
+  <meta itemprop="datePublished" content="2025-08-31T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-08-31T00:00:00+00:00">
+  <meta itemprop="wordCount" content="396">
+  <meta itemprop="keywords" content="Linux,Servers,Homelab,Vms">
+
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  
+  <link href="/original.min.css" rel="stylesheet">
+
+  
+
+  
+
+  
+</head>
+
+<body>
+  <header><a class="skip-link" href="#main-content">Skip to main content</a>
+
+<a href="/" class="title"><h1>Alecks</h1></a>
+<nav>
+  <a href="/">Home</a>
+
+  <a href="/blog/">Blog</a>
+
+  <a href="/homelab/">Homelab</a>
+
+  <a href="/skills/">Skills</a>
+
+<a href='http://localhost:1313/index.xml'>RSS</a>
+
+
+
+
+
+
+
+</nav>
+</header>
+  <main id="main-content">
+
+<h1>How I host Linux VMs for people in my Homelab</h1>
+<p class="byline">
+  <time datetime='2025-08-31' pubdate>
+    2025-08-31
+  </time>
+  · Alecks
+</p>
+
+<content>
+  <p>A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers &ldquo;spot&rdquo; vms for much cheaper as it uses excess compute capacity.</p>
+<p>Obviously I can&rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.</p>
+<h2 id="vm-templates--operating-systems">VM Templates &amp; Operating Systems</h2>
+<p>I already use Proxmox VE for personal vms so I&rsquo;m using my existing setup for this service.</p>
+<p>Currently I have a vm template for Debian 13 &ldquo;Trixie&rdquo;, which lets me spin up new machines with unattended updates and the setup process already complete.</p>
+<h2 id="networking--public-ips">Networking &amp; Public IPs</h2>
+<p>I had to get a bit creative here as residential internet connections don&rsquo;t let you have multiple public ip addresses on your connection.</p>
+<p>To get around this I run a vps with multiple public ips which has a secure encrypted tunnel back into a tailscale gateway running inside my home network which exposes the vm subnets/network, this setup also means I don&rsquo;t have to install tailscale on any vms.</p>
+<p>If someone connected to <code>[public_vps_ip]:22</code> it gets relayed to <code>[private_vm_ip]:22</code> through the tunnel and it all happens seemlessly.</p>
+<p><img src="/images/home_vps_diagram.webp" alt=""></p>
+<p>This all happens behind the scenes without any noticeable latency (1-2ms latency between vps and my network, tailscale gateway gets under 0.2ms to vms)</p>
+<h2 id="internal-network-security">Internal Network Security</h2>
+<p>Obviously one of the main security risks with running a service like this in my Homelab isn&rsquo;t really external attacks, its vms being breached and then attacking or breaking into stuff on my home network.</p>
+<p>To mitigate this I have a security group on the Proxmox firewall with a list of rules denying access to anything on my local network except the router (for internet) and tailscale gateway (to expose services). Running it on the hypervisor level adds an extra layer of security because you&rsquo;d need access to Proxmox which is also firewalled off.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This setup is still in the early stages of development, I&rsquo;ve been working on it for a couple days so I&rsquo;ll improve over time as I make it more robust and reliable, one of my goals for later on is to add something like high availability or an automated system as most of it is manual right now.</p>
+
+</content>
+<p>
+  
+    <a class="blog-tags" href="/tags/linux/">#linux</a>
+  
+    <a class="blog-tags" href="/tags/servers/">#servers</a>
+  
+    <a class="blog-tags" href="/tags/homelab/">#homelab</a>
+  
+    <a class="blog-tags" href="/tags/vms/">#vms</a>
+  
+</p>
+
+
+
+
+  </main>
+  <footer><small>
+  © Alecks 2025 | <a href="https://github.com/alecks20/alecks.dev">Source</a>
+</small></footer>
+
+    
+</body>
+
+</html>

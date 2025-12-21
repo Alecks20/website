@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vms on Alecks</title>
+    <link>http://localhost:1313/tags/vms/</link>
+    <description>Recent content in Vms on Alecks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© Alecks 2025</copyright>
+    <lastBuildDate>Sun, 31 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/vms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I host Linux VMs for people in my Homelab</title>
+      <link>http://localhost:1313/blog/vps-service/</link>
+      <pubDate>Sun, 31 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/vps-service/</guid>
+      <description>&lt;p&gt;A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers &amp;ldquo;spot&amp;rdquo; vms for much cheaper as it uses excess compute capacity.&lt;/p&gt;&#xA;&lt;p&gt;Obviously I can&amp;rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers &ldquo;spot&rdquo; vms for much cheaper as it uses excess compute capacity.</p>
+<p>Obviously I can&rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.</p>
+<h2 id="vm-templates--operating-systems">VM Templates &amp; Operating Systems</h2>
+<p>I already use Proxmox VE for personal vms so I&rsquo;m using my existing setup for this service.</p>
+<p>Currently I have a vm template for Debian 13 &ldquo;Trixie&rdquo;, which lets me spin up new machines with unattended updates and the setup process already complete.</p>
+<h2 id="networking--public-ips">Networking &amp; Public IPs</h2>
+<p>I had to get a bit creative here as residential internet connections don&rsquo;t let you have multiple public ip addresses on your connection.</p>
+<p>To get around this I run a vps with multiple public ips which has a secure encrypted tunnel back into a tailscale gateway running inside my home network which exposes the vm subnets/network, this setup also means I don&rsquo;t have to install tailscale on any vms.</p>
+<p>If someone connected to <code>[public_vps_ip]:22</code> it gets relayed to <code>[private_vm_ip]:22</code> through the tunnel and it all happens seemlessly.</p>
+<p><img src="/images/home_vps_diagram.webp" alt=""></p>
+<p>This all happens behind the scenes without any noticeable latency (1-2ms latency between vps and my network, tailscale gateway gets under 0.2ms to vms)</p>
+<h2 id="internal-network-security">Internal Network Security</h2>
+<p>Obviously one of the main security risks with running a service like this in my Homelab isn&rsquo;t really external attacks, its vms being breached and then attacking or breaking into stuff on my home network.</p>
+<p>To mitigate this I have a security group on the Proxmox firewall with a list of rules denying access to anything on my local network except the router (for internet) and tailscale gateway (to expose services). Running it on the hypervisor level adds an extra layer of security because you&rsquo;d need access to Proxmox which is also firewalled off.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This setup is still in the early stages of development, I&rsquo;ve been working on it for a couple days so I&rsquo;ll improve over time as I make it more robust and reliable, one of my goals for later on is to add something like high availability or an automated system as most of it is manual right now.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

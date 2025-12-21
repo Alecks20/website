@@ -5,9 +5,13 @@
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Securing ssh on your linux server. | Alecks 🌱</title>
-<meta name="title" content="Securing ssh on your linux server." />
-<meta name="description" content="Guide to emoji usage in Hugo" />
+<title>Securing ssh on your Linux Server | Alecks</title>
+<meta name="title" content="Securing ssh on your Linux Server" />
+<meta name="description" content="This post is made for debian based linux distros.
+Don&rsquo;t expose ssh, use a VPN
+This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.
+Non-root account for logins / Disable root login
+Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want" />
 <meta name="author" content="Alecks" />
 <meta name="keywords" content="linux,servers,ssh,security," />
 
@@ -18,9 +22,11 @@
 
   
   <meta property="og:url" content="http://localhost:1313/blog/securing-server/">
-  <meta property="og:site_name" content="Alecks 🌱">
-  <meta property="og:title" content="Securing ssh on your linux server.">
-  <meta property="og:description" content="Guide to emoji usage in Hugo">
+  <meta property="og:site_name" content="Alecks">
+  <meta property="og:title" content="Securing ssh on your Linux Server">
+  <meta property="og:description" content="This post is made for debian based linux distros.
+Don’t expose ssh, use a VPN This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.
+Non-root account for logins / Disable root login Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -35,17 +41,21 @@
   
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Securing ssh on your linux server.">
-  <meta name="twitter:description" content="Guide to emoji usage in Hugo">
+  <meta name="twitter:title" content="Securing ssh on your Linux Server">
+  <meta name="twitter:description" content="This post is made for debian based linux distros.
+Don’t expose ssh, use a VPN This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.
+Non-root account for logins / Disable root login Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want">
 
 
   
   
-  <meta itemprop="name" content="Securing ssh on your linux server.">
-  <meta itemprop="description" content="Guide to emoji usage in Hugo">
+  <meta itemprop="name" content="Securing ssh on your Linux Server">
+  <meta itemprop="description" content="This post is made for debian based linux distros.
+Don’t expose ssh, use a VPN This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.
+Non-root account for logins / Disable root login Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want">
   <meta itemprop="datePublished" content="2024-04-25T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-04-25T00:00:00+00:00">
-  <meta itemprop="wordCount" content="266">
+  <meta itemprop="wordCount" content="324">
   <meta itemprop="keywords" content="Linux,Servers,Ssh,Security">
 
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -66,13 +76,15 @@
 <body>
   <header><a class="skip-link" href="#main-content">Skip to main content</a>
 
-<a href="/" class="title"><h1>Alecks 🌱</h1></a>
+<a href="/" class="title"><h1>Alecks</h1></a>
 <nav>
   <a href="/">Home</a>
 
   <a href="/blog/">Blog</a>
 
   <a href="/homelab/">Homelab</a>
+
+  <a href="/skills/">Skills</a>
 
 <a href='http://localhost:1313/index.xml'>RSS</a>
 
@@ -86,7 +98,7 @@
 </header>
   <main id="main-content">
 
-<h1>Securing ssh on your linux server.</h1>
+<h1>Securing ssh on your Linux Server</h1>
 <p class="byline">
   <time datetime='2024-04-25' pubdate>
     2024-04-25
@@ -95,9 +107,11 @@
 </p>
 
 <content>
-  <p>This post is made for debian based linux distros</p>
-<h2 id="non-root-account-for-logins--disable-root-login">Non-root account for logins / Disable root login.</h2>
-<p>Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants</p>
+  <p>This post is made for debian based linux distros.</p>
+<h3 id="dont-expose-ssh-use-a-vpn">Don&rsquo;t expose ssh, use a VPN</h3>
+<p>This is obviously not viable for stuff running in the cloud but for a homelab server its advised to not expose ssh or management ports, if you need external access use a free VPN service like Tailscale or self-hosted Wireguard.</p>
+<h3 id="non-root-account-for-logins--disable-root-login">Non-root account for logins / Disable root login</h3>
+<p>Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you want</p>
 
 
 
@@ -109,11 +123,11 @@
 
 
 
-<pre tabindex="0"><code>usermod -aG sudo kuma</code></pre><h2 id="using-ssh-keys-over-plaintext-passwords">Using SSH keys over plaintext passwords.</h2>
+<pre tabindex="0"><code>usermod -aG sudo kuma</code></pre><h3 id="using-ssh-keys-over-plaintext-passwords">Using SSH keys over plaintext passwords</h3>
 <p>SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.</p>
-<p>Generate an ssh key using PuttyGen and paste it on a new line in <code>/home/&lt;your_username&gt;/.ssh/authorized_keys</code></p>
-<h2 id="updating-your-ssh-configuration">Updating your SSH configuration.</h2>
-<p>This process can differ depending on your host, but for most servers the ssh config is located in <code>/etc/ssh/sshd_config</code>, in the file you want to change the following values</p>
+<p>Generate an ssh key using PuttyGen and paste it on a new line in <code>/home/&lt;your_username&gt;/.ssh/authorized_keys</code>.</p>
+<h3 id="updating-your-ssh-configuration">Updating your SSH configuration</h3>
+<p>This process can differ depending on your host, but for most servers the ssh config is located in <code>/etc/ssh/sshd_config</code>, in the file you want to change the following values.</p>
 
 
 
@@ -129,7 +143,7 @@
 
 
 
-<pre tabindex="0"><code>PermitRootLogin no</code></pre><p>Changing these config vaulues will</p>
+<pre tabindex="0"><code>PermitRootLogin no</code></pre><p>Changing these config values will</p>
 <ul>
 <li>Disable password authentication</li>
 <li>Allow you to login using ssh keys (Which I showed how to setup above)</li>
@@ -141,7 +155,8 @@
 
 
 
-<pre tabindex="0"><code>sudo systemctl restart ssh</code></pre><h2 id="ntfy-notifcations-on-ssh-login">NTFY notifcations on ssh login.</h2>
+<pre tabindex="0"><code>sudo systemctl restart ssh</code></pre><h3 id="ntfy-notifcations-on-ssh-login">NTFY notifcations on ssh login</h3>
+<p>You can learn how to setup a secure personal ntfy server <a href="/posts/ntfy-server">here</a>.</p>
 <p>Adding these lines to your <code>/etc/profile</code> file will send a request to your chosen ntfy server when any user logs in via ssh</p>
 
 
@@ -175,7 +190,7 @@ fi</code></pre><p>Modify to add your own api key and change the url to your ntfy
 
   </main>
   <footer><small>
-  No copyright | <a href="https://github.com/alecks20/alecks.dev">Source</a>
+  © Alecks 2025 | <a href="https://github.com/alecks20/alecks.dev">Source</a>
 </small></footer>
 
     

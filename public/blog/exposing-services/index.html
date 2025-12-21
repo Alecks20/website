@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Exposing self-hosted applications without a Public IP address | Alecks</title>
+<meta name="title" content="Exposing self-hosted applications without a Public IP address" />
+<meta name="description" content="In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don&rsquo;t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.
+So here are a few free and paid solutions for exposing both web applications and game servers to the internet without port forwarding.
+Cloudflare Tunnels
+This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network" />
+<meta name="author" content="Alecks" />
+<meta name="keywords" content="servers,homelab,self-hosting," />
+
+
+
+
+
+
+  
+  <meta property="og:url" content="http://localhost:1313/blog/exposing-services/">
+  <meta property="og:site_name" content="Alecks">
+  <meta property="og:title" content="Exposing self-hosted applications without a Public IP address">
+  <meta property="og:description" content="In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don’t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.
+So here are a few free and paid solutions for exposing both web applications and game servers to the internet without port forwarding.
+Cloudflare Tunnels This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-08-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-30T00:00:00+00:00">
+    <meta property="article:tag" content="Servers">
+    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="Self-Hosting">
+
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Exposing self-hosted applications without a Public IP address">
+  <meta name="twitter:description" content="In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don’t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.
+So here are a few free and paid solutions for exposing both web applications and game servers to the internet without port forwarding.
+Cloudflare Tunnels This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network">
+
+
+  
+  
+  <meta itemprop="name" content="Exposing self-hosted applications without a Public IP address">
+  <meta itemprop="description" content="In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don’t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.
+So here are a few free and paid solutions for exposing both web applications and game servers to the internet without port forwarding.
+Cloudflare Tunnels This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network">
+  <meta itemprop="datePublished" content="2025-08-30T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-08-30T00:00:00+00:00">
+  <meta itemprop="wordCount" content="398">
+  <meta itemprop="keywords" content="Servers,Homelab,Self-Hosting">
+
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  
+  <link href="/original.min.css" rel="stylesheet">
+
+  
+    
+    <link href="/syntax.min.css" rel="stylesheet">
+  
+
+  
+
+  
+</head>
+
+<body>
+  <header><a class="skip-link" href="#main-content">Skip to main content</a>
+
+<a href="/" class="title"><h1>Alecks</h1></a>
+<nav>
+  <a href="/">Home</a>
+
+  <a href="/blog/">Blog</a>
+
+  <a href="/homelab/">Homelab</a>
+
+  <a href="/skills/">Skills</a>
+
+<a href='http://localhost:1313/index.xml'>RSS</a>
+
+
+
+
+
+
+
+</nav>
+</header>
+  <main id="main-content">
+
+<h1>Exposing self-hosted applications without a Public IP address</h1>
+<p class="byline">
+  <time datetime='2025-08-30' pubdate>
+    2025-08-30
+  </time>
+  · Alecks
+</p>
+
+<content>
+  <p>In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don&rsquo;t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.</p>
+<p>So here are a few <strong>free and paid</strong> solutions for exposing both web applications and game servers to the internet without port forwarding.</p>
+<h2 id="cloudflare-tunnels"><a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/">Cloudflare Tunnels</a></h2>
+<p>This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network</p>
+<p>Some argue that it defeats the point of self-hosting since Cloudflare centralizes the web while the indie webs goal is the opposite, however its a great service for exposing applications for free if your fine with that tradeoff.</p>
+<h2 id="tailscale-w-an-optional-vps"><a href="https://tailscale.com">Tailscale</a> (w/ an optional VPS)</h2>
+<p>This solution can be either free or paid depending on if you want just yourself to be able to access your services or you want them to be exposed via a domain. You can setup Tailscale on both your devices and the server then securely connect to eachother without exposing anything publicly for completely free.</p>
+<p>If you want a service to be publicly accessible via a domain, you&rsquo;ll need a remote server with its own public ip address as Tailscale only lets you establish secure connections between devices, not expose things to the internet.</p>
+<p>You&rsquo;d install Tailscale on your home server and remote server, then on the remote server you install for example caddy and setup a reverse proxy to your home servers Tailscale address, an example config is shown below.</p>
+
+
+
+
+
+<pre tabindex="0"><code>example.com {
+  reverse_proxy http://100.85.48.32
+}</code></pre><p>Additionally, you can use this to expose any tcp/udp service, including Game Servers, SSH, (S)FTP and much more which requires forwarding ports from a remote server to your home servers Tailscale address but I don&rsquo;t feel confident explaining how to do that.</p>
+<h2 id="playitgg"><a href="https://playit.gg">Playit.gg</a></h2>
+<p>Arguably the best free service for exposing game servers without port forwarding. The setup includes installing a program which tunnels game server traffic to their global network of relay servers.</p>
+<p>Its super easy to setup, you can watch a video guide <a href="https://www.youtube.com/watch?v=itVVhcid2_Q&amp;pp=ygUUc2V0dGluZyB1cCBwbGF5aXQuZ2fSBwkJsgkBhyohjO8%3D">here</a>.</p>
+<p>You can also use it to expose any tcp port with a dedicated IPV4 but Tailscale w/ a VPS or CF Tunnels (for websites) is a better option since playit is primarily for game servers.</p>
+
+</content>
+<p>
+  
+    <a class="blog-tags" href="/tags/servers/">#servers</a>
+  
+    <a class="blog-tags" href="/tags/homelab/">#homelab</a>
+  
+    <a class="blog-tags" href="/tags/self-hosting/">#self-hosting</a>
+  
+</p>
+
+
+
+
+  </main>
+  <footer><small>
+  © Alecks 2025 | <a href="https://github.com/alecks20/alecks.dev">Source</a>
+</small></footer>
+
+    
+</body>
+
+</html>
