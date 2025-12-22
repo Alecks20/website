@@ -1,6 +1,9 @@
----
-title: "Home"
----
++++
+title = "About"
+date = "2025-12-22"
+author = "Alecks"
++++
+
 Hello Internet, 
 
 I'm a passionate developer living in Australia from a small town in New Zealand highly skilled in various tech fields - [my skills](/skills). 

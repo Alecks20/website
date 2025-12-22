@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Exposing self-hosted applications without a Public IP address :: Terminal</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don&rsquo;t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.
+So here are a few free and paid solutions for exposing both web applications and game servers to the internet without port forwarding.
+Cloudflare Tunnels This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://localhost:1313/posts/exposing-services/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Exposing self-hosted applications without a Public IP address">
+<meta property="og:description" content="In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don&rsquo;t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.
+So here are a few free and paid solutions for exposing both web applications and game servers to the internet without port forwarding.
+Cloudflare Tunnels This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network
+" />
+<meta property="og:url" content="http://localhost:1313/posts/exposing-services/" />
+<meta property="og:site_name" content="Terminal" />
+
+  <meta property="og:image" content="http://localhost:1313/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2025-08-30 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Terminal
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="/showcase" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/posts/exposing-services/">Exposing self-hosted applications without a Public IP address</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-08-30</time><span class="post-author">Alecks</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="http://localhost:1313/tags/servers/">servers</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/homelab/">homelab</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/self-hosting/">self-hosting</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don&rsquo;t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.</p>
+<p>So here are a few <strong>free and paid</strong> solutions for exposing both web applications and game servers to the internet without port forwarding.</p>
+<h2 id="cloudflare-tunnels"><a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/">Cloudflare Tunnels</a><a href="#cloudflare-tunnels" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network</p>
+<p>Some argue that it defeats the point of self-hosting since Cloudflare centralizes the web while the indie webs goal is the opposite, however its a great service for exposing applications for free if your fine with that tradeoff.</p>
+<h2 id="tailscale-w-an-optional-vps"><a href="https://tailscale.com">Tailscale</a> (w/ an optional VPS)<a href="#tailscale-w-an-optional-vps" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>This solution can be either free or paid depending on if you want just yourself to be able to access your services or you want them to be exposed via a domain. You can setup Tailscale on both your devices and the server then securely connect to eachother without exposing anything publicly for completely free.</p>
+<p>If you want a service to be publicly accessible via a domain, you&rsquo;ll need a remote server with its own public ip address as Tailscale only lets you establish secure connections between devices, not expose things to the internet.</p>
+<p>You&rsquo;d install Tailscale on your home server and remote server, then on the remote server you install for example caddy and setup a reverse proxy to your home servers Tailscale address, an example config is shown below.</p>
+<pre tabindex="0"><code>example.com {
+  reverse_proxy http://100.85.48.32
+}
+</code></pre><p>Additionally, you can use this to expose any tcp/udp service, including Game Servers, SSH, (S)FTP and much more which requires forwarding ports from a remote server to your home servers Tailscale address but I don&rsquo;t feel confident explaining how to do that.</p>
+<h2 id="playitgg"><a href="https://playit.gg">Playit.gg</a><a href="#playitgg" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Arguably the best free service for exposing game servers without port forwarding. The setup includes installing a program which tunnels game server traffic to their global network of relay servers.</p>
+<p>Its super easy to setup, you can watch a video guide <a href="https://www.youtube.com/watch?v=itVVhcid2_Q&amp;pp=ygUUc2V0dGluZyB1cCBwbGF5aXQuZ2fSBwkJsgkBhyohjO8%3D">here</a>.</p>
+<p>You can also use it to expose any tcp port with a dedicated IPV4 but Tailscale w/ a VPS or CF Tunnels (for websites) is a better option since playit is primarily for game servers.</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h"></span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="http://localhost:1313/posts/vps-service/" class="button inline prev">
+        &lt; [<span class="button__text">How I host Linux VMs for people in my Homelab</span>]
+      </a>
+    
+    
+      ::
+    
+    
+      <a href="http://localhost:1313/posts/mini-pcs/" class="button inline next">
+         [<span class="button__text">Mini PCs are perfect Home Servers</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
