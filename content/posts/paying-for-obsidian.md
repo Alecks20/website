@@ -2,7 +2,7 @@
 author = "Alecks"
 title = "Why I pay for Obsidian Sync"
 date = "2025-11-10"
-description = "Why the $4 per month I pay for obsidian sync is actually great value."
+description = "Why the $4 per month I pay for obsidian sync is pretty good value."
 tags = [
     "reviews","computers","obsidian"
 ]
