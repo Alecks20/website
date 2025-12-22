@@ -30,11 +30,7 @@ pagination.pagerSize = 5
       [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
-        url = "/"
-      [[languages.en.menu.main]]
-        identifier = "blog"
-        name = "Blog"
-        url = "/blog"
+        url = "/about"
       [[languages.en.menu.main]]
         identifier = "homelab"
         name = "Homelab"
