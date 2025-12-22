@@ -4,7 +4,7 @@ title = "The MacBook Experience: Initial Impressions"
 date = "2025-11-09"
 description = ""
 tags = [
-    "computers","laptops","gear"
+    "computers","laptops","reviews"
 ]
 +++
 ## Introduction
