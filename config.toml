@@ -11,6 +11,7 @@ pagination.pagerSize = 5
   showMenuItems = 4
   fullWidthTheme = false
   centerTheme = true
+  repo = 'https://github.com/alecks20/website'
 
 [languages]
   [languages.en]
@@ -18,9 +19,11 @@ pagination.pagerSize = 5
     subtitle = "A simple, retro theme for Hugo"
     keywords = ""
     copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
     readOtherPosts = "Read other posts"
+
+    [languages.en.params]
+      menuMore = "Show more"
+      readMore = "Read more"
 
     [languages.en.params.logo]
       logoText = "Alecks"

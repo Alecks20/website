@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Alecks</title>
+    <title>Tags on Terminal</title>
     <link>//localhost:1313/tags/</link>
-    <description>Recent content in Tags on Alecks</description>
+    <description>Recent content in Tags on Terminal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
@@ -37,13 +37,6 @@
       <description></description>
     </item>
     <item>
-      <title>Reviews</title>
-      <link>//localhost:1313/tags/reviews/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/reviews/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Vpns</title>
       <link>//localhost:1313/tags/vpns/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
@@ -65,17 +58,10 @@
       <description></description>
     </item>
     <item>
-      <title>Software</title>
-      <link>//localhost:1313/tags/software/</link>
+      <title>Reviews</title>
+      <link>//localhost:1313/tags/reviews/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/software/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Gear</title>
-      <link>//localhost:1313/tags/gear/</link>
-      <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/gear/</guid>
+      <guid>//localhost:1313/tags/reviews/</guid>
       <description></description>
     </item>
     <item>
@@ -114,13 +100,6 @@
       <description></description>
     </item>
     <item>
-      <title>Security</title>
-      <link>//localhost:1313/tags/security/</link>
-      <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/security/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Linux</title>
       <link>//localhost:1313/tags/linux/</link>
       <pubDate>Sun, 31 Aug 2025 00:00:00 +0000</pubDate>
@@ -132,6 +111,13 @@
       <link>//localhost:1313/tags/vms/</link>
       <pubDate>Sun, 31 Aug 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/tags/vms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>//localhost:1313/tags/security/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/security/</guid>
       <description></description>
     </item>
     <item>

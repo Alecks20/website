@@ -2,7 +2,7 @@
 author = "Alecks"
 title = "The MacBook Experience: Initial Impressions"
 date = "2025-11-09"
-description = ""
+description = "Initial unboxing and first day review of my new M3 Macbook Air including performance, battery life and my first time using macOS."
 tags = [
     "computers","laptops","reviews"
 ]

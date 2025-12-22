@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reviews on Alecks</title>
+    <title>Reviews on Terminal</title>
     <link>//localhost:1313/tags/reviews/</link>
-    <description>Recent content in Reviews on Alecks</description>
+    <description>Recent content in Reviews on Terminal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/reviews/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Why VPNs are useless for most people</title>
-      <link>//localhost:1313/posts/vpns/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/vpns/</guid>
-      <description>&lt;p&gt;VPN companies like to make it seem like their product will solve all of your privacy and security issues but most of the claims they make are just flat-out lies, over-exaggerated or only true in specific scenarios.&lt;/p&gt;&#xA;&lt;p&gt;This is primarily about mainstream VPNs like NordVPN, ExpressVPN and others with huge advertising budgets so they make false or incomplete claims about their product.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-can-your-isp-see-about-your-internet-traffic&#34;&gt;What can your ISP see about your internet traffic&lt;/h3&gt;&#xA;&lt;p&gt;All modern apps and websites nowadays use HTTPS, which is enabled if you have a green padlock in your browser, the content of your traffic like the specific page you&amp;rsquo;re on, message content if you&amp;rsquo;re sending a dm on discord or snapchat and more is hidden from them encrypted between your device and that website. Your ISP can only see the domain of the site you&amp;rsquo;re connecting to (e.g google.com, discord.com).&lt;/p&gt;</description>
+      <title>Why I pay for Obsidian Sync</title>
+      <link>//localhost:1313/posts/paying-for-obsidian/</link>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/paying-for-obsidian/</guid>
+      <description>&lt;p&gt;With the addition of a new laptop which I use for development work and various other things like schoolwork or journaling, I needed an easy way to sync my Obsidian vault between devices.&lt;/p&gt;&#xA;&lt;p&gt;I use Obsidian to store my school notes and saved configs or commands for my homelab and other linux stuff which includes credentials so whatever service I use needs to be end-to-end encrypted (e2ee).&lt;/p&gt;&#xA;&lt;p&gt;While I tried free solutions like Obsidian Git, it doesn&amp;rsquo;t include native e2e encryption and isn&amp;rsquo;t as seemless as the built in Sync solution requiring me to commit and sync changes everytime which could cause conflicts if I have changes to commit on both my PC and Laptop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The MacBook Experience: Initial Impressions</title>
+      <link>//localhost:1313/posts/macbook-experience/</link>
+      <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/macbook-experience/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been looking closely at the laptop market for a while now, and I haven&amp;rsquo;t been able to find anything thats a better all-rounder than the Macbook lineup. They offer amazing battery life, hardware and performance on battery for fairly competitive prices.&lt;/p&gt;&#xA;&lt;p&gt;I ended up going with the M3 Macbook Air with 24GB ram and 512GB storage. The ram upgrade was primarily because I planned to do development with Docker which is very memory hungry, and I felt that 512gb storage would give me the best longevity.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -29,9 +29,6 @@
     <loc>//localhost:1313/tags/privacy/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/reviews/</loc>
-    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/tags/vpns/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -44,14 +41,11 @@
     <loc>//localhost:1313/tags/obsidian/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/software/</loc>
+    <loc>//localhost:1313/tags/reviews/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/paying-for-obsidian/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/gear/</loc>
-    <lastmod>2025-11-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/laptops/</loc>
     <lastmod>2025-11-09T00:00:00+00:00</lastmod>
@@ -77,9 +71,6 @@
     <loc>//localhost:1313/tags/ntfy/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/security/</loc>
-    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/posts/ntfy-server/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -102,6 +93,9 @@
     <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/securing-server/</loc>
+    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/security/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/ssh/</loc>
