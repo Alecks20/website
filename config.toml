@@ -14,7 +14,7 @@ pagination.pagerSize = 5
 
 [languages]
   [languages.en]
-    title = "Alecks"
+    title = "Terminal"
     subtitle = "A simple, retro theme for Hugo"
     keywords = ""
     copyright = ""
@@ -23,7 +23,7 @@ pagination.pagerSize = 5
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "Terminal"
+      logoText = "Alecks"
       logoHomeLink = "/"
 
     [languages.en.menu]
