@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Warning on Alecks</title>
+    <link>//localhost:1313/tags/warning/</link>
+    <description>Recent content in Warning on Alecks</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/warning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why free VPNs are dangerous </title>
+      <link>//localhost:1313/posts/free-vpns/</link>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/free-vpns/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

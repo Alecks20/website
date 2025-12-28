@@ -14,7 +14,7 @@ The VMs themself run various different services including remote workspaces, sel
 
 Some upgrades to existing machines are coming soon.
 ### Backups & Monitoring
-- Daily backups of vm disks are sent to my local PBS server (incremental), then mirrored onto Hetzner object storage and stored for 7 days.
+- ~~Daily backups of vm disks are sent to my local PBS server (incremental), then mirrored onto Hetzner object storage and stored for 7 days.~~ Currently no vm level backup system, game nodes run their own daily backups of server volumes.
 - [HetrixTools](https://hetrixtools.com) monitors server resources (cpu, ram, storage and bandwidth usage), uptime, drive health, detects outages and pushes alerts to my ntfy server.
 - [ntfy](https://ntfy.sh) notifies me of incidents picked up my hetrix with mobile push notifications.
 

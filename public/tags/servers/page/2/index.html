@@ -172,6 +172,40 @@
     
       <article class="post on-list">
         <h1 class="post-title">
+          <a href="//localhost:1313/posts/homelab-2025/">The state of my Homelab in 2025</a>
+        </h1>
+        <div class="post-meta"><time class="post-date">2025-09-03</time><span class="post-author">Alecks</span></div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="//localhost:1313/tags/servers/">servers</a>&nbsp;
+            
+            #<a href="//localhost:1313/tags/homelab/">homelab</a>&nbsp;
+            
+            #<a href="//localhost:1313/tags/self-hosting/">self-hosting</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+
+        <div class="post-content">
+          
+            <p>An in-depth look into the current state of my homelab in 2025, including services running, how I expose everything, what hardware I&rsquo;m using, linux distros, backups, reliability, redundancy and much more.</p>
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button inline" href="/posts/homelab-2025/">[Read more]</a>
+          </div>
+        
+      </article>
+    
+      <article class="post on-list">
+        <h1 class="post-title">
           <a href="//localhost:1313/posts/vps-service/">How I host Linux VMs for people in my Homelab</a>
         </h1>
         <div class="post-meta"><time class="post-date">2025-08-31</time><span class="post-author">Alecks</span></div>
@@ -195,8 +229,7 @@
 
         <div class="post-content">
           
-            <p>A lot of my Homelab typically sits idle, wasting power. So I had the idea of letting other people run their own linux virtual machines on it, kinda like how gcp offers &ldquo;spot&rdquo; vms for much cheaper as it uses excess compute capacity.</p>
-<p>Obviously I can&rsquo;t provide this as a paid service since that comes with a lot of liability and legal documents to protect yourself, so I just offer it as a free service for friends.</p>
+            <p>My network architecture for exposing linux vms running on my homelab to provide them as vps servers for friends and giving them their own public ip address.</p>
           
         </div>
 
@@ -230,10 +263,7 @@
 
         <div class="post-content">
           
-            <p>In a perfect world everyone could port forward and use an ISP with DDoS Protection and Static IPs, however we don&rsquo;t live in a perfect world. Many people have to deal with things like CGNAT (no public ip) and annoying ISPs.</p>
-<p>So here are a few <strong>free and paid</strong> solutions for exposing both web applications and game servers to the internet without port forwarding.</p>
-<h2 id="cloudflare-tunnels"><a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/">Cloudflare Tunnels</a></h2>
-<p>This is a completely free service which supports exposing only web applications to the internet using an application (cloudflared) running on your server which tunnels traffic out and exposes it via the Cloudflare Network</p>
+            <p>Various methods for exposing self hosted applications to the internet securely when you have things like cgnat, your isp blocking ports or anything that prevents you from port forwarding.</p>
           
         </div>
 
@@ -321,45 +351,6 @@
         
       </article>
     
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="//localhost:1313/posts/starting-homelab/">Starting my Homelab</a>
-        </h1>
-        <div class="post-meta"><time class="post-date">2024-03-29</time><span class="post-author">Alecks</span></div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="//localhost:1313/tags/homelab/">homelab</a>&nbsp;
-            
-            #<a href="//localhost:1313/tags/servers/">servers</a>&nbsp;
-            
-            #<a href="//localhost:1313/tags/self-hosting/">self-hosting</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-        <div class="post-content">
-          
-            <blockquote>
-<p>This is a very old post, I now have a fully functional homelab <a href="/homelab/">here</a> - and a full walkthrough of everything on it <a href="/posts/homelab-2025/">here</a>.</p>
-</blockquote>
-<p>Im planning to start a homelab this year so I can get real hands on experience with server hardware and software, and also own my information and data instead of having to trust hosting companies with it</p>
-<h2 id="upsides-to-running-one">Upsides to running one</h2>
-<p>Most programmers and developers have a homelab for a few reasons</p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button inline" href="/posts/starting-homelab/">[Read more]</a>
-          </div>
-        
-      </article>
-    
 
     <div class="pagination">
   <div class="pagination__buttons">
@@ -369,6 +360,12 @@
       </a>
     
     
+      ::
+    
+    
+      <a href="/tags/servers/page/3/" class="button inline next">
+        [<span class="button__text">Older posts</span>] &gt;
+      </a>
     
   </div>
 </div>
