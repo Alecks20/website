@@ -6,8 +6,15 @@
     <description>Recent content in Self-Hosting on Alecks</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/self-hosting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moving to Prometheus and building a k3s cluster</title>
+      <link>//localhost:1313/posts/prometheus-and-k3s/</link>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/prometheus-and-k3s/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been watching a lot of homelabbing content recently and decided to setup some new services specifically for improving reliability, observability and adding new functionality.&lt;/p&gt;&#xA;&lt;p&gt;Both of these I just got started with yesterday so my knowledge is quite limited, I intend to slowly improve these setups overtime.&lt;/p&gt;&#xA;&lt;h3 id=&#34;prometheus-and-grafana-monitoring&#34;&gt;Prometheus and Grafana (Monitoring)&lt;/h3&gt;&#xA;&lt;p&gt;I wanted a flexible self-hosted solution that didn&amp;rsquo;t depend on the cloud, gave me more in depth monitoring thanks to prometheus node exporter and let me monitor stuff like server resources, kubernetes clusters, caddy web proxys, databases and much more so I ended up on prometheus and grafana.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Revised Homelab plans for 2026</title>
       <link>//localhost:1313/posts/revised-homelab-2026/</link>

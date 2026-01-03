@@ -6,14 +6,21 @@
     <description>Recent content on Alecks</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 22 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>//localhost:1313/about/</link>
-      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/about/</guid>
-      <description>&lt;p&gt;Hello Internet,&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m a self-taught developer from Australia interested in system administration, networking, computer hardware, programming and homelabbing highly skilled in various tech fields - &lt;a href=&#34;//localhost:1313/skills/&#34;&gt;my skills&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This website is my own little corner of the internet to showcase my practical experience and serve as a time capsule for writings, it also helps solidify learnings as explaining things to other people is one of the best ways to remember things.&lt;/p&gt;&#xA;&lt;p&gt;Outside of tech I love documentaries (tech, hacking, politics, economics and true crime), anime, fixing up/reviving old thinkpads or devices and designing things.&lt;/p&gt;</description>
+      <description>&lt;img src=&#34;//localhost:1313/images/fmab_figure.webp&#34; alt=&#34;Edward Elric Figure&#34; style=&#34;float: right; margin-left: 20px; width: 300px;&#34;&gt;&#xA;&lt;p&gt;Hello Internet,&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m a self-taught developer from Australia interested in system administration, networking, computer hardware, programming and homelabbing skilled in various tech fields - &lt;a href=&#34;//localhost:1313/skills/&#34;&gt;my skills&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This website is my own little corner of the internet to showcase my practical experience and serve as a time capsule for writings, it also helps solidify learnings as explaining things to others is one of the best ways to remember things.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Moving to Prometheus and building a k3s cluster</title>
+      <link>//localhost:1313/posts/prometheus-and-k3s/</link>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/prometheus-and-k3s/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been watching a lot of homelabbing content recently and decided to setup some new services specifically for improving reliability, observability and adding new functionality.&lt;/p&gt;&#xA;&lt;p&gt;Both of these I just got started with yesterday so my knowledge is quite limited, I intend to slowly improve these setups overtime.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prometheus-and-grafana-monitoring&#34;&gt;Prometheus and Grafana (Monitoring)&lt;/h2&gt;&#xA;&lt;p&gt;I wanted a flexible self-hosted solution that didn&amp;rsquo;t depend on the cloud, gave me more in depth monitoring thanks to prometheus node exporter and let me monitor stuff like server resources, kubernetes clusters, caddy web proxys, databases and much more so I ended up on prometheus and grafana.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Revised Homelab plans for 2026</title>
@@ -114,25 +121,11 @@
       <description>&lt;p&gt;It&amp;rsquo;s a common misconception that if someone gets your IP address they can find your real home address, get your exact location, hack all your passwords, etc. None of this is true and the only real threat is something like a DDoS attack (Not the same as being doxxed). They can usually also see your general location like City or Neighborhood depending on where you are, you can see what your IP says about you on a site like &lt;a href=&#34;https://whatismyipaddress.com&#34;&gt;this&lt;/a&gt; if you&amp;rsquo;re worried about it.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Favourites</title>
-      <link>//localhost:1313/favourites/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/favourites/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;Small Web Communities - &lt;a href=&#34;https://32bit.cafe&#34;&gt;32bit.cafe&lt;/a&gt; - &lt;a href=&#34;https://cyberia.club&#34;&gt;Cyberia&lt;/a&gt; - &lt;a href=&#34;https://bearblog.dev&#34;&gt;Bearblog&lt;/a&gt; - &lt;a href=&#34;https://status.cafe&#34;&gt;status.cafe&lt;/a&gt; - &lt;a href=&#34;https://tildeverse.org&#34;&gt;Tildeverse&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;VPS Providers - &lt;a href=&#34;https://binarylane.com.au&#34;&gt;BinaryLane&lt;/a&gt;  - &lt;a href=&#34;https://capsul.org&#34;&gt;Capsul&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;YouTubers (For Learning IT) - &lt;a href=&#34;https://www.youtube.com/@NetworkChuck&#34;&gt;Network Chuck&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@PowerCertAnimatedVideos&#34;&gt;Powercert&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Animes - &lt;a href=&#34;https://en.wikipedia.org/wiki/Serial_Experiments_Lain&#34;&gt;Serial Experiments Lain&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Cyberpunk:_Edgerunners&#34;&gt;CP: Edgerunners&lt;/a&gt; - &lt;a href=&#34;https://en.wikipedia.org/wiki/Neon_Genesis_Evangelion&#34;&gt;Evangelion&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Games - &lt;a href=&#34;#ZgotmplZ&#34;&gt;Watch Dogs&lt;/a&gt; - &lt;a href=&#34;https://minecraft.net&#34;&gt;Minecraft&lt;/a&gt; - &lt;a href=&#34;https://www.counter-strike.net/cs2&#34;&gt;CS2&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1966720/Lethal_Company/&#34;&gt;Lethal Company&lt;/a&gt; - &lt;a href=&#34;https://store.steampowered.com/app/1144200/Ready_or_Not/&#34;&gt;Ready or not&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;YouTubers (Entertainment) - &lt;a href=&#34;https://www.youtube.com/@jvscholz/&#34;&gt;jvscholz&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@BrandonFM/&#34;&gt;Brandon FM&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@fern-tv&#34;&gt;Fern&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/@iambysurf&#34;&gt;bySurf&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
       <title>Homelab</title>
       <link>//localhost:1313/homelab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/homelab/</guid>
       <description>&lt;p&gt;This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).&lt;/p&gt;&#xA;&lt;p&gt;The VMs themself run various different services including remote workspaces, self-hosted applications, game servers and this website, some offsite services are utilized to expose everything to the internet.&lt;/p&gt;&#xA;&lt;h3 id=&#34;compute-nodes---live-status&#34;&gt;Compute Nodes - &lt;a href=&#34;https://status.alecks.cloud&#34;&gt;Live Status&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Name&lt;/th&gt;&#xA;          &lt;th&gt;CPU&lt;/th&gt;&#xA;          &lt;th&gt;RAM&lt;/th&gt;&#xA;          &lt;th&gt;Storage&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-01&lt;/td&gt;&#xA;          &lt;td&gt;Ryzen 5 5500&lt;/td&gt;&#xA;          &lt;td&gt;32GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;1TB NVMe&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-02&lt;/td&gt;&#xA;          &lt;td&gt;Core i5-7400T&lt;/td&gt;&#xA;          &lt;td&gt;8GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;256GB NVMe&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;Some upgrades to existing machines are coming soon.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My Gear</title>
-      <link>//localhost:1313/gear/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/gear/</guid>
-      <description>&lt;h3 id=&#34;main-pc-built-by-me&#34;&gt;Main PC (Built by me)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CPU: AMD Ryzen 5 5500&lt;/li&gt;&#xA;&lt;li&gt;Memory: 32GB DDR4&lt;/li&gt;&#xA;&lt;li&gt;GPU: AMD RX 7800 XT&lt;/li&gt;&#xA;&lt;li&gt;Storage: 2TB NVMe (Windows 11) + 256GB NVMe (Omarchy)&lt;/li&gt;&#xA;&lt;li&gt;Uses: Development, virtualization, tinkering/experiments, gaming, web browsing and entertainment&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;laptop-1&#34;&gt;Laptop #1&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Model: M3 MacBook Air&lt;/li&gt;&#xA;&lt;li&gt;Memory: 24GB Unified&lt;/li&gt;&#xA;&lt;li&gt;Storage: 512GB SSD&lt;/li&gt;&#xA;&lt;li&gt;Size: 13 inch&lt;/li&gt;&#xA;&lt;li&gt;Uses: Portable dev machine, media consumption, web browsing and schoolwork&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;laptop-2&#34;&gt;Laptop #2&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Model: ThinkPad x201 (in x200 body)&lt;/li&gt;&#xA;&lt;li&gt;CPU: i5-520M&lt;/li&gt;&#xA;&lt;li&gt;Memory: 4GB DDR3&lt;/li&gt;&#xA;&lt;li&gt;Storage: 128GB SSD (Arch + i3wm)&lt;/li&gt;&#xA;&lt;li&gt;Uses: programming/coding, writing, journaling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;homelab&#34;&gt;&lt;a href=&#34;//localhost:1313/homelab/&#34;&gt;Homelab&lt;/a&gt;&lt;/h3&gt;</description>
     </item>
     <item>
       <title>Skills</title>

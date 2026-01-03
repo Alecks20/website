@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Moving to Prometheus and building a k3s cluster :: Alecks</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Going over some major changes to my monitoring system and addition of a new kubernetes cluster, which isn&#39;t yet ready for production." />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="//localhost:1313/posts/prometheus-and-k3s/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="//localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Moving to Prometheus and building a k3s cluster">
+<meta property="og:description" content="Going over some major changes to my monitoring system and addition of a new kubernetes cluster, which isn&#39;t yet ready for production." />
+<meta property="og:url" content="//localhost:1313/posts/prometheus-and-k3s/" />
+<meta property="og:site_name" content="Alecks" />
+
+  <meta property="og:image" content="//localhost:1313/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2026-01-03 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Alecks
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/homelab">Homelab</a></li>
+        
+      
+        
+          <li><a href="/skills">Skills</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="/homelab" >Homelab</a></li>
+        
+      
+        
+          <li><a href="/skills" >Skills</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="//localhost:1313/posts/prometheus-and-k3s/">Moving to Prometheus and building a k3s cluster</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026-01-03</time><span class="post-author">Alecks</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="//localhost:1313/tags/servers/">servers</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/self-hosting/">self-hosting</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/k3s/">k3s</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/proemtheus/">proemtheus</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>I&rsquo;ve been watching a lot of homelabbing content recently and decided to setup some new services specifically for improving reliability, observability and adding new functionality.</p>
+<p>Both of these I just got started with yesterday so my knowledge is quite limited, I intend to slowly improve these setups overtime.</p>
+<h2 id="prometheus-and-grafana-monitoring">Prometheus and Grafana (Monitoring)<a href="#prometheus-and-grafana-monitoring" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>I wanted a flexible self-hosted solution that didn&rsquo;t depend on the cloud, gave me more in depth monitoring thanks to prometheus node exporter and let me monitor stuff like server resources, kubernetes clusters, caddy web proxys, databases and much more so I ended up on prometheus and grafana.</p>
+<p>I&rsquo;m running it on a dedicated monitoring vm running them both in docker, to access it remotely I use tailscale. I run node exporter on all my vms and pull all that data here using a job.</p>
+<p><img src="/images/grafana-dashboard.webp" alt=""></p>
+<p><sup>Slightly modified version of the <a href="https://grafana.com/grafana/dashboards/1860-node-exporter-full/">node exporter</a> dashboard</sup></p>
+<p>Its in very early stages right now, just a default dashboard with a single node exporter job as I only got started with it yesterday, shoutout to <a href="https://dellavedaffa.medium.com/run-node-exporter-as-a-background-service-in-5-minutes-with-python-systemd-a58a51c42672">this article</a> for helping me setup node exporter on machines that I don&rsquo;t have docker on (like proxmox nodes)</p>
+<h2 id="k3s-cluster">K3s Cluster<a href="#k3s-cluster" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>I&rsquo;ve taken an interest in something called &ldquo;mini labbing&rdquo; where people use things like raspberry pis or mini pcs (e.g second hand lenovo thinkcentres), put them in a mini rack and use them as a homelab, additionally one of my favourite productivity youtubers jvscholz <a href="https://www.youtube.com/watch?v=bKC2M34iKtw">made a video on homelabbing</a> where he mentioned making a kubernetes cluster.</p>
+<p>On top of that I&rsquo;ve seen kubernetes being used a lot in production enterprise deployments and stuff like that so I thought learning it must be pretty a importmant skill, so why not start now.</p>
+<p><img src="/images/kubernetes_dashboard.webp" alt=""></p>
+<p>As you can see I have 3 k3s nodes setup, node 1 is the &ldquo;control plane&rdquo; and worker node running the dashboard and the other ones are just worker nodes.</p>
+<p>I used the <a href="https://docs.k3s.io/installation">k3s install guide</a> to install it and <a href="">this</a> guide to setup the dashboard. They&rsquo;re currently just vms on top of proxmox as its more of a lab/testing environment for learing kubernetes rather than an actual production environment, had a lot of fun with it so far.</p>
+<h2 id="closing-thoughts">Closing Thoughts<a href="#closing-thoughts" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>These have been very fun to learn and setup, even more excited to see what I&rsquo;m able to do with these in the future like running production apps in kubernetes hosted on multiple physical machines instead of vms possibly even mini pcs.</p>
+<p>Thanks for reading :)</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h"></span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+    
+      <a href="//localhost:1313/posts/revised-homelab-2026/" class="button inline next">
+         [<span class="button__text">Revised Homelab plans for 2026</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2026 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
