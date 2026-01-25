@@ -3,4 +3,4 @@
 	url = https://github.com/clente/hugo-bearcub
 [submodule "themes/terminal"]
 	path = themes/terminal
-	url = https://github.com/panr/hugo-theme-terminal
+	url = https://github.com/alecks20/hugo-theme-terminal.git
