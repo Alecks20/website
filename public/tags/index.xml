@@ -16,10 +16,17 @@
       <description></description>
     </item>
     <item>
-      <title>Proemtheus</title>
-      <link>//localhost:1313/tags/proemtheus/</link>
+      <title>Monitoring</title>
+      <link>//localhost:1313/tags/monitoring/</link>
       <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/proemtheus/</guid>
+      <guid>//localhost:1313/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prometheus</title>
+      <link>//localhost:1313/tags/prometheus/</link>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/prometheus/</guid>
       <description></description>
     </item>
     <item>
