@@ -6,7 +6,7 @@ From my tinkering and natural curiosity, I became familiar with basic IT concept
 Over the years I've delved deeper into this rabbit hole setting up a homelab and learning to administer servers in production environments, where my skills, knowledge and practical experience has grown exponentially.
 
 ## Real world Experience
-- Designed, deployed and still actively maintaining a free game server hosting platform (Using Pterodactyl Panel & Wings) for various communities peaking at 50+ members, recieved tons of positive feedback about performance and reliability especially when using my [homelab](/homelab), also operated additional regions on rented ryzen boxes.
+- Designed, deployed and still actively maintaining a free game server hosting platform (Using Pterodactyl Panel & Wings) for various communities peaking at 30+ concurrent players, recieved tons of positive feedback about performance and reliability especially when using my [homelab](/homelab), also operated additional regions on rented ryzen boxes.
 - Actively operating and maintaining a prosumer level homelab to experiment with technologies and run services for personal use, small communities or friends (Proxmox VE & backup server with sophisticated monitoring, mobile notification alerts and proper disaster recovery following the 3-2-1 backup strategy).
 - Built a Discord Bot used by 40+ servers and hosted it on a DigitalOcean vps deployed via Docker made in Python with MongoDB - [Source Code](https://github.com/alecks20/Cloudy).
 ## General Knowledge
