@@ -1,10 +1,8 @@
 +++
 title = "About Me"
-date = "2026-01-03"
+date = "2026-02-19"
 author = "Alecks"
 +++
-<img src="/images/fmab_figure.webp" alt="Edward Elric Figure" style="float: right; margin-left: 20px; width: 300px;">
-
 Hello Internet, 
 
 I'm a self-taught developer from Australia interested in system administration, networking, computer hardware, programming and homelabbing skilled in various tech fields - [my skills](/skills). 
