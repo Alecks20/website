@@ -10,3 +10,5 @@ I'm a self-taught developer from Australia interested in system administration, 
 This website is my own little corner of the internet to showcase my practical experience and serve as a time capsule for writings, it also helps solidify learnings as explaining things to others is one of the best ways to remember things.
 
 Outside of tech I love documentaries (tech, hacking, politics, economics and true crime), anime, fixing up/reviving old thinkpads or devices and designing things.
+
+You can reach out to me via [alecks:matrix.alecks.dev](https://matrix.to/#/@alecks:matrix.alecks.dev) ([matrix](https://matrix.org)) or [me@alecks.dev](mailto:me@alecks.dev) (email), I'll do my best to respond within a few days.
