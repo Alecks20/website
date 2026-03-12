@@ -42,3 +42,7 @@ pagination.pagerSize = 5
         identifier = "skills"
         name = "Skills"
         url = "/skills"
+      [[languages.en.menu.main]]
+        identifier = "status"
+        name = "System Status"
+        url = "https://status.alecks.dev"
