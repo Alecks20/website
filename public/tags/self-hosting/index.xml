@@ -16,13 +16,6 @@
       <description>&lt;p&gt;I&amp;rsquo;ve been watching a lot of homelabbing content recently and decided to setup some new services specifically for improving reliability, observability and adding new functionality.&lt;/p&gt;&#xA;&lt;p&gt;Both of these I just got started with yesterday so my knowledge is quite limited, I intend to slowly improve these setups overtime.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prometheus-and-grafana--on-prem-monitoring&#34;&gt;Prometheus and Grafana / On-prem monitoring&lt;/h2&gt;&#xA;&lt;p&gt;I wanted a flexible self-hosted solution that didn&amp;rsquo;t run in the cloud while being able to monitor proxmox nodes, vms and more sophisticated monitoring with specific services like databases or kubernetes clusters which hetrixtools can&amp;rsquo;t do, so I ended up on prometheus and grafana.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Revised Homelab plans for 2026</title>
-      <link>//localhost:1313/posts/revised-homelab-2026/</link>
-      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/revised-homelab-2026/</guid>
-      <description>&lt;p&gt;Thanks to AI datacenters making the cost of RAM and Storage skyrocket, then making Micron one of the biggest manufacturers leave the consumer market (moving to exclusively serving these datacenters), the huge server cluster plans I had for 2026 really just aren&amp;rsquo;t viable anymore.&lt;/p&gt;&#xA;&lt;p&gt;At the time each server would&amp;rsquo;ve cost around 2 and a half to 3 thousand aud, now just 128GB of DDR5 RAM &lt;a href=&#34;//localhost:1313/images/ddr5_ram_prices.webp&#34;&gt;costs 3 thousand aud&lt;/a&gt; so I&amp;rsquo;ll primarily use second hand hardware like mini pcs and legacy AM4 machines.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Homelab Plan for 2026</title>
       <link>//localhost:1313/posts/homelab-plans-2026/</link>
       <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>

@@ -44,13 +44,6 @@
       <description></description>
     </item>
     <item>
-      <title>Homelab</title>
-      <link>//localhost:1313/tags/homelab/</link>
-      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/homelab/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Privacy</title>
       <link>//localhost:1313/tags/privacy/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
@@ -65,31 +58,10 @@
       <description></description>
     </item>
     <item>
-      <title>Computers</title>
-      <link>//localhost:1313/tags/computers/</link>
-      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/computers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Obsidian</title>
-      <link>//localhost:1313/tags/obsidian/</link>
-      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/obsidian/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reviews</title>
-      <link>//localhost:1313/tags/reviews/</link>
-      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/reviews/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Laptops</title>
-      <link>//localhost:1313/tags/laptops/</link>
-      <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/laptops/</guid>
+      <title>Homelab</title>
+      <link>//localhost:1313/tags/homelab/</link>
+      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/homelab/</guid>
       <description></description>
     </item>
     <item>
