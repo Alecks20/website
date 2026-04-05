@@ -7,8 +7,8 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).
-The VMs themself run various different services including remote workspaces, self-hosted applications, game servers and this website, some offsite services are utilized to expose everything to the internet.
-Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 32GB DDR4 1TB NVMe au-prox-02 Core i5-7400T 8GB DDR4 256GB NVMe Some upgrades to existing machines are coming soon.
+The VMs themself run various different services including game servers for me and my friends, aquaintances or small communities, a small jellyfin instance, matrix, websites and also acts as a gateway for my friends homelabs using tailscale.
+Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 64GB DDR4 1TB NVMe au-prox-02 Core i5-7400T 8GB DDR4 256GB NVMe SSD au-prox-03 Core i7-7700 16GB DDR4 256GB NVMe SSD au-mtr-01 Core i3-4130T 8GB DDR3 256GB SATA SSD (Anything on the status page not shown above is either a vm or vps)
 " />
 <meta name="keywords" content="" />
 
@@ -24,7 +24,7 @@ Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 32GB DD
   <link rel="stylesheet" href="//localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
 
   
-  <link rel="stylesheet" href="//localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+  <link rel="stylesheet" href="//localhost:1313/css/code.min.c4581949edab7810737609fc5568852bcd908945f14561e366dcd2300a370545.css">
 
   
   <link rel="stylesheet" href="//localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
@@ -51,7 +51,7 @@ Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 32GB DD
   <link rel="stylesheet" href="//localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
 
   
-  <link rel="stylesheet" href="//localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+  <link rel="stylesheet" href="//localhost:1313/css/syntax.min.a2cc694a9b481f15d41722bffc2cc54eea4c4f74fd9072b0b33253604c22606e.css">
 
   
   <link rel="stylesheet" href="//localhost:1313/css/terminal.min.26188031b44a96063cc0c02f4a8fc3eaf1cbf19cb426f2ac3180798a8e013e9d.css">
@@ -77,8 +77,8 @@ Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 32GB DD
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Homelab">
 <meta property="og:description" content="This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).
-The VMs themself run various different services including remote workspaces, self-hosted applications, game servers and this website, some offsite services are utilized to expose everything to the internet.
-Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 32GB DDR4 1TB NVMe au-prox-02 Core i5-7400T 8GB DDR4 256GB NVMe Some upgrades to existing machines are coming soon.
+The VMs themself run various different services including game servers for me and my friends, aquaintances or small communities, a small jellyfin instance, matrix, websites and also acts as a gateway for my friends homelabs using tailscale.
+Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 64GB DDR4 1TB NVMe au-prox-02 Core i5-7400T 8GB DDR4 256GB NVMe SSD au-prox-03 Core i7-7700 16GB DDR4 256GB NVMe SSD au-mtr-01 Core i3-4130T 8GB DDR3 256GB SATA SSD (Anything on the status page not shown above is either a vm or vps)
 " />
 <meta property="og:url" content="//localhost:1313/homelab/" />
 <meta property="og:site_name" content="Alecks" />
@@ -184,8 +184,8 @@ Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 32GB DD
 
   <div class="post-content"><div>
         <p>This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).</p>
-<p>The VMs themself run various different services including remote workspaces, self-hosted applications, game servers and this website, some offsite services are utilized to expose everything to the internet.</p>
-<h3 id="compute-nodes---live-status">Compute Nodes - <a href="https://status.alecks.cloud">Live Status</a><a href="#compute-nodes---live-status" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>The VMs themself run various different services including game servers for me and my friends, aquaintances or small communities, a small jellyfin instance, matrix, websites and also acts as a gateway for my friends homelabs using tailscale.</p>
+<h3 id="compute-nodes---live-status">Compute Nodes - <a href="https://status.alecks.dev">Live Status</a><a href="#compute-nodes---live-status" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <table>
   <thead>
       <tr>
@@ -199,29 +199,42 @@ Compute Nodes - Live Status Name CPU RAM Storage au-prox-01 Ryzen 5 5500 32GB DD
       <tr>
           <td>au-prox-01</td>
           <td>Ryzen 5 5500</td>
-          <td>32GB DDR4</td>
+          <td>64GB DDR4</td>
           <td>1TB NVMe</td>
       </tr>
       <tr>
           <td>au-prox-02</td>
           <td>Core i5-7400T</td>
           <td>8GB DDR4</td>
-          <td>256GB NVMe</td>
+          <td>256GB NVMe SSD</td>
+      </tr>
+      <tr>
+          <td>au-prox-03</td>
+          <td>Core i7-7700</td>
+          <td>16GB DDR4</td>
+          <td>256GB NVMe SSD</td>
+      </tr>
+      <tr>
+          <td>au-mtr-01</td>
+          <td>Core i3-4130T</td>
+          <td>8GB DDR3</td>
+          <td>256GB SATA SSD</td>
       </tr>
   </tbody>
 </table>
-<p>Some upgrades to existing machines are coming soon.</p>
+<p>(Anything on the status page not shown above is either a vm or vps)</p>
 <h3 id="backups--monitoring">Backups &amp; Monitoring<a href="#backups--monitoring" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
-<li><del>Daily backups of vm disks are sent to my local PBS server (incremental), then mirrored onto Hetzner object storage and stored for 7 days.</del> Currently no vm level backup system, game nodes run their own daily backups of server volumes.</li>
+<li><del>Daily backups of vm disks are sent to my local PBS server (incremental), then mirrored onto Hetzner object storage and stored for 7 days.</del> Currently no vm level backup system, game nodes run their own daily backups of server volumes. I do have plans to setup an offsite backup server at one of my friends houses.</li>
 <li><a href="https://hetrixtools.com">HetrixTools</a> monitors server resources (cpu, ram, storage and bandwidth usage), uptime, drive health, detects outages and pushes alerts to my ntfy server.</li>
-<li>Additionally, I have an on-prem prometheus and grafana setup which extensively monitors all vms.</li>
-<li><a href="https://ntfy.sh">ntfy</a> notifies me of incidents picked up my hetrix with mobile push notifications.</li>
+<li>Prometheus and Grafana extensively monitors vms, vpses and vm hosts and acts as a backup to HetrixTools, since its hosted on-prem it still collects metrics if my internet ever went down.</li>
+<li><a href="https://ntfy.sh">ntfy</a> notifies me of incidents picked up my hetrix with mobile push notifications, hosted on a cloud server so if my entire homelab goes offline I can still get nofified.</li>
+<li><a href="https://tailscale.com">Tailscale</a> lets me access any vm or vm host running internally from outside my network without me needing to expose any ssh ports or run an ssh gateway.</li>
 </ul>
 <h3 id="reliability">Reliability<a href="#reliability" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
 <li>Power outages happen at max a couple times a year and everything is designed to automatically recover when systems come back online (UPS backup will be installed soon to mitigate that).</li>
-<li>Internet has never gone down before, my router is reliable and semi-enterprise grade.</li>
+<li>Internet has never gone down before, my router is reliable and been rock solid under load.</li>
 </ul>
 
       </div></div>

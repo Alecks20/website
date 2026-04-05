@@ -5,9 +5,16 @@
     <link>//localhost:1313/</link>
     <description>Recent content on Alecks</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 19 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How my game hosting works behind the scenes</title>
+      <link>//localhost:1313/posts/homelab-early-2026/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/homelab-early-2026/</guid>
+      <description></description>
+    </item>
     <item>
       <title>About Me</title>
       <link>//localhost:1313/about/</link>
@@ -97,7 +104,7 @@
       <link>//localhost:1313/homelab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/homelab/</guid>
-      <description>&lt;p&gt;This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).&lt;/p&gt;&#xA;&lt;p&gt;The VMs themself run various different services including remote workspaces, self-hosted applications, game servers and this website, some offsite services are utilized to expose everything to the internet.&lt;/p&gt;&#xA;&lt;h3 id=&#34;compute-nodes---live-status&#34;&gt;Compute Nodes - &lt;a href=&#34;https://status.alecks.cloud&#34;&gt;Live Status&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Name&lt;/th&gt;&#xA;          &lt;th&gt;CPU&lt;/th&gt;&#xA;          &lt;th&gt;RAM&lt;/th&gt;&#xA;          &lt;th&gt;Storage&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-01&lt;/td&gt;&#xA;          &lt;td&gt;Ryzen 5 5500&lt;/td&gt;&#xA;          &lt;td&gt;32GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;1TB NVMe&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-02&lt;/td&gt;&#xA;          &lt;td&gt;Core i5-7400T&lt;/td&gt;&#xA;          &lt;td&gt;8GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;256GB NVMe&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;Some upgrades to existing machines are coming soon.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).&lt;/p&gt;&#xA;&lt;p&gt;The VMs themself run various different services including game servers for me and my friends, aquaintances or small communities, a small jellyfin instance, matrix, websites and also acts as a gateway for my friends homelabs using tailscale.&lt;/p&gt;&#xA;&lt;h3 id=&#34;compute-nodes---live-status&#34;&gt;Compute Nodes - &lt;a href=&#34;https://status.alecks.dev&#34;&gt;Live Status&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Name&lt;/th&gt;&#xA;          &lt;th&gt;CPU&lt;/th&gt;&#xA;          &lt;th&gt;RAM&lt;/th&gt;&#xA;          &lt;th&gt;Storage&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-01&lt;/td&gt;&#xA;          &lt;td&gt;Ryzen 5 5500&lt;/td&gt;&#xA;          &lt;td&gt;64GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;1TB NVMe&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-02&lt;/td&gt;&#xA;          &lt;td&gt;Core i5-7400T&lt;/td&gt;&#xA;          &lt;td&gt;8GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;256GB NVMe SSD&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-03&lt;/td&gt;&#xA;          &lt;td&gt;Core i7-7700&lt;/td&gt;&#xA;          &lt;td&gt;16GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;256GB NVMe SSD&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-mtr-01&lt;/td&gt;&#xA;          &lt;td&gt;Core i3-4130T&lt;/td&gt;&#xA;          &lt;td&gt;8GB DDR3&lt;/td&gt;&#xA;          &lt;td&gt;256GB SATA SSD&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;(Anything on the status page not shown above is either a vm or vps)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Skills</title>

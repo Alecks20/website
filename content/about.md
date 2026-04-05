@@ -11,4 +11,4 @@ This website is my own little corner of the internet to showcase my practical ex
 
 Outside of tech I love documentaries (tech, hacking, politics, economics and true crime), anime, fixing up/reviving old thinkpads or devices and designing things.
 
-You can reach out to me via [alecks:matrix.alecks.dev](https://matrix.to/#/@alecks:matrix.alecks.dev) ([matrix](https://matrix.org)) or [me@alecks.dev](mailto:me@alecks.dev) (email), I'll do my best to respond within a few days.
+You can reach out to me via [me@alecks.dev](mailto:me@alecks.dev) (email) or discord (alecks20), I'll do my best to respond within a few days.
