@@ -194,14 +194,14 @@
 
   <div class="post-content"><div>
         <p>I&rsquo;ve been watching a lot of homelabbing content recently and decided to setup some new services specifically for improving reliability, observability and adding new functionality.</p>
-<p>Both of these I just got started with yesterday so my knowledge is quite limited, I intend to slowly improve these setups overtime.</p>
+<p>My knowledge is quite limited currently as I&rsquo;m just getting started, I intend to slowly improve these setups overtime.</p>
 <h2 id="prometheus-and-grafana--on-prem-monitoring">Prometheus and Grafana / On-prem monitoring<a href="#prometheus-and-grafana--on-prem-monitoring" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>I wanted a flexible self-hosted solution that didn&rsquo;t run in the cloud while being able to monitor proxmox nodes, vms and more sophisticated monitoring with specific services like databases or kubernetes clusters which hetrixtools can&rsquo;t do, so I ended up on prometheus and grafana.</p>
-<p>I&rsquo;m running it on a dedicated monitoring vm running them both in docker, to access it remotely I use tailscale and I run node exporter on all my vms then pull that data here over local network or the internet (for vpses) with proper firewalling.</p>
-<p>In the future I plan to put this system on its own seperate hardware like a raspberry pi not in the proxmox cluster so that if theres failures this system doesn&rsquo;t go down with it.</p>
+<p>To prevent me from having no insignt into my homelab during an internet outage, I needed a monitoring solution that runs locally and stores everything locally, not on someone elses server. So I landed on prometheus as the monitoring service hooked up to grafana to visualize the data all running in docker.</p>
+<p>I&rsquo;m running them on a dedicated monitoring vm in docker containers, to access it remotely I use tailscale and run node exporter on all my vms then pull that data here over local network, the internet (for vpses) with proper firewalling or tailscale for servers hosted at friends houses.</p>
+<p>In the future I plan to put this system on its own seperate hardware so that its seperate from my proxmox cluster if that fails or has quorum issues.</p>
 <p><img src="/images/grafana.webp" alt=""></p>
 <p><sup>Slightly modified version of the <a href="https://grafana.com/grafana/dashboards/1860-node-exporter-full/">node exporter</a> dashboard</sup></p>
-<p>It&rsquo;s currently using just premade templates which are very complex and sophisticated but I plan to make my own custom dashboards in the future as I monitor more, shoutout to <a href="https://dellavedaffa.medium.com/run-node-exporter-as-a-background-service-in-5-minutes-with-python-systemd-a58a51c42672">this article</a> for helping me setup node exporter on machines that I don&rsquo;t have docker on (like proxmox nodes)</p>
+<p>It&rsquo;s currently using just premade templates which are very complex and sophisticated but I plan to make my own custom dashboards in the future as I monitor more, hetrixtools is my primarily monitoring solution hooked up to my ntfy server for mobile alerts for downtime and resource usage, this is like a backup system to collect more detailed metrics and offer a safety net if my internet dies or anything happens to my hetrixtools account I still have a huge metrics collection stored locally.</p>
 <p>I use this command to deploy the node exporter via docker on my machines.</p>
 <pre tabindex="0"><code>docker run -d \
   --name=node_exporter \
@@ -213,10 +213,11 @@
   --path.rootfs=/host
 </code></pre><h2 id="k3s-cluster">K3s Cluster<a href="#k3s-cluster" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>I&rsquo;ve taken an interest in something called &ldquo;mini labbing&rdquo; where people use things like raspberry pis or mini pcs (e.g second hand lenovo thinkcentres), put them in a mini rack and use them as a homelab, additionally one of my favourite productivity youtubers jvscholz <a href="https://www.youtube.com/watch?v=bKC2M34iKtw">made a video on homelabbing</a> where he mentioned making a kubernetes cluster.</p>
-<p>On top of that I&rsquo;ve seen kubernetes being used a lot in production enterprise deployments and stuff like that so I thought learning it must be pretty a importmant skill, so why not start now.</p>
+<p>On top of that I&rsquo;ve seen kubernetes being used a lot in production enterprise deployments and stuff like that and I thought learning it must be pretty a importmant skill, so why not start now.</p>
 <p><img src="/images/kubernetes_dashboard.webp" alt=""></p>
 <p>As you can see I have 3 k3s nodes setup, node 1 is the &ldquo;control plane&rdquo; and worker node running the dashboard and the other ones are just worker nodes.</p>
 <p>I used the <a href="https://docs.k3s.io/installation">k3s install guide</a> to install it and <a href="">this</a> guide to setup the dashboard. They&rsquo;re currently just vms on top of proxmox as its more of a lab/testing environment for learing kubernetes rather than an actual production environment, had a lot of fun with it so far.</p>
+<p>Have some ideas in the future like</p>
 <h2 id="closing-thoughts">Closing Thoughts<a href="#closing-thoughts" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>These have been very fun to learn and setup, even more excited to see what I&rsquo;m able to do with these in the future like running production apps in kubernetes hosted on multiple physical machines instead of vms possibly even mini pcs.</p>
 <p>Thanks for reading :)</p>

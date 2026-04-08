@@ -6,14 +6,14 @@
     <description>Recent content on Alecks</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How my game hosting works behind the scenes</title>
-      <link>//localhost:1313/posts/homelab-early-2026/</link>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/homelab-early-2026/</guid>
-      <description></description>
+      <title>Homelab Tour (Early 2026)</title>
+      <link>//localhost:1313/posts/homelab-tour-2026/</link>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/homelab-tour-2026/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Over these past few months of early 2026 my homelab has expanded to host many new game servers, proxy friends services and even run my own mini streaming service.&lt;/p&gt;&#xA;&lt;p&gt;So I&amp;rsquo;ll be taking you through everything behind the scenes that makes this possible, how I keep everything stable and my future expansion plans.&lt;/p&gt;&#xA;&lt;h2 id=&#34;services&#34;&gt;Services&lt;/h2&gt;&#xA;&lt;h3 id=&#34;managed-game-hosting&#34;&gt;Managed Game Hosting&lt;/h3&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve had my game hosting platform for a while but only just recently has it become pretty active and filled to capacity, I actually had to upgrade the ram on one of my physical machines to accomodate for this demand.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About Me</title>
@@ -27,7 +27,7 @@
       <link>//localhost:1313/posts/prometheus-and-k3s/</link>
       <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/prometheus-and-k3s/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been watching a lot of homelabbing content recently and decided to setup some new services specifically for improving reliability, observability and adding new functionality.&lt;/p&gt;&#xA;&lt;p&gt;Both of these I just got started with yesterday so my knowledge is quite limited, I intend to slowly improve these setups overtime.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prometheus-and-grafana--on-prem-monitoring&#34;&gt;Prometheus and Grafana / On-prem monitoring&lt;/h2&gt;&#xA;&lt;p&gt;I wanted a flexible self-hosted solution that didn&amp;rsquo;t run in the cloud while being able to monitor proxmox nodes, vms and more sophisticated monitoring with specific services like databases or kubernetes clusters which hetrixtools can&amp;rsquo;t do, so I ended up on prometheus and grafana.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been watching a lot of homelabbing content recently and decided to setup some new services specifically for improving reliability, observability and adding new functionality.&lt;/p&gt;&#xA;&lt;p&gt;My knowledge is quite limited currently as I&amp;rsquo;m just getting started, I intend to slowly improve these setups overtime.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prometheus-and-grafana--on-prem-monitoring&#34;&gt;Prometheus and Grafana / On-prem monitoring&lt;/h2&gt;&#xA;&lt;p&gt;To prevent me from having no insignt into my homelab during an internet outage, I needed a monitoring solution that runs locally and stores everything locally, not on someone elses server. So I landed on prometheus as the monitoring service hooked up to grafana to visualize the data all running in docker.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Homelab Plan for 2026</title>
@@ -104,7 +104,7 @@
       <link>//localhost:1313/homelab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/homelab/</guid>
-      <description>&lt;p&gt;This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).&lt;/p&gt;&#xA;&lt;p&gt;The VMs themself run various different services including game servers for me and my friends, aquaintances or small communities, a small jellyfin instance, matrix, websites and also acts as a gateway for my friends homelabs using tailscale.&lt;/p&gt;&#xA;&lt;h3 id=&#34;compute-nodes---live-status&#34;&gt;Compute Nodes - &lt;a href=&#34;https://status.alecks.dev&#34;&gt;Live Status&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Name&lt;/th&gt;&#xA;          &lt;th&gt;CPU&lt;/th&gt;&#xA;          &lt;th&gt;RAM&lt;/th&gt;&#xA;          &lt;th&gt;Storage&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-01&lt;/td&gt;&#xA;          &lt;td&gt;Ryzen 5 5500&lt;/td&gt;&#xA;          &lt;td&gt;64GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;1TB NVMe&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-02&lt;/td&gt;&#xA;          &lt;td&gt;Core i5-7400T&lt;/td&gt;&#xA;          &lt;td&gt;8GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;256GB NVMe SSD&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-03&lt;/td&gt;&#xA;          &lt;td&gt;Core i7-7700&lt;/td&gt;&#xA;          &lt;td&gt;16GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;256GB NVMe SSD&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-mtr-01&lt;/td&gt;&#xA;          &lt;td&gt;Core i3-4130T&lt;/td&gt;&#xA;          &lt;td&gt;8GB DDR3&lt;/td&gt;&#xA;          &lt;td&gt;256GB SATA SSD&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;(Anything on the status page not shown above is either a vm or vps)&lt;/p&gt;</description>
+      <description>&lt;p&gt;This setup hosts all of my core infrastructure which consists of several Linux VMs and a couple LXC Containers. VM nodes run Proxmox VE (Clustered).&lt;/p&gt;&#xA;&lt;p&gt;The VMs themself run various different services including game servers for me and my friends, aquaintances or small communities, a small jellyfin instance, matrix, websites and also acts as a gateway for my friends homelabs using tailscale.&lt;/p&gt;&#xA;&lt;h3 id=&#34;compute-nodes---live-status&#34;&gt;Compute Nodes - &lt;a href=&#34;https://status.alecks.dev&#34;&gt;Live Status&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Name&lt;/th&gt;&#xA;          &lt;th&gt;CPU&lt;/th&gt;&#xA;          &lt;th&gt;RAM&lt;/th&gt;&#xA;          &lt;th&gt;Storage&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-01&lt;/td&gt;&#xA;          &lt;td&gt;Ryzen 5 5500&lt;/td&gt;&#xA;          &lt;td&gt;64GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;1TB NVMe&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-02&lt;/td&gt;&#xA;          &lt;td&gt;Core i5-7400T&lt;/td&gt;&#xA;          &lt;td&gt;16GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;256GB NVMe SSD&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;au-prox-03&lt;/td&gt;&#xA;          &lt;td&gt;Core i7-7700&lt;/td&gt;&#xA;          &lt;td&gt;16GB DDR4&lt;/td&gt;&#xA;          &lt;td&gt;256GB NVMe SSD&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;(Anything on the status page not shown above is either a vm or vps)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Skills</title>
