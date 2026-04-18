@@ -6,14 +6,21 @@
     <description>Recent content in Servers on Alecks</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/servers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab Tour (Early 2026)</title>
+      <link>//localhost:1313/posts/homelab-tour-2026/</link>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/homelab-tour-2026/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Over these past few months of early 2026 my homelab has expanded to host many new game servers, proxy friends services and even run my own mini streaming service.&lt;/p&gt;&#xA;&lt;p&gt;So I&amp;rsquo;ll be taking you through everything behind the scenes that makes this possible, how I keep everything stable and my future expansion plans.&lt;/p&gt;&#xA;&lt;h2 id=&#34;services&#34;&gt;Services&lt;/h2&gt;&#xA;&lt;h3 id=&#34;managed-game-hosting&#34;&gt;Managed Game Hosting&lt;/h3&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve had my game hosting platform for a while but only just recently has it become pretty active and filled to capacity, I actually had to upgrade the ram on one of my physical machines to accomodate for this demand.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Moving to Prometheus and deploying a k3s cluster</title>
       <link>//localhost:1313/posts/prometheus-and-k3s/</link>
       <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/prometheus-and-k3s/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been watching a lot of homelabbing content recently and decided to setup some new services specifically for improving reliability, observability and adding new functionality.&lt;/p&gt;&#xA;&lt;p&gt;Both of these I just got started with yesterday so my knowledge is quite limited, I intend to slowly improve these setups overtime.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prometheus-and-grafana--on-prem-monitoring&#34;&gt;Prometheus and Grafana / On-prem monitoring&lt;/h2&gt;&#xA;&lt;p&gt;I wanted a flexible self-hosted solution that didn&amp;rsquo;t run in the cloud while being able to monitor proxmox nodes, vms and more sophisticated monitoring with specific services like databases or kubernetes clusters which hetrixtools can&amp;rsquo;t do, so I ended up on prometheus and grafana.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been watching a lot of homelabbing content recently and decided to setup some new services specifically for improving reliability, observability and adding new functionality.&lt;/p&gt;&#xA;&lt;p&gt;My knowledge is quite limited currently as I&amp;rsquo;m just getting started, I intend to slowly improve these setups overtime.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prometheus-and-grafana--on-prem-monitoring&#34;&gt;Prometheus and Grafana / On-prem monitoring&lt;/h2&gt;&#xA;&lt;p&gt;To prevent me from having no insignt into my homelab during an internet outage, I needed a monitoring solution that runs locally and stores everything locally, not on someone elses server. So I landed on prometheus as the monitoring service hooked up to grafana to visualize the data all running in docker.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Homelab Plan for 2026</title>

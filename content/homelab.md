@@ -11,7 +11,6 @@ The VMs themself run various different services including game servers for me an
 | -------- | ------- | ------- | ------ |
 | au-prox-01 | Ryzen 5 5500 | 64GB DDR4 | 1TB NVMe |
 | au-prox-02 | Core i5-7400T | 16GB DDR4 | 256GB NVMe SSD |
-| au-prox-03 | Core i7-7700 | 16GB DDR4 | 256GB NVMe SSD |
 
 (Anything on the status page not shown above is either a vm or vps)
 ### Backups & Monitoring

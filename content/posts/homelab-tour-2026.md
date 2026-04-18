@@ -50,7 +50,6 @@ My setup uses a small-business grade router and my servers are connected to an u
 | -------- | ------- | ------- | ------ |
 | au-prox-01 | Ryzen 5 5500 | 64GB DDR4 | 1TB NVMe |
 | au-prox-02 | Core i5-7400T | 16GB DDR4 | 256GB NVMe |
-| au-prox-03 | Core i7-7700 | 16GB DDR4 | 256GB NVMe |
 
 All servers run Proxmox VE clustered together which allows me to easily migrate vms and lxcs between machines if a server needs to be taken down for maintenance.
 
