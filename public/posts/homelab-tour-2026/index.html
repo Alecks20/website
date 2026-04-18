@@ -195,7 +195,7 @@
 <h2 id="services">Services<a href="#services" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <h3 id="managed-game-hosting">Managed Game Hosting<a href="#managed-game-hosting" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>I&rsquo;ve had my game hosting platform for a while but only just recently has it become pretty active and filled to capacity, I actually had to upgrade the ram on one of my physical machines to accomodate for this demand.</p>
-<p>I have primarily modded minecraft, some paper/vanilla smps and terraria all running inside docker containers managed by <a href="https://pyrodactyl.dev">pyrodactyl</a> where users get their own account on my game panel to manage their servers console, files, network allocations and backups just like a proper hosting service.</p>
+<p>I have primarily modded minecraft, some paper/vanilla smps, ark and terraria all running inside docker containers managed by <a href="https://pyrodactyl.dev">pyrodactyl</a> where users get their own account on my game panel to manage their servers console, files, network allocations and backups just like a proper hosting service.</p>
 <p>The panel runs in its own vm and game servers also run in their own vm to stop the game servers or panel overloading and taking the other down.</p>
 <h3 id="jellyfin---streaming-service">Jellyfin - streaming service<a href="#jellyfin---streaming-service" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>This is essentially my own self-hosted netflix, my friends with their own accounts can stream anything on demand from their phones, tvs, computers or anything that has a jellyfin client.</p>
@@ -238,6 +238,7 @@
 <h3 id="proxmox-hypervisor">Proxmox (Hypervisor)<a href="#proxmox-hypervisor" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>This lets me contain all my services into their own &ldquo;virtual&rdquo; computers which lets me set super strict resource allocations on cpu, ram and storage and makes them portable so they&rsquo;re easy to move around and migrate between machines.</p>
 <p>I also run a few lxcs for more lightweight services like my caddy gateway or tailscale subnet router.</p>
+<p>On au-prox-01 I have an Ubuntu Server template with cloud-initd which I clone and configure to setup new vms without having to spend ages waiting for a linux install.</p>
 <h3 id="docker-containers">Docker (Containers)<a href="#docker-containers" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>Runs on my service vms and contains everything into their own containers and bundles dependencies making it super easy to deploy things. It&rsquo;s heavily integrated with my game panel and I use it outside of that to run pretty much everything like jellyfin, grafana, prometheus, node exporters and more.</p>
 <p>Not the best explanation if you&rsquo;re interested I&rsquo;d recommend looking at one of the hundreds of guides or videos online talking about it.</p>

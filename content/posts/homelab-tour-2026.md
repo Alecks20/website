@@ -21,7 +21,7 @@ So I'll be taking you through everything behind the scenes that makes this possi
 ### Managed Game Hosting
 I've had my game hosting platform for a while but only just recently has it become pretty active and filled to capacity, I actually had to upgrade the ram on one of my physical machines to accomodate for this demand. 
 
-I have primarily modded minecraft, some paper/vanilla smps and terraria all running inside docker containers managed by [pyrodactyl](https://pyrodactyl.dev) where users get their own account on my game panel to manage their servers console, files, network allocations and backups just like a proper hosting service.
+I have primarily modded minecraft, some paper/vanilla smps, ark and terraria all running inside docker containers managed by [pyrodactyl](https://pyrodactyl.dev) where users get their own account on my game panel to manage their servers console, files, network allocations and backups just like a proper hosting service.
 
 The panel runs in its own vm and game servers also run in their own vm to stop the game servers or panel overloading and taking the other down.
 
@@ -64,6 +64,8 @@ Allows my systems to stay online during multi hour long power outages, I've alre
 This lets me contain all my services into their own "virtual" computers which lets me set super strict resource allocations on cpu, ram and storage and makes them portable so they're easy to move around and migrate between machines.
 
 I also run a few lxcs for more lightweight services like my caddy gateway or tailscale subnet router.
+
+On au-prox-01 I have an Ubuntu Server template with cloud-initd which I clone and configure to setup new vms without having to spend ages waiting for a linux install.
 
 ### Docker (Containers)
 Runs on my service vms and contains everything into their own containers and bundles dependencies making it super easy to deploy things. It's heavily integrated with my game panel and I use it outside of that to run pretty much everything like jellyfin, grafana, prometheus, node exporters and more.
