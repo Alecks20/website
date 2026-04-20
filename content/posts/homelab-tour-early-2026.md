@@ -44,6 +44,8 @@ Their web services also proxied through my main caddy server using the same setu
 
 My setup uses a small-business grade router and my servers are connected to an unmanaged gigabit switch, plan to upgrade eventually but for now 1 gigabit internal network is sufficient.
 
+Since my ISP uses [GSL](https://globalsecurelayer.com) for IP transit I can get low latency to almost all other ISPs in my city.
+
 ### Compute Nodes - [Live Status](https://status.alecks.dev)
 
 | Name | CPU | RAM | Storage |
