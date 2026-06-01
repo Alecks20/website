@@ -2,11 +2,11 @@
 title: "Skills"
 ---
 
-> This page is pretty outdated, I'll update it eventually...
+> This page is pretty outdated, I'll update it eventually
 
 From my tinkering and natural curiosity, I became familiar with basic IT concepts in networking, Linux and infrastructure at the age of 11. 
 
-Over the years I've delved deeper into this rabbit hole setting up a homelab and learning to administer servers in production environments, where my skills, knowledge and practical experience has grown exponentially.
+Over the years I've accumulated tons of skills and experience just from self hosting my own production servers/services for friends and family.
 
 ## Projects
 - Designed, deployed and still actively maintaining a free game server hosting platform (Using Pterodactyl Panel & Wings) for various communities peaking at 30+ concurrent players, recieved tons of positive feedback about performance and reliability especially when using my [homelab](/homelab), also operated additional regions on rented ryzen boxes.
