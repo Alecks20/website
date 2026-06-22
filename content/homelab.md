@@ -9,8 +9,9 @@ The VMs themself run various different services including game servers for me an
 
 | Name | CPU | RAM | Storage |
 | -------- | ------- | ------- | ------ |
-| au-prox-01 | Ryzen 5 5500 | 64GB DDR4 | 1TB NVMe |
+| au-prox-01 | Ryzen 5 5500 | 64GB DDR4 | 1TB NVMe, 6tb HDD |
 | au-prox-02 | Core i5-7400T | 16GB DDR4 | 256GB NVMe |
+| au-prox-03 | Core i7 8700 | 16GB DDR4 | 256GB NVMe, 2x 2tb HDDs|
 
 (Anything on the status page not shown above is either a vm or vps)
 
@@ -24,6 +25,7 @@ The VMs themself run various different services including game servers for me an
 - [HetrixTools](https://hetrixtools.com) monitors server resources (cpu, ram, storage and bandwidth usage), uptime, drive health, detects outages and pushes alerts to my ntfy server.
 - Prometheus and Grafana extensively monitors vms, vpses and vm hosts and acts as a backup to HetrixTools, since its hosted on-prem it still collects metrics if my internet ever went down.
 - [ntfy](https://ntfy.sh) notifies me of incidents picked up my hetrix with mobile push notifications, hosted on a cloud server so if my entire homelab goes offline I can still get nofified.
+- I backup all my vm boot disks to a local proxmox backup server (offsite server coming soon) to protect from vm host disk failures or if I break something on a vm I can rollback easily.
 
 ### Networking
 - [Tailscale](https://tailscale.com) lets me access any vm or vm host running internally from outside my network without me needing to expose any ssh ports or run an ssh gateway. It also lets me establish private links between my rack and friends servers so I can run my reverse proxy service.

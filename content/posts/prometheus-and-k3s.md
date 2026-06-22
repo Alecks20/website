@@ -19,10 +19,6 @@ I'm running them on a dedicated monitoring vm in docker containers, to access it
 
 In the future I plan to put this system on its own seperate hardware so that its seperate from my proxmox cluster if that fails or has quorum issues.
 
-![](/images/grafana.webp)
-
-<sup>Slightly modified version of the [node exporter](https://grafana.com/grafana/dashboards/1860-node-exporter-full/) dashboard</sup>
-
 It's currently using just premade templates which are very complex and sophisticated but I plan to make my own custom dashboards in the future as I monitor more, hetrixtools is my primarily monitoring solution hooked up to my ntfy server for mobile alerts for downtime and resource usage, this is like a backup system to collect more detailed metrics and offer a safety net if my internet dies or anything happens to my hetrixtools account I still have a huge metrics collection stored locally.
 
 I use this command to deploy the node exporter via docker on my machines.
